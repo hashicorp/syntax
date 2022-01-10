@@ -109,8 +109,8 @@
 				"1": {
 					"patterns": [
 						{
-							"match": "resource|provider|variable|output|locals|module|data|terraform",
-							"name": "storage.type.terraform"
+							"match": "\\b(?:resource|provider|variable|output|locals|module|data|terraform)\\b",
+							"name": "entity.name.type.terraform"
 						},
 						{
 							"match": "\\b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",
@@ -264,11 +264,11 @@
 			]
 		},
 		"string_interpolation": {
-			"begin": "(\\G|[^%$])[%$]{",
+			"begin": "(\\G|[^%$])([%$]{)",
 			"comment": "String interpolation",
 			"name": "meta.interpolation.terraform",
 			"beginCaptures": {
-				"0": {
+				"2": {
 					"name": "keyword.other.interpolation.begin.terraform"
 				}
 			},
@@ -449,7 +449,7 @@
 					"include": "#comments"
 				},
 				{
-					"match": "\\b((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)\\s*(\\=)\\s*(.+)\\n",
+					"match": "\\b((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)\\s*(\\=)\\s*",
 					"comment": "Literal, named object key",
 					"captures": {
 						"1": {
@@ -457,18 +457,11 @@
 						},
 						"2": {
 							"name": "keyword.operator.terraform"
-						},
-						"3": {
-							"patterns": [
-								{
-									"include": "#object_key_values"
-								}
-							]
 						}
 					}
 				},
 				{
-					"match": "\\b((\").*(\"))\\s*(\\=)\\s*(.+)\\n",
+					"match": "\\b((\").*(\"))\\s*(\\=)\\s*",
 					"comment": "String object key",
 					"captures": {
 						"0": {
@@ -489,18 +482,11 @@
 						},
 						"4": {
 							"name": "keyword.operator.terraform"
-						},
-						"5": {
-							"patterns": [
-								{
-									"include": "#object_key_values"
-								}
-							]
 						}
 					}
 				},
 				{
-					"begin": "\\(",
+					"begin": "^\\s*\\(",
 					"comment": "Computed object key (any expression between parens)",
 					"name": "meta.mapping.key.terraform",
 					"beginCaptures": {
@@ -537,7 +523,22 @@
 					"include": "#comments"
 				},
 				{
-					"include": "#expressions"
+					"include": "#literal_values"
+				},
+				{
+					"include": "#operators"
+				},
+				{
+					"include": "#tuple_for_expression"
+				},
+				{
+					"include": "#object_for_expression"
+				},
+				{
+					"include": "#heredoc"
+				},
+				{
+					"include": "#functions"
 				}
 			]
 		},
@@ -650,7 +651,7 @@
 							"match": "\\*",
 							"comment": "Attribute-only splat",
 							"name": "keyword.operator.splat.terraform"
-						}	
+						}
 					]
 				}
 			}
@@ -746,8 +747,12 @@
 				"1": {
 					"patterns": [
 						{
-							"match": "abs|ceil|floor|log|max|min|pow|signum|chomp|format|formatlist|indent|join|lower|regex|regexall|replace|split|strrev|substr|title|trimspace|upper|chunklist|coalesce|coalescelist|compact|concat|contains|distinct|element|flatten|index|keys|length|list|lookup|map|matchkeys|merge|range|reverse|setintersection|setproduct|setunion|slice|sort|transpose|values|zipmap|base64decode|base64encode|base64gzip|csvdecode|jsondecode|jsonencode|urlencode|yamldecode|yamlencode|abspath|dirname|pathexpand|basename|file|fileexists|fileset|filebase64|templatefile|formatdate|timeadd|timestamp|base64sha256|base64sha512|bcrypt|filebase64sha256|filebase64sha512|filemd5|filemd1|filesha256|filesha512|md5|rsadecrypt|sha1|sha256|sha512|uuid|uuidv5|cidrhost|cidrnetmask|cidrsubnet|tobool|tolist|tomap|tonumber|toset|tostring",
+							"match": "abspath|abs|ceil|floor|log|max|min|pow|signum|chomp|formatlist|indent|join|lower|regexall|regex|replace|split|strrev|substr|title|trimspace|upper|chunklist|coalescelist|coalesce|compact|concat|contains|distinct|element|flatten|index|keys|length|lookup|matchkeys|merge|range|reverse|setintersection|setproduct|setunion|slice|sort|transpose|values|zipmap|base64decode|base64encode|base64gzip|csvdecode|jsondecode|jsonencode|urlencode|yamldecode|yamlencode|dirname|pathexpand|basename|fileexists|fileset|filebase64|templatefile|formatdate|timeadd|timestamp|base64sha256|base64sha512|bcrypt|filebase64sha256|filebase64sha512|filemd5|filemd1|filesha256|filesha512|md5|rsadecrypt|sha1|sha256|sha512|uuidv5|uuid|cidrhost|cidrnetmask|cidrsubnet|tobool|tolist|tomap|tonumber|toset|tostring|file|format",
 							"name": "support.function.builtin.terraform"
+						},
+						{
+							"match": "list|map",
+							"name": "invalid.deprecated.terraform"
 						},
 						{
 							"match": "\\b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",
@@ -793,7 +798,7 @@
 			},
 			"patterns": [
 				{
-					"include": "expressions"
+					"include": "#expressions"
 				},
 				{
 					"include": "#local_identifiers"
