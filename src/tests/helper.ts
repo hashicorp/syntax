@@ -5,7 +5,7 @@ import * as oniguruma from 'vscode-oniguruma';
 import * as vsctm from 'vscode-textmate';
 
 export async function getGrammar(filePath: string, grammar: vsctm.IGrammar) {
-  const wasmBin = fs.readFileSync(path.join(__dirname, '../node_modules/vscode-oniguruma/release/onig.wasm')).buffer;
+  const wasmBin = fs.readFileSync(path.join(__dirname, '../../node_modules/vscode-oniguruma/release/onig.wasm')).buffer;
 
   const vscodeOnigurumaLib = oniguruma.loadWASM(wasmBin).then(() => {
     return {

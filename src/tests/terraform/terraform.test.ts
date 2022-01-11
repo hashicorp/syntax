@@ -1,3 +1,4 @@
+import * as path from 'path';
 import * as vsctm from 'vscode-textmate';
 import { getGrammar, getTokens } from '../helper';
 
@@ -5,7 +6,7 @@ describe('terraform.tmGrammar', function () {
   let grammar: vsctm.IGrammar;
 
   beforeAll(async () => {
-    const filePath = './terraform/terraform.tmGrammar.json';
+    const filePath =  path.join(__dirname, '../../terraform/terraform.tmGrammar.json');
     grammar = await getGrammar(filePath, grammar);
     expect(grammar).toBeDefined();
   });
