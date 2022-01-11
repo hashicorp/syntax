@@ -1,0 +1,32 @@
+{
+  "name": "syntax",
+  "version": "0.1.0",
+  "description": "HashiCorp Syntax files",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashicorp/syntax.git"
+  },
+  "author": "HashiCorp",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/hashicorp/syntax/issues"
+  },
+  "homepage": "https://github.com/hashicorp/syntax#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.4",
+    "vscode-oniguruma": "^1.6.1",
+    "vscode-textmate": "^6.0.0"
+  }
+}
