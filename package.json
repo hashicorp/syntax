@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "ts-node main.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:grammar": "npx vscode-tmgrammar-test  -s source.terraform -g ./syntaxes/terraform/terraform.tmGrammar.json -t \"./tests/**/*.{tf,tfvars}\""
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "typescript": "^4.5.4",
     "vscode-oniguruma": "^1.6.1",
     "vscode-textmate": "^6.0.0",
+    "vscode-tmgrammar-test": "^0.0.11",
     "yaml": "^1.10.2"
   }
 }

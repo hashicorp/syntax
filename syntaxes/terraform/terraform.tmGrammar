@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>scopeName</key>
-    <string>scope.terraform</string>
+    <string>source.terraform</string>
     <key>fileTypes</key>
     <array>
       <string>tf</string>

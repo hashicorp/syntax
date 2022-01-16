@@ -13,6 +13,6 @@ describe('terraform.tmGrammar', function () {
 
   it('default scope is scope.terraform', async function () {
     const tokens = getTokens(grammar, '');
-    expect(tokens).toStrictEqual([{ startIndex: 0, endIndex: 1, scopes: ['scope.terraform'] }]);
+    expect(tokens).toStrictEqual([{ startIndex: 0, endIndex: 1, scopes: ['source.terraform'] }]);
   });
 });

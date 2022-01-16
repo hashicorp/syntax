@@ -35,18 +35,18 @@ describe('terraform blocks', function () {
         {
           startIndex: 0,
           endIndex: 8,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'entity.name.type.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'entity.name.type.terraform'],
         },
         {
           startIndex: 8,
           endIndex: 9,
-          scopes: ['scope.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 9,
           endIndex: 10,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.begin.terraform',
@@ -55,13 +55,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 10,
           endIndex: 32,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
         },
         {
           startIndex: 32,
           endIndex: 33,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.end.terraform',
@@ -70,13 +70,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 33,
           endIndex: 34,
-          scopes: ['scope.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 34,
           endIndex: 35,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.begin.terraform',
@@ -85,13 +85,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 35,
           endIndex: 37,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
         },
         {
           startIndex: 37,
           endIndex: 38,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.end.terraform',
@@ -100,12 +100,12 @@ describe('terraform blocks', function () {
         {
           startIndex: 38,
           endIndex: 39,
-          scopes: ['scope.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 39,
           endIndex: 40,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'punctuation.section.block.begin.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'punctuation.section.block.begin.terraform'],
         },
       ]);
     });
@@ -115,13 +115,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 8,
           endIndex: 9,
-          scopes: ['scope.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 9,
           endIndex: 10,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.begin.terraform',
@@ -130,13 +130,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 10,
           endIndex: 32,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
         },
         {
           startIndex: 32,
           endIndex: 33,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.end.terraform',
@@ -151,7 +151,7 @@ describe('terraform blocks', function () {
           startIndex: 34,
           endIndex: 35,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.begin.terraform',
@@ -160,13 +160,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 35,
           endIndex: 37,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
         },
         {
           startIndex: 37,
           endIndex: 38,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.end.terraform',
@@ -180,7 +180,7 @@ describe('terraform blocks', function () {
         {
           startIndex: 39,
           endIndex: 40,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'punctuation.section.block.begin.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'punctuation.section.block.begin.terraform'],
         },
       ]);
     });
@@ -191,7 +191,7 @@ describe('terraform blocks', function () {
           startIndex: 42,
           endIndex: 46,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'variable.declaration.terraform',
             'variable.other.readwrite.terraform',
@@ -200,13 +200,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 46,
           endIndex: 47,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'variable.declaration.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'variable.declaration.terraform'],
         },
         {
           startIndex: 47,
           endIndex: 48,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'variable.declaration.terraform',
             'keyword.operator.assignment.terraform',
@@ -215,13 +215,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 48,
           endIndex: 49,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'variable.declaration.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'variable.declaration.terraform'],
         },
         {
           startIndex: 49,
           endIndex: 50,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.begin.terraform',
@@ -230,13 +230,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 50,
           endIndex: 67,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
         },
         {
           startIndex: 67,
           endIndex: 68,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.end.terraform',
@@ -250,9 +250,9 @@ describe('terraform blocks', function () {
         {
           startIndex: 90,
           endIndex: 91,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'punctuation.section.block.end.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'punctuation.section.block.end.terraform'],
         },
-        { startIndex: 91, endIndex: 93, scopes: ['scope.terraform'] },
+        { startIndex: 91, endIndex: 93, scopes: ['source.terraform'] },
       ]);
     });
   });
@@ -278,18 +278,18 @@ describe('terraform blocks', function () {
         {
           startIndex: 0,
           endIndex: 8,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'entity.name.type.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'entity.name.type.terraform'],
         },
         {
           startIndex: 8,
           endIndex: 9,
-          scopes: ['scope.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 9,
           endIndex: 10,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.begin.terraform',
@@ -298,13 +298,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 10,
           endIndex: 17,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'string.quoted.double.terraform'],
         },
         {
           startIndex: 17,
           endIndex: 18,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'string.quoted.double.terraform',
             'punctuation.definition.string.end.terraform',
@@ -313,12 +313,12 @@ describe('terraform blocks', function () {
         {
           startIndex: 18,
           endIndex: 19,
-          scopes: ['scope.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 19,
           endIndex: 20,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'punctuation.section.block.begin.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'punctuation.section.block.begin.terraform'],
         },
       ]);
     });
@@ -328,23 +328,23 @@ describe('terraform blocks', function () {
         {
           startIndex: 20,
           endIndex: 22,
-          scopes: ['scope.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 22,
           endIndex: 30,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'meta.block.terraform', 'entity.name.label.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'meta.block.terraform', 'entity.name.label.terraform'],
         },
         {
           startIndex: 30,
           endIndex: 31,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 31,
           endIndex: 32,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'meta.block.terraform',
             'punctuation.section.block.begin.terraform',
@@ -353,13 +353,13 @@ describe('terraform blocks', function () {
         {
           startIndex: 32,
           endIndex: 33,
-          scopes: ['scope.terraform', 'meta.block.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform', 'meta.block.terraform'],
         },
         {
           startIndex: 33,
           endIndex: 34,
           scopes: [
-            'scope.terraform',
+            'source.terraform',
             'meta.block.terraform',
             'meta.block.terraform',
             'punctuation.section.block.end.terraform',
@@ -368,7 +368,7 @@ describe('terraform blocks', function () {
         {
           startIndex: 34,
           endIndex: 36,
-          scopes: ['scope.terraform', 'meta.block.terraform'],
+          scopes: ['source.terraform', 'meta.block.terraform'],
         },
       ]);
     });

@@ -1,4 +1,4 @@
-scopeName: 'scope.terraform'
+scopeName: 'source.terraform'
 fileTypes: [
 	'tf'
 	'tfvars'

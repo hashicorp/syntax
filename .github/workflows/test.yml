@@ -15,5 +15,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Install modules
       run: npm ci
-    - name: Run tests
+    - name: Run vscode-textmate
       run: npm test
+    - name: Run vscode-tmgrammar-test
+      run: npm run test:grammar
