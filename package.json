@@ -6,7 +6,7 @@
   "scripts": {
     "build": "ts-node main.ts",
     "test": "jest",
-    "test:grammar": "npx vscode-tmgrammar-test  -s source.terraform -g ./syntaxes/terraform/terraform.tmGrammar.json -t \"./tests/**/*.{tf,tfvars}\""
+    "test:grammar": "npx vscode-tmgrammar-test  -s source.terraform -g ./syntaxes/terraform/terraform.tmGrammar.json -t './tests/**/*.{tf,tfvars}'"
   },
   "repository": {
     "type": "git",

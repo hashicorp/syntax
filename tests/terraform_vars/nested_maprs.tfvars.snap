@@ -1,0 +1,79 @@
+># SYNTAX TEST "source.terraform" "GH-675 tfvars nested maps"
+#^ source.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform comment.line.terraform
+>
+>somedata = {
+#^^^^^^^^ source.terraform variable.declaration.terraform variable.other.readwrite.terraform
+#        ^ source.terraform variable.declaration.terraform
+#         ^ source.terraform variable.declaration.terraform keyword.operator.assignment.terraform
+#          ^ source.terraform variable.declaration.terraform
+#           ^ source.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+>  name1 = {
+#^^ source.terraform meta.braces.terraform
+#  ^^^^^ source.terraform meta.braces.terraform meta.mapping.key.terraform string.unquoted.terraform
+#       ^ source.terraform meta.braces.terraform
+#        ^ source.terraform meta.braces.terraform keyword.operator.terraform
+#         ^ source.terraform meta.braces.terraform
+#          ^^ source.terraform meta.braces.terraform
+># ^^^^^ meta.mapping.key.terraform string.unquoted.terraform
+#^ source.terraform meta.braces.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.braces.terraform comment.line.terraform
+>    database_name = "db1"
+#^^^^ source.terraform meta.braces.terraform
+#    ^^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.mapping.key.terraform string.unquoted.terraform
+#                 ^ source.terraform meta.braces.terraform
+#                  ^ source.terraform meta.braces.terraform keyword.operator.terraform
+#                   ^ source.terraform meta.braces.terraform
+#                    ^ source.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
+#                     ^^^ source.terraform meta.braces.terraform string.quoted.double.terraform
+#                        ^ source.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+>  }
+#^^ source.terraform meta.braces.terraform
+#  ^ source.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+>  name2 = {
+#^^ source.terraform
+#  ^^^^^ source.terraform variable.declaration.terraform variable.other.readwrite.terraform
+#       ^ source.terraform variable.declaration.terraform
+#        ^ source.terraform variable.declaration.terraform keyword.operator.assignment.terraform
+#         ^ source.terraform variable.declaration.terraform
+#          ^ source.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+># ^^^^^ meta.mapping.key.terraform string.unquoted.terraform
+#^ source.terraform meta.braces.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.braces.terraform comment.line.terraform
+>    database_name = "db2"
+#^^^^ source.terraform meta.braces.terraform
+#    ^^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.mapping.key.terraform string.unquoted.terraform
+#                 ^ source.terraform meta.braces.terraform
+#                  ^ source.terraform meta.braces.terraform keyword.operator.terraform
+#                   ^ source.terraform meta.braces.terraform
+#                    ^ source.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
+#                     ^^^ source.terraform meta.braces.terraform string.quoted.double.terraform
+#                        ^ source.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+>  }
+#^^ source.terraform meta.braces.terraform
+#  ^ source.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+>  name3 = {
+#^^ source.terraform
+#  ^^^^^ source.terraform variable.declaration.terraform variable.other.readwrite.terraform
+#       ^ source.terraform variable.declaration.terraform
+#        ^ source.terraform variable.declaration.terraform keyword.operator.assignment.terraform
+#         ^ source.terraform variable.declaration.terraform
+#          ^ source.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+># ^^^^^ meta.mapping.key.terraform string.unquoted.terraform
+#^ source.terraform meta.braces.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.braces.terraform comment.line.terraform
+>    database_name = "db3"
+#^^^^ source.terraform meta.braces.terraform
+#    ^^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.mapping.key.terraform string.unquoted.terraform
+#                 ^ source.terraform meta.braces.terraform
+#                  ^ source.terraform meta.braces.terraform keyword.operator.terraform
+#                   ^ source.terraform meta.braces.terraform
+#                    ^ source.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
+#                     ^^^ source.terraform meta.braces.terraform string.quoted.double.terraform
+#                        ^ source.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+>  }
+#^^ source.terraform meta.braces.terraform
+#  ^ source.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+>}
+#^^ source.terraform
+>

@@ -1,0 +1,109 @@
+># SYNTAX TEST "source.terraform" "GH-683 highlight static segments"
+#^ source.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform comment.line.terraform
+>
+>resource "aws_docdb_cluster" "aws_docdb_cluster" {
+#^^^^^^^^ source.terraform meta.block.terraform entity.name.type.terraform
+#        ^ source.terraform meta.block.terraform
+#         ^ source.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
+#          ^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform string.quoted.double.terraform
+#                           ^ source.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+#                            ^ source.terraform meta.block.terraform
+#                             ^ source.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
+#                              ^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform string.quoted.double.terraform
+#                                               ^ source.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+#                                                ^ source.terraform meta.block.terraform
+#                                                 ^ source.terraform meta.block.terraform punctuation.section.block.begin.terraform
+># ^^^^^^^^ source.terraform meta.block.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#         ^^^^^^^^^^^^^^^^^ string.quoted.double.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                             ^^^^^^^^^^^^^^^^^ string.quoted.double.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                                                ^ punctuation.section.block.begin.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>  tags                      = var.tags
+#^^ source.terraform meta.block.terraform
+#  ^^^^ source.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
+#      ^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform variable.declaration.terraform
+#                            ^ source.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
+#                             ^ source.terraform meta.block.terraform variable.declaration.terraform
+#                              ^^^ source.terraform meta.block.terraform support.constant.terraform
+#                                 ^ source.terraform meta.block.terraform keyword.operator.accessor.terraform
+#                                  ^^^^ source.terraform meta.block.terraform variable.other.member.terraform
+># ^^^^ variable.declaration.terraform variable.other.readwrite.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                           ^ keyword.operator.assignment.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                             ^^^ support.constant.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                                 ^^^ variable.other.member.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>  final_snapshot_identifier = "${var.docdb_cluster_cluster_identifier}-final-snapshot"
+#^^ source.terraform meta.block.terraform
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
+#                           ^ source.terraform meta.block.terraform variable.declaration.terraform
+#                            ^ source.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
+#                             ^ source.terraform meta.block.terraform variable.declaration.terraform
+#                              ^ source.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
+#                               ^^ source.terraform meta.block.terraform string.quoted.double.terraform meta.interpolation.terraform keyword.other.interpolation.begin.terraform
+#                                 ^^^ source.terraform meta.block.terraform string.quoted.double.terraform meta.interpolation.terraform support.constant.terraform
+#                                    ^ source.terraform meta.block.terraform string.quoted.double.terraform meta.interpolation.terraform keyword.operator.accessor.terraform
+#                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform string.quoted.double.terraform meta.interpolation.terraform variable.other.member.terraform
+#                                                                     ^ source.terraform meta.block.terraform string.quoted.double.terraform meta.interpolation.terraform keyword.other.interpolation.end.terraform
+#                                                                      ^^^^^^^^^^^^^^^ source.terraform meta.block.terraform string.quoted.double.terraform
+#                                                                                     ^ source.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+># ^^^^^^^^^^^^^^^^^^^^^^^^^ variable.declaration.terraform variable.other.readwrite.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                           ^ keyword.operator.assignment.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                               ^ keyword.other.interpolation.begin.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                                ^^^ support.constant.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                                   ^ keyword.operator.accessor.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ variable.other.member.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                                                                    ^ keyword.other.interpolation.end.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                                                                     ^^^^^^^^^^^^^^^ string.quoted.double.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>  storage_encrypted         = true
+#^^ source.terraform meta.block.terraform
+#  ^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
+#                   ^^^^^^^^^ source.terraform meta.block.terraform variable.declaration.terraform
+#                            ^ source.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
+#                             ^ source.terraform meta.block.terraform variable.declaration.terraform
+#                              ^^^^ source.terraform meta.block.terraform constant.language.terraform
+># ^^^^^^^^^^^^^^^^^ variable.declaration.terraform variable.other.readwrite.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                           ^ keyword.operator.assignment.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>#                             ^^^^ constant.language.terraform
+#^ source.terraform meta.block.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform comment.line.terraform
+>}
+#^ source.terraform meta.block.terraform punctuation.section.block.end.terraform
+># <- punctuation.section.block.end.terraform
+#^ source.terraform comment.line.terraform punctuation.definition.comment.terraform
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform comment.line.terraform
+>
