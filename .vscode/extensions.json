@@ -1,5 +1,3 @@
 {
-  "recommendations": [
-    "redhat.vscode-yaml"
-  ]
+  "recommendations": ["esbenp.prettier-vscode", "redhat.vscode-yaml"]
 }

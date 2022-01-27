@@ -1,4 +1,7 @@
 {
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "json.schemas": [
     {
       "fileMatch": ["*.tmGrammar.json"],
