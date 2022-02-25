@@ -1,0 +1,29 @@
+{
+  "name": "syntax",
+  "version": "0.1.0",
+  "description": "HashiCorp TextMate grammar files",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hashicorp/syntax.git"
+  },
+  "author": "HashiCorp",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/hashicorp/syntax/issues"
+  },
+  "homepage": "https://github.com/hashicorp/syntax#readme",
+  "scripts": {
+    "check": "prettier --check syntaxes/*.json",
+    "format": "prettier --write syntaxes/*.json",
+    "test": "npm run test:grammar && npm run test:snap",
+    "test:grammar": "npm run test:grammar:terraform",
+    "test:grammar:terraform": "npx vscode-tmgrammar-test -s source.terraform -g syntaxes/terraform.tmGrammar.json -t tests/unit/**/*.tf",
+    "test:snap": "npm run test:snap:terraform",
+    "test:snap:terraform": "npx vscode-tmgrammar-snap -s source.terraform -g syntaxes/terraform.tmGrammar.json -t tests/snapshot/**/*.tf"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "vscode-tmgrammar-test": "^0.0.11"
+  }
+}

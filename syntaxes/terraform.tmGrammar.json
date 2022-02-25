@@ -1,5 +1,5 @@
 {
-	"scopeName": "scope.terraform",
+	"scopeName": "source.terraform",
 	"fileTypes": [
 		"tf",
 		"tfvars",
@@ -53,18 +53,26 @@
 		},
 		"comments": {
 			"patterns": [
-				{
-					"include": "#inline_comments"
-				},
-				{
-					"include": "#block_comments"
-				}
+				{ "include": "#hash_line_comments" },
+				{ "include": "#double_slash_line_comments" },
+				{ "include": "#block_inline_comments" }
 			]
 		},
-		"inline_comments": {
-			"begin": "#|//",
-			"comment": "Inline Comments",
-			"name": "comment.line.terraform",
+		"hash_line_comments": {
+			"name": "comment.line.number-sign.hcl",
+			"comment": "Line comments start with # sequence and end with the next newline sequence. A line comment is considered equivalent to a newline sequence",
+			"begin": "#",
+			"end": "$\\n?",
+			"captures": {
+				"0": {
+					"name": "punctuation.definition.comment.terraform"
+				}
+			}
+		},
+		"double_slash_line_comments": {
+			"name": "comment.line.double-slash.hcl",
+			"comment": "Line comments start with // sequence and end with the next newline sequence. A line comment is considered equivalent to a newline sequence",
+			"begin": "//",
 			"captures": {
 				"0": {
 					"name": "punctuation.definition.comment.terraform"
@@ -72,10 +80,10 @@
 			},
 			"end": "$\\n?"
 		},
-		"block_comments": {
+		"block_inline_comments": {
+			"name": "comment.block.hcl",
+			"comment": "Inline comments start with the /* sequence and end with the */ sequence, and may have any characters within except the ending sequence. An inline comment is considered equivalent to a whitespace sequence",
 			"begin": "/\\*",
-			"comment": "Block comments",
-			"name": "comment.block.terraform",
 			"captures": {
 				"0": {
 					"name": "punctuation.definition.comment.terraform"
@@ -104,13 +112,14 @@
 		},
 		"block": {
 			"name": "meta.block.terraform",
+			"comment": "This will match Terraform blocks like `resource \"aws_instance\" \"web\" {` or `module {`",
 			"begin": "(\\w+)(?:([\\s\\\"\\-[:word:]]*)(\\{))",
 			"beginCaptures": {
 				"1": {
 					"patterns": [
 						{
-							"match": "resource|provider|variable|output|locals|module|data|terraform",
-							"name": "storage.type.terraform"
+							"match": "\\b(?:resource|provider|variable|output|locals|module|data|terraform)\\b",
+							"name": "entity.name.type.terraform"
 						},
 						{
 							"match": "\\b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",
@@ -122,7 +131,19 @@
 				"2": {
 					"patterns": [
 						{
-							"include": "#string_literals"
+							"name":"entity.name.tag.terraform",
+							"begin": "\"",
+							"beginCaptures": {
+								"0": {
+									"name": "entity.name.tag.begin.terraform"
+								}
+							},
+							"end": "\"",
+							"endCaptures": {
+								"0": {
+									"name": "entity.name.tag.end.terraform"
+								}
+							}
 						}
 					]
 				},
@@ -264,11 +285,11 @@
 			]
 		},
 		"string_interpolation": {
-			"begin": "(\\G|[^%$])[%$]{",
+			"begin": "(\\G|[^%$])([%$]{)",
 			"comment": "String interpolation",
 			"name": "meta.interpolation.terraform",
 			"beginCaptures": {
-				"0": {
+				"2": {
 					"name": "keyword.other.interpolation.begin.terraform"
 				}
 			},
@@ -423,6 +444,12 @@
 					"include": "#comments"
 				},
 				{
+					"include": "#inline_for_expression"
+				},
+				{
+					"include": "#inline_if_expression"
+				},
+				{
 					"include": "#expressions"
 				},
 				{
@@ -449,26 +476,34 @@
 					"include": "#comments"
 				},
 				{
-					"match": "\\b((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)\\s*(\\=)\\s*(.+)\\n",
+					"include": "#objects"
+				},
+				{
+					"include": "#inline_for_expression"
+				},
+				{
+					"include": "#inline_if_expression"
+				},
+				{
+					"match": "\\b((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)\\s*(\\=\\>?)\\s*",
 					"comment": "Literal, named object key",
 					"captures": {
 						"1": {
-							"name": "meta.mapping.key.terraform string.unquoted.terraform"
+							"name": "meta.mapping.key.terraform variable.other.readwrite.terraform"
 						},
 						"2": {
-							"name": "keyword.operator.terraform"
-						},
-						"3": {
+							"name": "keyword.operator.assignment.terraform",
 							"patterns": [
 								{
-									"include": "#object_key_values"
+									"match": "\\=\\>",
+									"name": "storage.type.function.terraform"
 								}
 							]
 						}
 					}
 				},
 				{
-					"match": "\\b((\").*(\"))\\s*(\\=)\\s*(.+)\\n",
+					"match": "\\b((\").*(\"))\\s*(\\=)\\s*",
 					"comment": "String object key",
 					"captures": {
 						"0": {
@@ -489,18 +524,11 @@
 						},
 						"4": {
 							"name": "keyword.operator.terraform"
-						},
-						"5": {
-							"patterns": [
-								{
-									"include": "#object_key_values"
-								}
-							]
 						}
 					}
 				},
 				{
-					"begin": "\\(",
+					"begin": "^\\s*\\(",
 					"comment": "Computed object key (any expression between parens)",
 					"name": "meta.mapping.key.terraform",
 					"beginCaptures": {
@@ -537,7 +565,22 @@
 					"include": "#comments"
 				},
 				{
-					"include": "#expressions"
+					"include": "#literal_values"
+				},
+				{
+					"include": "#operators"
+				},
+				{
+					"include": "#tuple_for_expression"
+				},
+				{
+					"include": "#object_for_expression"
+				},
+				{
+					"include": "#heredoc"
+				},
+				{
+					"include": "#functions"
 				}
 			]
 		},
@@ -591,6 +634,47 @@
 				}
 			]
 		},
+		"inline_for_expression": {
+			"begin": "(for)\\b",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.control.terraform"
+				}
+			},
+			"end": "\\n",
+			"patterns": [
+				{
+					"match": "\\=\\>",
+					"name": "storage.type.function.terraform"
+				},
+				{
+					"include": "#for_expression_body"
+				}
+			]
+		},
+		"inline_if_expression": {
+			"begin": "(if)\\b",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.control.conditional.terraform"
+				}
+			},
+			"end": "\\n",
+			"patterns": [
+				{
+					"include": "#expressions"
+				},
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#comma"
+				},
+				{
+					"include": "#local_identifiers"
+				}
+			]
+		},
 		"for_expression_body": {
 			"patterns": [
 				{
@@ -628,29 +712,26 @@
 					"name": "keyword.operator.accessor.terraform"
 				}
 			},
-			"end": "\\w+(\\[[0-9\\*]+\\])?",
+			"end": "[[:alpha:]][[:alnum:]_-]*(\\[[0-9\\*]+\\])?",
+			"comment": "Matches a variable with an optional splat or index ([*]/[0])",
 			"endCaptures": {
 				"0": {
 					"patterns": [
 						{
 							"match": "\\b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",
-							"comment": "Attribute access",
+							"comment": "Attribute name including - and _",
 							"name": "variable.other.member.terraform"
-						}
-					]
-				},
-				"1": {
-					"patterns": [
+						},
 						{
 							"match": "\\d+",
-							"comment": "Subscript",
+							"comment": "Optional attribute index",
 							"name": "constant.numeric.integer.terraform"
 						},
 						{
 							"match": "\\*",
-							"comment": "Attribute-only splat",
+							"comment": "Optional attribute-only splat",
 							"name": "keyword.operator.splat.terraform"
-						}	
+						}
 					]
 				}
 			}
@@ -746,7 +827,7 @@
 				"1": {
 					"patterns": [
 						{
-							"match": "abs|ceil|floor|log|max|min|pow|signum|chomp|format|formatlist|indent|join|lower|regex|regexall|replace|split|strrev|substr|title|trimspace|upper|chunklist|coalesce|coalescelist|compact|concat|contains|distinct|element|flatten|index|keys|length|list|lookup|map|matchkeys|merge|range|reverse|setintersection|setproduct|setunion|slice|sort|transpose|values|zipmap|base64decode|base64encode|base64gzip|csvdecode|jsondecode|jsonencode|urlencode|yamldecode|yamlencode|abspath|dirname|pathexpand|basename|file|fileexists|fileset|filebase64|templatefile|formatdate|timeadd|timestamp|base64sha256|base64sha512|bcrypt|filebase64sha256|filebase64sha512|filemd5|filemd1|filesha256|filesha512|md5|rsadecrypt|sha1|sha256|sha512|uuid|uuidv5|cidrhost|cidrnetmask|cidrsubnet|tobool|tolist|tomap|tonumber|toset|tostring",
+							"match": "abspath|abs|ceil|floor|log|max|min|pow|signum|chomp|formatlist|indent|join|lower|regexall|regex|replace|split|strrev|substr|title|trimspace|upper|chunklist|coalescelist|coalesce|compact|concat|contains|distinct|element|flatten|index|keys|length|lookup|matchkeys|merge|range|reverse|setintersection|setproduct|setunion|slice|sort|transpose|values|zipmap|base64decode|base64encode|base64gzip|csvdecode|jsondecode|jsonencode|urlencode|yamldecode|yamlencode|dirname|pathexpand|basename|fileexists|fileset|filebase64|templatefile|formatdate|timeadd|timestamp|base64sha256|base64sha512|bcrypt|filebase64sha256|filebase64sha512|filemd5|filemd1|filesha256|filesha512|md5|rsadecrypt|sha1|sha256|sha512|uuidv5|uuid|cidrhost|cidrnetmask|cidrsubnet|tobool|tolist|tomap|tonumber|toset|tostring|file|format|map|list",
 							"name": "support.function.builtin.terraform"
 						},
 						{
@@ -793,7 +874,7 @@
 			},
 			"patterns": [
 				{
-					"include": "expressions"
+					"include": "#expressions"
 				},
 				{
 					"include": "#local_identifiers"
