@@ -6,6 +6,7 @@ Syntax highlighting files for editors (VSCode, SublimeText, TextMate, etc.) for 
 
 By product, format:
 
+* HCL - TextMate
 * Terraform - TextMate
 
 ## What editors this can be used with
