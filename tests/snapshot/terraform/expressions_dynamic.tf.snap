@@ -1,178 +1,168 @@
 >resource "thing" "name" {
-#^^^^^^^^ source.terraform meta.block.terraform entity.name.type.terraform
-#        ^ source.terraform meta.block.terraform
-#         ^ source.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.begin.terraform
-#          ^^^^^ source.terraform meta.block.terraform entity.name.tag.terraform
-#               ^ source.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.end.terraform
-#                ^ source.terraform meta.block.terraform
-#                 ^ source.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.begin.terraform
-#                  ^^^^ source.terraform meta.block.terraform entity.name.tag.terraform
-#                      ^ source.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.end.terraform
-#                       ^ source.terraform meta.block.terraform
-#                        ^ source.terraform meta.block.terraform punctuation.section.block.begin.terraform
+#^^^^^^^^ source.hcl.terraform meta.block.hcl entity.name.type.terraform
+#        ^ source.hcl.terraform meta.block.hcl
+#         ^^^^^^^ source.hcl.terraform meta.block.hcl variable.other.enummember.hcl
+#                ^ source.hcl.terraform meta.block.hcl
+#                 ^^^^^^ source.hcl.terraform meta.block.hcl variable.other.enummember.hcl
+#                       ^ source.hcl.terraform meta.block.hcl
+#                        ^ source.hcl.terraform meta.block.hcl punctuation.section.block.begin.hcl
 >  name = "tf-test-name"
-#^^ source.terraform meta.block.terraform
-#  ^^^^ source.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#      ^ source.terraform meta.block.terraform variable.declaration.terraform
-#       ^ source.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#        ^ source.terraform meta.block.terraform variable.declaration.terraform
-#         ^ source.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#          ^^^^^^^^^^^^ source.terraform meta.block.terraform string.quoted.double.terraform
-#                      ^ source.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+#^^ source.hcl.terraform meta.block.hcl
+#  ^^^^ source.hcl.terraform meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#      ^ source.hcl.terraform meta.block.hcl variable.declaration.hcl
+#       ^ source.hcl.terraform meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#        ^ source.hcl.terraform meta.block.hcl variable.declaration.hcl
+#         ^ source.hcl.terraform meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#          ^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl string.quoted.double.hcl
+#                      ^ source.hcl.terraform meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 >
 >  dynamic "setting" {
-#^^ source.terraform meta.block.terraform
-#  ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform entity.name.label.terraform
-#         ^ source.terraform meta.block.terraform meta.block.terraform
-#          ^ source.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.begin.terraform
-#           ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform
-#                  ^ source.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.end.terraform
-#                   ^ source.terraform meta.block.terraform meta.block.terraform
-#                    ^ source.terraform meta.block.terraform meta.block.terraform punctuation.section.block.begin.terraform
+#^^ source.hcl.terraform meta.block.hcl
+#  ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.label.hcl
+#         ^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#          ^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.enummember.hcl
+#                   ^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#                    ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >    for_each = var.settings
-#^^^^ source.terraform meta.block.terraform meta.block.terraform
-#    ^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#            ^ source.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#             ^ source.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#              ^ source.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#               ^^^ source.terraform meta.block.terraform meta.block.terraform support.constant.terraform
-#                  ^ source.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                   ^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
+#^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#    ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#            ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl
+#               ^^^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#                  ^ source.hcl.terraform meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                   ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.member.hcl
 >    content {
-#^^^^ source.terraform meta.block.terraform meta.block.terraform
-#    ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform entity.name.label.terraform
-#           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#            ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.block.begin.terraform
+#^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#    ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl entity.name.label.hcl
+#           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#            ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >      namespace = setting.value["namespace"]
-#^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#      ^^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#               ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#                ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#                 ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#                  ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#                         ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                          ^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
-#                               ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.brackets.begin.terraform
-#                                ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                                 ^^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform
-#                                          ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#                                           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.brackets.end.terraform
+#^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#      ^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#               ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#                ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                 ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#                  ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#                         ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                          ^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
+#                               ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
+#                                ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                                 ^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                                          ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.end.hcl
 >      name = setting.value["name"]
-#^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#      ^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#          ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#            ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#             ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#                    ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                     ^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
-#                          ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.brackets.begin.terraform
-#                           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                            ^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform
-#                                ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#                                 ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.brackets.end.terraform
+#^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#      ^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#          ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#                    ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                     ^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
+#                          ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
+#                           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                            ^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                                ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                 ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.end.hcl
 >      value = setting.value["value"]
-#^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#      ^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#            ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#             ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#              ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#                     ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                      ^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
-#                           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.brackets.begin.terraform
-#                            ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                             ^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform
-#                                  ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#                                   ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.brackets.end.terraform
+#^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#      ^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#            ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#             ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#              ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#                     ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                      ^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
+#                           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
+#                            ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                             ^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                                  ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                   ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.end.hcl
 >    }
-#^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#    ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.block.end.terraform
+#^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#    ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
 >  }
-#^^ source.terraform meta.block.terraform meta.block.terraform
-#  ^ source.terraform meta.block.terraform meta.block.terraform punctuation.section.block.end.terraform
+#^^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#  ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
 >
 >  dynamic "origin_group" {
-#^^ source.terraform meta.block.terraform
-#  ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform entity.name.label.terraform
-#         ^ source.terraform meta.block.terraform meta.block.terraform
-#          ^ source.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.begin.terraform
-#           ^^^^^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform
-#                       ^ source.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.end.terraform
-#                        ^ source.terraform meta.block.terraform meta.block.terraform
-#                         ^ source.terraform meta.block.terraform meta.block.terraform punctuation.section.block.begin.terraform
+#^^ source.hcl.terraform meta.block.hcl
+#  ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.label.hcl
+#         ^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#          ^^^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.enummember.hcl
+#                        ^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#                         ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >    for_each = var.load_balancer_origin_groups
-#^^^^ source.terraform meta.block.terraform meta.block.terraform
-#    ^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#            ^ source.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#             ^ source.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#              ^ source.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#               ^^^ source.terraform meta.block.terraform meta.block.terraform support.constant.terraform
-#                  ^ source.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
+#^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#    ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#            ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl
+#               ^^^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#                  ^ source.hcl.terraform meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.member.hcl
 >    content {
-#^^^^ source.terraform meta.block.terraform meta.block.terraform
-#    ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform entity.name.label.terraform
-#           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#            ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.block.begin.terraform
+#^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#    ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl entity.name.label.hcl
+#           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#            ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >      name = origin_group.key
-#^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#      ^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#          ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#            ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#             ^^^^^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#                         ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                          ^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
+#^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#      ^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#          ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#                         ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                          ^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
 >
 >      dynamic "origin" {
-#^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#      ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform entity.name.label.terraform
-#             ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#              ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.begin.terraform
-#               ^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform
-#                     ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform entity.name.tag.terraform entity.name.tag.end.terraform
-#                      ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#                       ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.block.begin.terraform
+#^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#      ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl entity.name.label.hcl
+#             ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#              ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.other.enummember.hcl
+#                      ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#                       ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >        for_each = origin_group.value.origins
-#^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#        ^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#                ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#                 ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#                  ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#                   ^^^^^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#                               ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                                ^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
-#                                     ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                                      ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
+#^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#        ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#                ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#                 ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                  ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#                   ^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#                               ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                ^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
+#                                     ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                      ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
 >        content {
-#^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#        ^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform entity.name.label.terraform
-#               ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#                ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.block.begin.terraform
+#^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#        ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl entity.name.label.hcl
+#               ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#                ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >          hostname = origin.value.hostname
-#^^^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#          ^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#                  ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#                   ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#                    ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.declaration.terraform
-#                     ^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#                           ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                            ^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
-#                                 ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform keyword.operator.accessor.terraform
-#                                  ^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform variable.other.member.terraform
+#^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#          ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#                  ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#                   ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                    ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#                     ^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#                           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                            ^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
+#                                 ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                  ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
 >        }
-#^^^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#        ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.block.end.terraform
+#^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#        ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
 >      }
-#^^^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#      ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.block.end.terraform
+#^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
+#      ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
 >    }
-#^^^^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform
-#    ^ source.terraform meta.block.terraform meta.block.terraform meta.block.terraform punctuation.section.block.end.terraform
+#^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
+#    ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
 >  }
-#^^ source.terraform meta.block.terraform meta.block.terraform
-#  ^ source.terraform meta.block.terraform meta.block.terraform punctuation.section.block.end.terraform
+#^^ source.hcl.terraform meta.block.hcl meta.block.hcl
+#  ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
 >}
-#^ source.terraform meta.block.terraform punctuation.section.block.end.terraform
+#^ source.hcl.terraform meta.block.hcl punctuation.section.block.end.hcl
 >

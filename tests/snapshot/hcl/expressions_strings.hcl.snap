@@ -1,0 +1,199 @@
+>"hello"
+#^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+# ^^^^^ source.hcl string.quoted.double.hcl
+#      ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>"\n\r\t\"\\"
+#^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+# ^^ source.hcl string.quoted.double.hcl constant.character.escape.hcl
+#   ^^ source.hcl string.quoted.double.hcl constant.character.escape.hcl
+#     ^^ source.hcl string.quoted.double.hcl constant.character.escape.hcl
+#       ^^ source.hcl string.quoted.double.hcl constant.character.escape.hcl
+#         ^^ source.hcl string.quoted.double.hcl constant.character.escape.hcl
+#           ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>"$${}"
+#^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+# ^^^^ source.hcl string.quoted.double.hcl
+#     ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>"%%{}"
+#^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+# ^^^^ source.hcl string.quoted.double.hcl
+#     ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>thing = <<EOT
+#^^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#     ^ source.hcl variable.declaration.hcl
+#      ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#       ^ source.hcl variable.declaration.hcl
+#        ^^ source.hcl string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
+#          ^^^ source.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>hello
+#^^^^^^ source.hcl string.unquoted.heredoc.hcl
+>world
+#^^^^^^ source.hcl string.unquoted.heredoc.hcl
+>EOT
+#^^^^ source.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>
+>block {
+#^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#     ^ source.hcl meta.block.hcl
+#      ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  value = <<EOT
+#^^ source.hcl meta.block.hcl
+#  ^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl meta.block.hcl variable.declaration.hcl
+#          ^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
+#            ^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>hello
+#^^^^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl
+>world
+#^^^^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl
+>EOT
+#^^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>block {
+#^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#     ^ source.hcl meta.block.hcl
+#      ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  value = <<-EOT
+#^^ source.hcl meta.block.hcl
+#  ^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl meta.block.hcl variable.declaration.hcl
+#          ^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
+#             ^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>  hello
+#^^^^^^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl
+>    world
+#^^^^^^^^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl
+>  EOT
+#^^^^^^ source.hcl meta.block.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>"Hello, ${var.name}!"
+#^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+# ^^^^^^ source.hcl string.quoted.double.hcl
+#       ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#        ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#          ^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#             ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#              ^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
+#                  ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                   ^ source.hcl string.quoted.double.hcl
+#                    ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>"Hello, %{ if var.name != "" }${var.name}%{ else }unnamed%{ endif }!"
+#^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+# ^^^^^^ source.hcl string.quoted.double.hcl
+#       ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#        ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#          ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#           ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
+#             ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#              ^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#                 ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                  ^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
+#                      ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                       ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.hcl
+#                         ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                          ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                           ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                            ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                             ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                              ^^^^^^^^^^ source.hcl string.quoted.double.hcl
+#                                        ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                                         ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                                           ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                                            ^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
+#                                                ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                                                 ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                                                  ^^^^^^ source.hcl string.quoted.double.hcl
+#                                                        ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                                                         ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                                                           ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                                                            ^^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
+#                                                                 ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                                                                  ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                                                                   ^ source.hcl string.quoted.double.hcl
+#                                                                    ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+><<EOT
+#^^ source.hcl string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
+#  ^^^ source.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>%{ for ip in aws_instance.example.*.private_ip }
+#^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#  ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#   ^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.control.hcl
+#      ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#       ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#         ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#          ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.control.hcl
+#            ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#             ^^^^^^^^^^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#                         ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                          ^^^^^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.member.hcl
+#                                 ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                                  ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#                                    ^^^^^^^^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.member.hcl
+#                                              ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#                                               ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+>server ${ip}
+#^^^^^^ source.hcl string.unquoted.heredoc.hcl
+#      ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#       ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#         ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#           ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+>%{ endfor }
+#^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#  ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#   ^^^^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.control.hcl
+#         ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#          ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+>EOT
+#^^^^ source.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>
+><<EOT
+#^^ source.hcl string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
+#  ^^^ source.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>%{ for ip in aws_instance.example.*.private_ip ~}
+#^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#  ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#   ^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.control.hcl
+#      ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#       ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#         ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#          ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.control.hcl
+#            ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#             ^^^^^^^^^^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#                         ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                          ^^^^^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.member.hcl
+#                                 ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                                  ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#                                    ^^^^^^^^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.member.hcl
+#                                              ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.operator.template.right.trim.hcl
+#                                                ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+>server ${ip}
+#^^^^^^ source.hcl string.unquoted.heredoc.hcl
+#      ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#       ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#         ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#           ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+>%{ endfor ~}
+#^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#  ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl
+#   ^^^^^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.control.hcl
+#         ^^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.operator.template.right.trim.hcl
+#           ^ source.hcl string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+>EOT
+#^^^^ source.hcl string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>
+>
+>

@@ -1,0 +1,66 @@
+>output "instance_ip_addr" {
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                         ^ source.hcl meta.block.hcl
+#                          ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  value = aws_instance.server.private_ip
+#^^ source.hcl meta.block.hcl
+#  ^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl meta.block.hcl variable.declaration.hcl
+#          ^^^^^^^^^^^^ source.hcl meta.block.hcl
+#                      ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                       ^^^^^^ source.hcl meta.block.hcl variable.other.member.hcl
+#                             ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                              ^^^^^^^^^^ source.hcl meta.block.hcl variable.other.member.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>output "instance_ip_addr" {
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                         ^ source.hcl meta.block.hcl
+#                          ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  value       = aws_instance.server.private_ip
+#^^ source.hcl meta.block.hcl
+#  ^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl
+#              ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#               ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                ^^^^^^^^^^^^ source.hcl meta.block.hcl
+#                            ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                             ^^^^^^ source.hcl meta.block.hcl variable.other.member.hcl
+#                                   ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                    ^^^^^^^^^^ source.hcl meta.block.hcl variable.other.member.hcl
+>  description = "The private IP address of the main server instance."
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#             ^ source.hcl meta.block.hcl variable.declaration.hcl
+#              ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#               ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
+#                                                                    ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>  depends_on = [
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#            ^ source.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl meta.block.hcl variable.declaration.hcl
+#               ^ source.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
+>    aws_security_group_rule.local_access,
+#^^^^ source.hcl meta.block.hcl
+#    ^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.readwrite.hcl
+#                           ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                            ^^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.member.hcl
+#                                        ^ source.hcl meta.block.hcl punctuation.separator.hcl
+>  ]
+#^^ source.hcl meta.block.hcl
+#  ^ source.hcl meta.block.hcl punctuation.section.brackets.end.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>

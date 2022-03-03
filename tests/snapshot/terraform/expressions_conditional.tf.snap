@@ -1,53 +1,53 @@
 >var.a != "" ? var.a : "default-a"
-#^^^ source.terraform support.constant.terraform
-#   ^ source.terraform keyword.operator.accessor.terraform
-#    ^ source.terraform variable.other.member.terraform
-#     ^ source.terraform
-#      ^^ source.terraform keyword.operator.terraform
-#        ^ source.terraform
-#         ^ source.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#          ^ source.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#           ^ source.terraform
-#            ^ source.terraform keyword.operator.terraform
-#             ^ source.terraform
-#              ^^^ source.terraform support.constant.terraform
-#                 ^ source.terraform keyword.operator.accessor.terraform
-#                  ^ source.terraform variable.other.member.terraform
-#                   ^ source.terraform
-#                    ^ source.terraform
-#                     ^ source.terraform
-#                      ^ source.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                       ^^^^^^^^^ source.terraform string.quoted.double.terraform
-#                                ^ source.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+#^^^ source.hcl.terraform support.constant.terraform
+#   ^ source.hcl.terraform keyword.operator.accessor.hcl
+#    ^ source.hcl.terraform variable.other.member.hcl
+#     ^ source.hcl.terraform
+#      ^^ source.hcl.terraform keyword.operator.hcl
+#        ^ source.hcl.terraform
+#         ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#          ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+#           ^ source.hcl.terraform
+#            ^ source.hcl.terraform keyword.operator.hcl
+#             ^ source.hcl.terraform
+#              ^^^ source.hcl.terraform support.constant.terraform
+#                 ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                  ^ source.hcl.terraform variable.other.member.hcl
+#                   ^ source.hcl.terraform
+#                    ^ source.hcl.terraform
+#                     ^ source.hcl.terraform
+#                      ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                       ^^^^^^^^^ source.hcl.terraform string.quoted.double.hcl
+#                                ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >var.example ? tostring(12) : "hello"
-#^^^ source.terraform support.constant.terraform
-#   ^ source.terraform keyword.operator.accessor.terraform
-#    ^^^^^^^ source.terraform variable.other.member.terraform
-#           ^ source.terraform
-#            ^ source.terraform keyword.operator.terraform
-#             ^ source.terraform
-#              ^^^^^^^^ source.terraform meta.function-call.terraform support.function.builtin.terraform
-#                      ^ source.terraform meta.function-call.terraform punctuation.section.parens.begin.terraform
-#                       ^^ source.terraform meta.function-call.terraform constant.numeric.integer.terraform
-#                         ^ source.terraform meta.function-call.terraform punctuation.section.parens.end.terraform
-#                          ^ source.terraform
-#                           ^ source.terraform
-#                            ^ source.terraform
-#                             ^ source.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                              ^^^^^ source.terraform string.quoted.double.terraform
-#                                   ^ source.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+#^^^ source.hcl.terraform support.constant.terraform
+#   ^ source.hcl.terraform keyword.operator.accessor.hcl
+#    ^^^^^^^ source.hcl.terraform variable.other.member.hcl
+#           ^ source.hcl.terraform
+#            ^ source.hcl.terraform keyword.operator.hcl
+#             ^ source.hcl.terraform
+#              ^^^^^^^^ source.hcl.terraform meta.function-call.hcl support.function.builtin.terraform
+#                      ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                       ^^ source.hcl.terraform meta.function-call.hcl constant.numeric.integer.hcl
+#                         ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.end.hcl
+#                          ^ source.hcl.terraform
+#                           ^ source.hcl.terraform
+#                            ^ source.hcl.terraform
+#                             ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                              ^^^^^ source.hcl.terraform string.quoted.double.hcl
+#                                   ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >var.example ? 12 : "hello"
-#^^^ source.terraform support.constant.terraform
-#   ^ source.terraform keyword.operator.accessor.terraform
-#    ^^^^^^^ source.terraform variable.other.member.terraform
-#           ^ source.terraform
-#            ^ source.terraform keyword.operator.terraform
-#             ^ source.terraform
-#              ^^ source.terraform constant.numeric.integer.terraform
-#                ^ source.terraform
-#                 ^ source.terraform
-#                  ^ source.terraform
-#                   ^ source.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                    ^^^^^ source.terraform string.quoted.double.terraform
-#                         ^ source.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+#^^^ source.hcl.terraform support.constant.terraform
+#   ^ source.hcl.terraform keyword.operator.accessor.hcl
+#    ^^^^^^^ source.hcl.terraform variable.other.member.hcl
+#           ^ source.hcl.terraform
+#            ^ source.hcl.terraform keyword.operator.hcl
+#             ^ source.hcl.terraform
+#              ^^ source.hcl.terraform constant.numeric.integer.hcl
+#                ^ source.hcl.terraform
+#                 ^ source.hcl.terraform
+#                  ^ source.hcl.terraform
+#                   ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                    ^^^^^ source.hcl.terraform string.quoted.double.hcl
+#                         ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >

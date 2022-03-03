@@ -1,0 +1,80 @@
+># arithmetic
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>
+>1 + 2 * 3 / 4
+#^ source.hcl constant.numeric.integer.hcl
+# ^ source.hcl
+#  ^ source.hcl keyword.operator.arithmetic.hcl
+#   ^ source.hcl
+#    ^ source.hcl constant.numeric.integer.hcl
+#     ^ source.hcl
+#      ^ source.hcl keyword.operator.arithmetic.hcl
+#       ^ source.hcl
+#        ^ source.hcl constant.numeric.integer.hcl
+#         ^ source.hcl
+#          ^ source.hcl keyword.operator.arithmetic.hcl
+#           ^ source.hcl
+#            ^ source.hcl constant.numeric.integer.hcl
+>
+>5 % 6
+#^ source.hcl constant.numeric.integer.hcl
+# ^ source.hcl
+#  ^ source.hcl keyword.operator.arithmetic.hcl
+#   ^ source.hcl
+#    ^ source.hcl constant.numeric.integer.hcl
+>
+>-thing
+#^ source.hcl keyword.operator.arithmetic.hcl
+# ^^^^^^ source.hcl
+>
+># equality
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>
+>thing1 == thing2
+#^^^^^^^ source.hcl
+#       ^^ source.hcl keyword.operator.hcl
+#         ^^^^^^^^ source.hcl
+>thing1 != thing2
+#^^^^^^^ source.hcl
+#       ^^ source.hcl keyword.operator.hcl
+#         ^^^^^^^^ source.hcl
+>
+># comparison
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>
+>thing1 > thing2
+#^^^^^^^ source.hcl
+#       ^ source.hcl keyword.operator.hcl
+#        ^^^^^^^^ source.hcl
+>thing1 >= thing2
+#^^^^^^^ source.hcl
+#       ^^ source.hcl keyword.operator.hcl
+#         ^^^^^^^^ source.hcl
+>thing1 < thing2
+#^^^^^^^ source.hcl
+#       ^ source.hcl keyword.operator.hcl
+#        ^^^^^^^^ source.hcl
+>thing1 <= thing2
+#^^^^^^^ source.hcl
+#       ^^ source.hcl keyword.operator.hcl
+#         ^^^^^^^^ source.hcl
+>
+># logical
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>
+>thing1 || thing2
+#^^^^^^^ source.hcl
+#       ^^ source.hcl keyword.operator.logical.hcl
+#         ^^^^^^^^ source.hcl
+>thing1 && thing2
+#^^^^^^^ source.hcl
+#       ^^ source.hcl keyword.operator.logical.hcl
+#         ^^^^^^^^ source.hcl
+>!thing1
+#^ source.hcl keyword.operator.logical.hcl
+# ^^^^^^^ source.hcl
+>

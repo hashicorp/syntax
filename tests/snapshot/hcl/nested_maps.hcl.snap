@@ -1,0 +1,162 @@
+>ipam_configuration = {
+#^^^^^^^^^^^^^^^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#                  ^ source.hcl variable.declaration.hcl
+#                   ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                    ^ source.hcl variable.declaration.hcl
+#                     ^ source.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>  us-east-1 = {
+#^^ source.hcl meta.braces.hcl
+#  ^^^^^^^^^ source.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#           ^ source.hcl meta.braces.hcl
+#            ^ source.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#             ^ source.hcl meta.braces.hcl
+#              ^ source.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>    cidr   = ["10.0.0.0/16"]
+#^^^^ source.hcl meta.braces.hcl meta.braces.hcl
+#    ^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#        ^^^ source.hcl meta.braces.hcl meta.braces.hcl
+#           ^ source.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl meta.braces.hcl meta.braces.hcl
+#             ^ source.hcl meta.braces.hcl meta.braces.hcl
+#              ^ source.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#               ^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                          ^ source.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                           ^^ source.hcl meta.braces.hcl meta.braces.hcl
+>    locale = "us-east-1"
+#^^^^ source.hcl meta.braces.hcl meta.braces.hcl
+#    ^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#          ^ source.hcl meta.braces.hcl meta.braces.hcl
+#           ^ source.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl meta.braces.hcl meta.braces.hcl
+#             ^ source.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#              ^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                       ^ source.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>    sub_pools = {
+#^^^^ source.hcl meta.braces.hcl meta.braces.hcl
+#    ^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#             ^ source.hcl meta.braces.hcl meta.braces.hcl
+#              ^ source.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#               ^ source.hcl meta.braces.hcl meta.braces.hcl
+#                ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>      dev = {
+#^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#      ^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#         ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#           ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>        cidr                              = ["10.0.0.0/20"]
+#^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                          ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                                           ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                            ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                             ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                                              ^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                                                         ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                                          ^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+>        allocation_default_netmask_length = 28
+#^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                                         ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                          ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                                           ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                            ^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl constant.numeric.integer.hcl
+>
+>        sub_pools = {
+#^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                 ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                  ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                   ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                    ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>          app_team_b = {
+#^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                    ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                     ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                      ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                       ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>            cidr        = ["10.0.0.0/24"]
+#^^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                ^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                        ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                         ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                          ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                           ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                            ^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                                       ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                        ^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+>            description = "app team b's space in us-east-1"
+#^^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                       ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                        ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                         ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                          ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                                                          ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>          }
+#^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>          app_team_a = {
+#^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                    ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                     ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                      ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                       ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>            cidr = ["10.0.1.0/24"]
+#^^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                 ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                  ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                   ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                    ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                     ^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                                ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                 ^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+>          }
+#^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>        }
+#^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>      }
+#^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#      ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>
+>      stage = {
+#^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#      ^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#           ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#             ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#              ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>        cidr = ["10.0.16.0/20"]
+#^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#            ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#             ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#               ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^^^^^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                             ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                              ^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+>      }
+#^^^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#      ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>    }
+#^^^^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#    ^ source.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>  }
+#^^ source.hcl meta.braces.hcl meta.braces.hcl
+#  ^ source.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>}
+#^ source.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>

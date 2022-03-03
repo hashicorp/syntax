@@ -1,80 +1,80 @@
 ># arithmetic
-#^ source.terraform comment.line.number-sign.hcl punctuation.definition.comment.terraform
-# ^^^^^^^^^^^ source.terraform comment.line.number-sign.hcl
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
 >
 >1 + 2 * 3 / 4
-#^ source.terraform constant.numeric.integer.terraform
-# ^ source.terraform
-#  ^ source.terraform keyword.operator.arithmetic.terraform
-#   ^ source.terraform
-#    ^ source.terraform constant.numeric.integer.terraform
-#     ^ source.terraform
-#      ^ source.terraform keyword.operator.arithmetic.terraform
-#       ^ source.terraform
-#        ^ source.terraform constant.numeric.integer.terraform
-#         ^ source.terraform
-#          ^ source.terraform keyword.operator.arithmetic.terraform
-#           ^ source.terraform
-#            ^ source.terraform constant.numeric.integer.terraform
+#^ source.hcl.terraform constant.numeric.integer.hcl
+# ^ source.hcl.terraform
+#  ^ source.hcl.terraform keyword.operator.arithmetic.hcl
+#   ^ source.hcl.terraform
+#    ^ source.hcl.terraform constant.numeric.integer.hcl
+#     ^ source.hcl.terraform
+#      ^ source.hcl.terraform keyword.operator.arithmetic.hcl
+#       ^ source.hcl.terraform
+#        ^ source.hcl.terraform constant.numeric.integer.hcl
+#         ^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.arithmetic.hcl
+#           ^ source.hcl.terraform
+#            ^ source.hcl.terraform constant.numeric.integer.hcl
 >
 >5 % 6
-#^ source.terraform constant.numeric.integer.terraform
-# ^ source.terraform
-#  ^ source.terraform keyword.operator.arithmetic.terraform
-#   ^ source.terraform
-#    ^ source.terraform constant.numeric.integer.terraform
+#^ source.hcl.terraform constant.numeric.integer.hcl
+# ^ source.hcl.terraform
+#  ^ source.hcl.terraform keyword.operator.arithmetic.hcl
+#   ^ source.hcl.terraform
+#    ^ source.hcl.terraform constant.numeric.integer.hcl
 >
 >-thing
-#^ source.terraform keyword.operator.arithmetic.terraform
-# ^^^^^^ source.terraform
+#^ source.hcl.terraform keyword.operator.arithmetic.hcl
+# ^^^^^^ source.hcl.terraform
 >
 ># equality
-#^ source.terraform comment.line.number-sign.hcl punctuation.definition.comment.terraform
-# ^^^^^^^^^ source.terraform comment.line.number-sign.hcl
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
 >
 >thing1 == thing2
-#^^^^^^^ source.terraform
-#       ^^ source.terraform keyword.operator.terraform
-#         ^^^^^^^^ source.terraform
+#^^^^^^^ source.hcl.terraform
+#       ^^ source.hcl.terraform keyword.operator.hcl
+#         ^^^^^^^^ source.hcl.terraform
 >thing1 != thing2
-#^^^^^^^ source.terraform
-#       ^^ source.terraform keyword.operator.terraform
-#         ^^^^^^^^ source.terraform
+#^^^^^^^ source.hcl.terraform
+#       ^^ source.hcl.terraform keyword.operator.hcl
+#         ^^^^^^^^ source.hcl.terraform
 >
 ># comparison
-#^ source.terraform comment.line.number-sign.hcl punctuation.definition.comment.terraform
-# ^^^^^^^^^^^ source.terraform comment.line.number-sign.hcl
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
 >
 >thing1 > thing2
-#^^^^^^^ source.terraform
-#       ^ source.terraform keyword.operator.terraform
-#        ^^^^^^^^ source.terraform
+#^^^^^^^ source.hcl.terraform
+#       ^ source.hcl.terraform keyword.operator.hcl
+#        ^^^^^^^^ source.hcl.terraform
 >thing1 >= thing2
-#^^^^^^^ source.terraform
-#       ^^ source.terraform keyword.operator.terraform
-#         ^^^^^^^^ source.terraform
+#^^^^^^^ source.hcl.terraform
+#       ^^ source.hcl.terraform keyword.operator.hcl
+#         ^^^^^^^^ source.hcl.terraform
 >thing1 < thing2
-#^^^^^^^ source.terraform
-#       ^ source.terraform keyword.operator.terraform
-#        ^^^^^^^^ source.terraform
+#^^^^^^^ source.hcl.terraform
+#       ^ source.hcl.terraform keyword.operator.hcl
+#        ^^^^^^^^ source.hcl.terraform
 >thing1 <= thing2
-#^^^^^^^ source.terraform
-#       ^^ source.terraform keyword.operator.terraform
-#         ^^^^^^^^ source.terraform
+#^^^^^^^ source.hcl.terraform
+#       ^^ source.hcl.terraform keyword.operator.hcl
+#         ^^^^^^^^ source.hcl.terraform
 >
 ># logical
-#^ source.terraform comment.line.number-sign.hcl punctuation.definition.comment.terraform
-# ^^^^^^^^ source.terraform comment.line.number-sign.hcl
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
 >
 >thing1 || thing2
-#^^^^^^^ source.terraform
-#       ^^ source.terraform keyword.operator.logical.terraform
-#         ^^^^^^^^ source.terraform
+#^^^^^^^ source.hcl.terraform
+#       ^^ source.hcl.terraform keyword.operator.logical.hcl
+#         ^^^^^^^^ source.hcl.terraform
 >thing1 && thing2
-#^^^^^^^ source.terraform
-#       ^^ source.terraform keyword.operator.logical.terraform
-#         ^^^^^^^^ source.terraform
+#^^^^^^^ source.hcl.terraform
+#       ^^ source.hcl.terraform keyword.operator.logical.hcl
+#         ^^^^^^^^ source.hcl.terraform
 >!thing1
-#^ source.terraform keyword.operator.logical.terraform
-# ^^^^^^^ source.terraform
+#^ source.hcl.terraform keyword.operator.logical.hcl
+# ^^^^^^^ source.hcl.terraform
 >

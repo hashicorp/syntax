@@ -1,0 +1,44 @@
+>[for o in var.list : o.id]
+#^ source.hcl punctuation.section.brackets.begin.hcl
+# ^^^ source.hcl keyword.control.hcl
+#    ^ source.hcl
+#     ^ source.hcl variable.other.readwrite.hcl
+#      ^ source.hcl
+#       ^^ source.hcl keyword.operator.word.hcl
+#         ^ source.hcl
+#          ^^^ source.hcl variable.other.readwrite.hcl
+#             ^ source.hcl keyword.operator.accessor.hcl
+#              ^^^^ source.hcl variable.other.member.hcl
+#                  ^ source.hcl
+#                   ^ source.hcl keyword.operator.hcl
+#                    ^ source.hcl
+#                     ^ source.hcl variable.other.readwrite.hcl
+#                      ^ source.hcl keyword.operator.accessor.hcl
+#                       ^^ source.hcl variable.other.member.hcl
+#                         ^ source.hcl punctuation.section.brackets.end.hcl
+>
+>var.list[*].id
+#^^^ source.hcl
+#   ^ source.hcl keyword.operator.accessor.hcl
+#    ^^^^ source.hcl variable.other.member.hcl
+#        ^ source.hcl
+#         ^ source.hcl keyword.operator.splat.hcl
+#          ^ source.hcl
+#           ^ source.hcl keyword.operator.accessor.hcl
+#            ^^ source.hcl variable.other.member.hcl
+>
+>var.list[*].interfaces[0].name
+#^^^ source.hcl
+#   ^ source.hcl keyword.operator.accessor.hcl
+#    ^^^^ source.hcl variable.other.member.hcl
+#        ^ source.hcl
+#         ^ source.hcl keyword.operator.splat.hcl
+#          ^ source.hcl
+#           ^ source.hcl keyword.operator.accessor.hcl
+#            ^^^^^^^^^^ source.hcl variable.other.member.hcl
+#                      ^ source.hcl
+#                       ^ source.hcl constant.numeric.integer.hcl
+#                        ^ source.hcl
+#                         ^ source.hcl keyword.operator.accessor.hcl
+#                          ^^^^ source.hcl variable.other.member.hcl
+>
