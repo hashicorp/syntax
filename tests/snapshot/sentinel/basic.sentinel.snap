@@ -1,0 +1,42 @@
+>hour = 4
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel constant.numeric.number.sentinel
+>
+>past_midnight = rule { hour >= 0 }
+#^^^^^^^^^^^^^^ source.sentinel
+#              ^ source.sentinel keyword.operator.symbol.sentinel
+#               ^ source.sentinel
+#                ^^^^ source.sentinel keyword.other.sentinel
+#                    ^^^^^^^^ source.sentinel
+#                            ^ source.sentinel keyword.operator.symbol.sentinel
+#                             ^ source.sentinel keyword.operator.symbol.sentinel
+#                              ^ source.sentinel
+#                               ^ source.sentinel constant.numeric.number.sentinel
+#                                ^^^ source.sentinel
+>before_noon   = rule { hour < 12 }
+#^^^^^^^^^^^^^^ source.sentinel
+#              ^ source.sentinel keyword.operator.symbol.sentinel
+#               ^ source.sentinel
+#                ^^^^ source.sentinel keyword.other.sentinel
+#                    ^^^^^^^^ source.sentinel
+#                            ^ source.sentinel keyword.operator.symbol.sentinel
+#                             ^ source.sentinel
+#                              ^^ source.sentinel constant.numeric.number.sentinel
+#                                ^^^ source.sentinel
+>
+>main = rule {
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^^^^ source.sentinel keyword.other.sentinel
+#           ^^^ source.sentinel
+>    past_midnight and
+#^^^^^^^^^^^^^^^^^^ source.sentinel
+#                  ^^^ source.sentinel keyword.control.sentinel
+>    before_noon
+#^^^^^^^^^^^^^^^^ source.sentinel
+>}
+#^^ source.sentinel
+>

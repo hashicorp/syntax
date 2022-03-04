@@ -1,0 +1,9 @@
+hour = 4
+
+past_midnight = rule { hour >= 0 }
+before_noon   = rule { hour < 12 }
+
+main = rule {
+    past_midnight and
+    before_noon
+}
