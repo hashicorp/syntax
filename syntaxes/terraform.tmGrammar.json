@@ -30,7 +30,7 @@
             {
               "match": "\\b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",
               "comment": "Unknown block type",
-              "name": "entity.name.label.hcl"
+              "name": "entity.name.type.hcl"
             }
           ]
         },
