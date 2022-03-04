@@ -465,13 +465,6 @@
           "match": "\\b((\").*(\"))\\s*(\\=)\\s*",
           "comment": "String object key",
           "captures": {
-            "0": {
-              "patterns": [
-                {
-                  "include": "#named_value_references"
-                }
-              ]
-            },
             "1": {
               "name": "meta.mapping.key.hcl string.quoted.double.hcl"
             },
