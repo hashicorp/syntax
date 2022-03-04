@@ -19,7 +19,7 @@
 #          ^ source.hcl.terraform meta.block.hcl punctuation.section.block.begin.hcl
 >  required_providers {
 #^^ source.hcl.terraform meta.block.hcl
-#  ^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.label.hcl
+#  ^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.type.hcl
 #                    ^ source.hcl.terraform meta.block.hcl meta.block.hcl
 #                     ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >    azurerm = {
@@ -74,7 +74,7 @@
 #                   ^ source.hcl.terraform meta.block.hcl punctuation.section.block.begin.hcl
 >  features {}
 #^^ source.hcl.terraform meta.block.hcl
-#  ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.label.hcl
+#  ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.type.hcl
 #          ^ source.hcl.terraform meta.block.hcl meta.block.hcl
 #           ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 #            ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl

@@ -18,7 +18,7 @@
 >
 >  dynamic "setting" {
 #^^ source.hcl.terraform meta.block.hcl
-#  ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.label.hcl
+#  ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.type.hcl
 #         ^ source.hcl.terraform meta.block.hcl meta.block.hcl
 #          ^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.enummember.hcl
 #                   ^ source.hcl.terraform meta.block.hcl meta.block.hcl
@@ -34,7 +34,7 @@
 #                   ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.member.hcl
 >    content {
 #^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl
-#    ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl entity.name.label.hcl
+#    ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
 #           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
 #            ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >      namespace = setting.value["namespace"]
@@ -88,7 +88,7 @@
 >
 >  dynamic "origin_group" {
 #^^ source.hcl.terraform meta.block.hcl
-#  ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.label.hcl
+#  ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.type.hcl
 #         ^ source.hcl.terraform meta.block.hcl meta.block.hcl
 #          ^^^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.enummember.hcl
 #                        ^ source.hcl.terraform meta.block.hcl meta.block.hcl
@@ -104,7 +104,7 @@
 #                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.member.hcl
 >    content {
 #^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl
-#    ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl entity.name.label.hcl
+#    ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
 #           ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
 #            ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >      name = origin_group.key
@@ -119,7 +119,7 @@
 >
 >      dynamic "origin" {
 #^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl
-#      ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl entity.name.label.hcl
+#      ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
 #             ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
 #              ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.other.enummember.hcl
 #                      ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
@@ -137,7 +137,7 @@
 #                                      ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
 >        content {
 #^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
-#        ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl entity.name.label.hcl
+#        ^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
 #               ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl
 #                ^ source.hcl.terraform meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >          hostname = origin.value.hostname

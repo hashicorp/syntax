@@ -26,7 +26,7 @@
 #                           ^ source.hcl.terraform meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 >  timeouts {
 #^^ source.hcl.terraform meta.block.hcl
-#  ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.label.hcl
+#  ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.type.hcl
 #          ^ source.hcl.terraform meta.block.hcl meta.block.hcl
 #           ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >    create = "60m"

@@ -158,7 +158,7 @@
 >
 >  validation {
 #^^ source.hcl.terraform meta.block.hcl
-#  ^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.label.hcl
+#  ^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl entity.name.type.hcl
 #            ^ source.hcl.terraform meta.block.hcl meta.block.hcl
 #             ^ source.hcl.terraform meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >    condition     = length(var.image_id) > 4 && substr(var.image_id, 0, 4) == "ami-"
