@@ -1,0 +1,15 @@
+># line comment
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>
+>// line comment
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>
+>/*
+#^^ source.hcl comment.block.hcl punctuation.definition.comment.hcl
+>  Block comment
+#^^^^^^^^^^^^^^^^ source.hcl comment.block.hcl
+>*/
+#^^ source.hcl comment.block.hcl punctuation.definition.comment.hcl
+>

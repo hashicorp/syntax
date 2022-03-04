@@ -1,0 +1,58 @@
+>data "aws_ami" "example" {
+#^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#    ^ source.hcl meta.block.hcl
+#     ^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                        ^ source.hcl meta.block.hcl
+#                         ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  most_recent = true
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#             ^ source.hcl meta.block.hcl variable.declaration.hcl
+#              ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#               ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                ^^^^ source.hcl meta.block.hcl constant.language.hcl
+>
+>  owners = ["self"]
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#        ^ source.hcl meta.block.hcl variable.declaration.hcl
+#         ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#          ^ source.hcl meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
+#            ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#             ^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
+#                 ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                  ^ source.hcl meta.block.hcl punctuation.section.brackets.end.hcl
+>  tags = {
+#^^ source.hcl meta.block.hcl
+#  ^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#      ^ source.hcl meta.block.hcl variable.declaration.hcl
+#       ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#        ^ source.hcl meta.block.hcl variable.declaration.hcl
+#         ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>    Name   = "app-server"
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#    ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#        ^^^ source.hcl meta.block.hcl meta.braces.hcl
+#           ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl meta.block.hcl meta.braces.hcl
+#             ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#              ^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl
+#                        ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>    Tested = "true"
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#    ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#          ^ source.hcl meta.block.hcl meta.braces.hcl
+#           ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl meta.block.hcl meta.braces.hcl
+#             ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#              ^^^^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl
+#                  ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  }
+#^^ source.hcl meta.block.hcl meta.braces.hcl
+#  ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>

@@ -1,0 +1,132 @@
+># line comment
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>
+>// line comment
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>
+>/*
+#^^ source.hcl comment.block.hcl punctuation.definition.comment.hcl
+>  Block comment
+#^^^^^^^^^^^^^^^^ source.hcl comment.block.hcl
+>*/
+#^^ source.hcl comment.block.hcl punctuation.definition.comment.hcl
+>
+>io_mode = "async"
+#^^^^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl variable.declaration.hcl
+#        ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl variable.declaration.hcl
+#          ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#           ^^^^^ source.hcl string.quoted.double.hcl
+#                ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>service "http" "web_proxy" {
+#^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#       ^ source.hcl meta.block.hcl
+#        ^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                          ^ source.hcl meta.block.hcl
+#                           ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  listen_addr = "127.0.0.1:8080"
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#             ^ source.hcl meta.block.hcl variable.declaration.hcl
+#              ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#               ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^^^^^^^^^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
+#                               ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>  process "main" {
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^ source.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
+#         ^ source.hcl meta.block.hcl meta.block.hcl
+#          ^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.other.enummember.hcl
+#                ^ source.hcl meta.block.hcl meta.block.hcl
+#                 ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>    command = ["/usr/local/bin/awesome-app", "server"]
+#^^^^ source.hcl meta.block.hcl meta.block.hcl
+#    ^^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#           ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#            ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#             ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#              ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
+#               ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                                          ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                           ^ source.hcl meta.block.hcl meta.block.hcl punctuation.separator.hcl
+#                                            ^ source.hcl meta.block.hcl meta.block.hcl
+#                                             ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                                              ^^^^^^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                                                    ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                                     ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.end.hcl
+>  }
+#^^ source.hcl meta.block.hcl meta.block.hcl
+#  ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>  process "mgmt" {
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^ source.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
+#         ^ source.hcl meta.block.hcl meta.block.hcl
+#          ^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.other.enummember.hcl
+#                ^ source.hcl meta.block.hcl meta.block.hcl
+#                 ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>    command = ["/usr/local/bin/awesome-app", "mgmt"]
+#^^^^ source.hcl meta.block.hcl meta.block.hcl
+#    ^^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#           ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#            ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#             ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#              ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
+#               ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                                          ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                           ^ source.hcl meta.block.hcl meta.block.hcl punctuation.separator.hcl
+#                                            ^ source.hcl meta.block.hcl meta.block.hcl
+#                                             ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                                              ^^^^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                                                  ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                                   ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.brackets.end.hcl
+>  }
+#^^ source.hcl meta.block.hcl meta.block.hcl
+#  ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>sum = 1 + addend
+#^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#   ^ source.hcl variable.declaration.hcl
+#    ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#     ^ source.hcl variable.declaration.hcl
+#      ^ source.hcl constant.numeric.integer.hcl
+#       ^ source.hcl
+#        ^ source.hcl keyword.operator.arithmetic.hcl
+#         ^^^^^^^^ source.hcl
+>
+>message = "Hello, ${name}!"
+#^^^^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl variable.declaration.hcl
+#        ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl variable.declaration.hcl
+#          ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#           ^^^^^^ source.hcl string.quoted.double.hcl
+#                 ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#                  ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                    ^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#                        ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                         ^ source.hcl string.quoted.double.hcl
+#                          ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>shouty_message = upper(message)
+#^^^^^^^^^^^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#              ^ source.hcl variable.declaration.hcl
+#               ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                ^ source.hcl variable.declaration.hcl
+#                 ^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#                      ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                       ^^^^^^^ source.hcl meta.function-call.hcl
+#                              ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
+>

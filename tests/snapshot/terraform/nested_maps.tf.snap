@@ -1,162 +1,162 @@
 >ipam_configuration = {
-#^^^^^^^^^^^^^^^^^^ source.terraform variable.declaration.terraform variable.other.readwrite.terraform
-#                  ^ source.terraform variable.declaration.terraform
-#                   ^ source.terraform variable.declaration.terraform keyword.operator.assignment.terraform
-#                    ^ source.terraform variable.declaration.terraform
-#                     ^ source.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+#^^^^^^^^^^^^^^^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#                  ^ source.hcl.terraform variable.declaration.hcl
+#                   ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#                    ^ source.hcl.terraform variable.declaration.hcl
+#                     ^ source.hcl.terraform meta.braces.hcl punctuation.section.braces.begin.hcl
 >  us-east-1 = {
-#^^ source.terraform meta.braces.terraform
-#  ^^^^^^^^^ source.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#           ^ source.terraform meta.braces.terraform
-#            ^ source.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#             ^ source.terraform meta.braces.terraform
-#              ^ source.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+#^^ source.hcl.terraform meta.braces.hcl
+#  ^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#           ^ source.hcl.terraform meta.braces.hcl
+#            ^ source.hcl.terraform meta.braces.hcl keyword.operator.assignment.hcl
+#             ^ source.hcl.terraform meta.braces.hcl
+#              ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >    cidr   = ["10.0.0.0/16"]
-#^^^^ source.terraform meta.braces.terraform meta.braces.terraform
-#    ^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#        ^^^ source.terraform meta.braces.terraform meta.braces.terraform
-#           ^ source.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#            ^ source.terraform meta.braces.terraform meta.braces.terraform
-#             ^ source.terraform meta.braces.terraform meta.braces.terraform
-#              ^ source.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#               ^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform
-#                          ^ source.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#                           ^^ source.terraform meta.braces.terraform meta.braces.terraform
+#^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#    ^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#        ^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#           ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#             ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#              ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#               ^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                           ^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
 >    locale = "us-east-1"
-#^^^^ source.terraform meta.braces.terraform meta.braces.terraform
-#    ^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#          ^ source.terraform meta.braces.terraform meta.braces.terraform
-#           ^ source.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#            ^ source.terraform meta.braces.terraform meta.braces.terraform
-#             ^ source.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#              ^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform
-#                       ^ source.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+#^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#    ^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#           ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#             ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#              ^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                       ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 >
 >    sub_pools = {
-#^^^^ source.terraform meta.braces.terraform meta.braces.terraform
-#    ^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#             ^ source.terraform meta.braces.terraform meta.braces.terraform
-#              ^ source.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#               ^ source.terraform meta.braces.terraform meta.braces.terraform
-#                ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+#^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#    ^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#             ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#              ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#               ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#                ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >      dev = {
-#^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#      ^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#         ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#          ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#           ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#            ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+#^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#      ^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#         ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#           ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >        cidr                              = ["10.0.0.0/20"]
-#^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#        ^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                                          ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#                                           ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                                            ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                                             ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                                              ^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform
-#                                                         ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#                                                          ^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
+#^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                                           ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                            ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                             ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                                              ^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                                                         ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                                          ^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
 >        allocation_default_netmask_length = 28
-#^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#                                         ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                                          ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#                                           ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                                            ^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform constant.numeric.integer.terraform
+#^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                                         ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                                           ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                                            ^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl constant.numeric.integer.hcl
 >
 >        sub_pools = {
-#^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#        ^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#                 ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                  ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#                   ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                    ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+#^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                 ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                  ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                   ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                    ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >          app_team_b = {
-#^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#          ^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#                    ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                     ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#                      ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                       ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+#^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                    ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                     ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                      ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                       ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >            cidr        = ["10.0.0.0/24"]
-#^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#            ^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#                ^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                        ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#                         ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                          ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                           ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                            ^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform
-#                                       ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#                                        ^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
+#^^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                ^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                        ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                         ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                           ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                            ^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                                       ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                        ^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
 >            description = "app team b's space in us-east-1"
-#^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#            ^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#                       ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                        ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#                         ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                          ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform
-#                                                          ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
+#^^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                       ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                        ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                         ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                                                          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 >          }
-#^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#          ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+#^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >          app_team_a = {
-#^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#          ^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#                    ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                     ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#                      ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                       ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+#^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                    ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                     ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                      ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                       ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >            cidr = ["10.0.1.0/24"]
-#^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#            ^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#                ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                 ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#                  ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                   ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                    ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                     ^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform
-#                                ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#                                 ^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
+#^^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                 ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                  ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                   ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                    ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                     ^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                                ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                 ^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
 >          }
-#^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#          ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+#^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#          ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >        }
-#^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#        ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+#^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >      }
-#^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#      ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+#^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#      ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >
 >      stage = {
-#^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#      ^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#           ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#            ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#             ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#              ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.begin.terraform
+#^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#      ^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#           ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#            ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#             ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#              ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >        cidr = ["10.0.16.0/20"]
-#^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#        ^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.mapping.key.terraform variable.other.readwrite.terraform
-#            ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#             ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform keyword.operator.assignment.terraform
-#              ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#               ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#                ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.begin.terraform
-#                 ^^^^^^^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform
-#                             ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform string.quoted.double.terraform punctuation.definition.string.end.terraform
-#                              ^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
+#^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#        ^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#            ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#             ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#               ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#                ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^^^^^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl
+#                             ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                              ^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
 >      }
-#^^^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#      ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+#^^^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#      ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >    }
-#^^^^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform
-#    ^ source.terraform meta.braces.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+#^^^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl
+#    ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >  }
-#^^ source.terraform meta.braces.terraform meta.braces.terraform
-#  ^ source.terraform meta.braces.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+#^^ source.hcl.terraform meta.braces.hcl meta.braces.hcl
+#  ^ source.hcl.terraform meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >}
-#^ source.terraform meta.braces.terraform punctuation.section.braces.end.terraform
+#^ source.hcl.terraform meta.braces.hcl punctuation.section.braces.end.hcl
 >

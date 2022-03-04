@@ -16,11 +16,11 @@
   "scripts": {
     "check": "prettier --check syntaxes/*.json",
     "format": "prettier --write syntaxes/*.json",
-    "test": "npm run test:grammar && npm run test:snap",
-    "test:grammar": "npm run test:grammar:terraform",
-    "test:grammar:terraform": "npx vscode-tmgrammar-test -s source.terraform -g syntaxes/terraform.tmGrammar.json -t tests/unit/**/*.tf",
-    "test:snap": "npm run test:snap:terraform",
-    "test:snap:terraform": "npx vscode-tmgrammar-snap -s source.terraform -g syntaxes/terraform.tmGrammar.json -t tests/snapshot/**/*.tf"
+    "test": "npm run test:snap",
+    "test:snap": "npm run test:snap:hcl && npm run test:snap:terraform",
+    "test:snap:update": "npm run test:snap:hcl -- -u && npm run test:snap:terraform -- -u",
+    "test:snap:hcl": "npx vscode-tmgrammar-snap -s source.hcl -g syntaxes/hcl.tmGrammar.json -t \"tests/snapshot/hcl/*.hcl\"",
+    "test:snap:terraform": "npx vscode-tmgrammar-snap -s source.hcl.terraform -g syntaxes/terraform.tmGrammar.json  -g syntaxes/hcl.tmGrammar.json -t \"tests/snapshot/terraform/*.tf\""
   },
   "devDependencies": {
     "prettier": "^2.5.1",

@@ -1,0 +1,55 @@
+>resource "aws_instance" "web" {
+#^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#        ^ source.hcl meta.block.hcl
+#         ^^^^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                       ^ source.hcl meta.block.hcl
+#                        ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                             ^ source.hcl meta.block.hcl
+#                              ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  ami           = "ami-a1b2c3d4"
+#^^ source.hcl meta.block.hcl
+#  ^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#     ^^^^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl
+#                ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                 ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                  ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                   ^^^^^^^^^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
+#                               ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  instance_type = "t2.micro"
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#               ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                 ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                  ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                   ^^^^^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
+#                           ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  timeouts {
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
+#          ^ source.hcl meta.block.hcl meta.block.hcl
+#           ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>    create = "60m"
+#^^^^ source.hcl meta.block.hcl meta.block.hcl
+#    ^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#          ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#              ^^^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                 ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>    delete = "2h"
+#^^^^ source.hcl meta.block.hcl meta.block.hcl
+#    ^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#          ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#              ^^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  }
+#^^ source.hcl meta.block.hcl meta.block.hcl
+#  ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
