@@ -1,6 +1,6 @@
 # HashiCorp Syntax
 
-Grammars for highlighting configuration used by HashiCorp software, primarly [HCL (HashiCorp Configuration Language)](https://github.com/hashicorp/hcl) and HCL-based languages.
+TextMate grammars for highlighting configuration used by HashiCorp software, primarily [HCL (HashiCorp Configuration Language)](https://github.com/hashicorp/hcl) and HCL-based languages.
 
 ## How do I use this?
 
@@ -10,9 +10,9 @@ Generally you should never need to interact with this repository directly.
 
 Instead you can use the grammar through editors, editor extensions, or highlighting libraries which in turn may use this repository, for example:
 
- - [Terraform VSCode Extension](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform)
- - _Coming soon: HCL VSCode Extension_
- - _Coming soon: Sentinel VSCode Extension_
+ - [Terraform VS Code Extension](https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform)
+ - _Coming soon: HCL VS Code Extension_
+ -  [Sentinel VS Code Extension](https://marketplace.visualstudio.com/items?itemName=HashiCorp.sentinel)
 
 ### As maintainer enabling end-users
 
@@ -24,7 +24,7 @@ URL="https://github.com/hashicorp/syntax/raw/v${VERSION}/syntaxes/hcl.tmGrammar.
 curl -fL $URL > ./hcl.tmGrammar.json
 ```
 
-We may consider distributing the grammars via a packaging system such as NPM in the future.
+We may consider distributing the grammars via a packaging system in the future.
 
 #### Grammar Mapping
 
