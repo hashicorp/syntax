@@ -30,11 +30,12 @@ We may consider distributing the grammars via a packaging system in the future.
 
 Most highlighting engines match files based on filename patterns. Matched files are then mapped to language IDs. With that in mind we recommend the following mapping.
 
-| Pattern     | Language ID      | Language                  |
-| ----------- | ---------------- | ------------------------- |
-| `*.hcl`     | `hcl`            | HCL                       |
-| `*.tf`      | `terraform`      | Terraform (configuration) |
-| `*.tfvars`  | `terraform-vars` | Terraform (variables)     |
+| Pattern      | Language ID      | Language                  |
+| ------------ | ---------------- | ------------------------- |
+| `*.hcl`      | `hcl`            | HCL                       |
+| `*.tf`       | `terraform`      | [Terraform (configuration)](https://www.terraform.io/language/syntax/configuration) |
+| `*.tfvars`   | `terraform-vars` | [Terraform (variables)](https://www.terraform.io/language/values/variables#variable-definitions-tfvars-files) |
+| `*.sentinel` | `sentinel`       | [Sentinel (policies)](https://docs.hashicorp.com/sentinel/language/spec) |
 
 Language IDs are also often used in [highlighting Markdown code blocks](https://www.markdownguide.org/extended-syntax/#syntax-highlighting). Picking the right language IDs is key to enable accurate and consistent highlighting everywhere and to enable IntelliSense (such as completion) in editors.
 
