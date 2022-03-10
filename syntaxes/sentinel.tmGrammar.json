@@ -55,7 +55,7 @@
     },
     {
       "name": "keyword.control.sentinel",
-      "match": "\\b(if|case|for|any|all|filter|break|continue|return)\\b"
+      "match": "\\b(if|case|for|any|all|filter|map|break|continue|return)\\b"
     },
     {
       "name": "keyword.operator.symbol.sentinel",
