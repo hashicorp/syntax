@@ -2,8 +2,7 @@
 
 This project produces GitHub Releases as the versioned artifacts for use in products like the Terraform VS Code Extension.
 
-For example, you can download the v0.2.3 Terraform Syntax release by using `
-https://github.com/hashicorp/syntax/releases/download/v0.2.3/terraform.tmGrammar.json`
+For example, you can download the `v0.2.3` Terraform Syntax release from `https://github.com/hashicorp/syntax/releases/download/v0.2.3/terraform.tmGrammar.json`
 
 ## Publish Release
 

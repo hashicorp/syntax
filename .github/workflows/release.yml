@@ -1,7 +1,7 @@
 name: Publish release
 
 permissions:
-  contents: write # for uploading release artifacts
+  contents: write # for creating a release and uploading release artifacts
 
 on:
   push:
