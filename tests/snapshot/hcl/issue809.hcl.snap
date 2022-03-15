@@ -1,0 +1,55 @@
+>locals {
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  key_name = "testing"
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#          ^ source.hcl meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#              ^^^^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
+#                     ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  test_example = {
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#              ^ source.hcl meta.block.hcl variable.declaration.hcl
+#               ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                 ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>    (local.key_name): "test"
+#^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl punctuation.section.parens.begin.hcl
+#     ^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl
+#          ^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl keyword.operator.accessor.hcl
+#           ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.member.hcl
+#                   ^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl punctuation.section.parens.end.hcl
+#                    ^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl keyword.operator.hcl
+#                     ^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl
+#                      ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                       ^^^^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl
+#                           ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  }
+#^^ source.hcl meta.block.hcl meta.braces.hcl
+#  ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>variable "test" {
+#^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#        ^ source.hcl meta.block.hcl
+#         ^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#               ^ source.hcl meta.block.hcl
+#                ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  default = "test"
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#         ^ source.hcl meta.block.hcl variable.declaration.hcl
+#          ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#           ^ source.hcl meta.block.hcl variable.declaration.hcl
+#            ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#             ^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
+#                 ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
