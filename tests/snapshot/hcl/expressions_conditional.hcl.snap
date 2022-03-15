@@ -25,7 +25,7 @@
 #           ^ source.hcl
 #            ^ source.hcl keyword.operator.hcl
 #             ^ source.hcl
-#              ^^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#              ^^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #                      ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #                       ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #                         ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl

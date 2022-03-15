@@ -3,22 +3,22 @@
 # ^^^^^^^^ source.hcl comment.line.number-sign.hcl
 >
 >abs(23)
-#^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #   ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #    ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >ceil(5)
-#^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #    ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #     ^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >floor(5)
-#^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #     ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #      ^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #       ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >log(50, 10)
-#^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #   ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #    ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.separator.hcl
@@ -26,7 +26,7 @@
 #        ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #          ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >max(12, 54, 3)
-#^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #   ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #    ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.separator.hcl
@@ -37,7 +37,7 @@
 #            ^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #             ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >min(12, 54, 3)
-#^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #   ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #    ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.separator.hcl
@@ -48,7 +48,7 @@
 #            ^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #             ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >parseint("100", 10)
-#^^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #        ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #         ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #          ^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -58,7 +58,7 @@
 #                ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #                  ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >pow(3, 2)
-#^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #   ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #    ^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #     ^ source.hcl meta.function-call.hcl punctuation.separator.hcl
@@ -66,7 +66,7 @@
 #       ^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #        ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >signum(-13)
-#^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #       ^ source.hcl meta.function-call.hcl keyword.operator.arithmetic.hcl
 #        ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
@@ -77,7 +77,7 @@
 # ^^^^^^^ source.hcl comment.line.number-sign.hcl
 >
 >chomp("hello\n")
-#^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #     ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #      ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #       ^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -85,7 +85,7 @@
 #              ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #               ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >format("Hello, %s!", "Ander")
-#^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #       ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #        ^^^^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -97,7 +97,7 @@
 #                           ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                            ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >formatlist("Hello, %s!", ["Valentina", "Ander", "Olivia", "Sam"])
-#^^^^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #          ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #           ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #            ^^^^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -126,7 +126,7 @@
 #                                                               ^ source.hcl meta.function-call.hcl punctuation.section.brackets.end.hcl
 #                                                                ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >formatlist("%s, %s!", "Salutations", ["Valentina", "Ander", "Olivia", "Sam"])
-#^^^^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #          ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #           ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #            ^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -164,7 +164,7 @@
 # ^^^^^^^^ source.hcl string.quoted.double.hcl
 #         ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
 #          ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
-#            ^^^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl meta.function-call.hcl variable.function.hcl
+#            ^^^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl meta.function-call.hcl support.function.builtin.hcl
 #                  ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #                   ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #                    ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl meta.function-call.hcl punctuation.separator.hcl
@@ -183,7 +183,7 @@
 #                                               ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
 #                                                ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 >join(", ", ["foo", "bar", "baz"])
-#^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #    ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #     ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #      ^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -207,14 +207,14 @@
 #                               ^ source.hcl meta.function-call.hcl punctuation.section.brackets.end.hcl
 #                                ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >lower("HELLO")
-#^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #     ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #      ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #       ^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
 #            ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #             ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >regex("[a-z]+", "53453453.345345aaabbbccc23454")
-#^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #     ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #      ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #       ^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -226,7 +226,7 @@
 #                                              ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                                               ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >regexall("[a-z]+", "1234abcd5678efgh9")
-#^^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #        ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #         ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #          ^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -238,7 +238,7 @@
 #                                     ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                                      ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >replace("1 + 2 + 3", "+", "-")
-#^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #       ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #        ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #         ^^^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -255,7 +255,7 @@
 #                            ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                             ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >split(",", "foo,bar,baz")
-#^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #     ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #      ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #       ^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -267,14 +267,14 @@
 #                       ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                        ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >strrev("hello")
-#^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #       ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #        ^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
 #             ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #              ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >substr("hello world", 1, 4)
-#^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #      ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #       ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #        ^^^^^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -287,14 +287,14 @@
 #                         ^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #                          ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >title("hello world")
-#^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #     ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #      ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #       ^^^^^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
 #                  ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                   ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >trim("?!hello?!", "!?")
-#^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #    ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #     ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #      ^^^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -306,7 +306,7 @@
 #                     ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                      ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >trimprefix("helloworld", "hello")
-#^^^^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #          ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #           ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #            ^^^^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -318,7 +318,7 @@
 #                               ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                                ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >trimsuffix("helloworld", "world")
-#^^^^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #          ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #           ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #            ^^^^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -330,7 +330,7 @@
 #                               ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                                ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >trimspace("  hello\n\n")
-#^^^^^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #         ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #          ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #           ^^^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -339,7 +339,7 @@
 #                      ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                       ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >upper("hello")
-#^^^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #     ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #      ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #       ^^^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
@@ -351,7 +351,7 @@
 # ^^^^^^ source.hcl comment.line.number-sign.hcl
 >
 >foo("bar")
-#^^^ source.hcl meta.function-call.hcl variable.function.hcl
+#^^^ source.hcl meta.function-call.hcl support.function.builtin.hcl
 #   ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
 #    ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #     ^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
