@@ -83,7 +83,7 @@
 # ^^^^^^ source.hcl.terraform string.quoted.double.hcl
 #       ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
 #        ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
-#          ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#          ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl support.constant.terraform
 #             ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
 #              ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
 #                  ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
@@ -98,7 +98,7 @@
 #          ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
 #           ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
 #             ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#              ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#              ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl support.constant.terraform
 #                 ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
 #                  ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
 #                      ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
