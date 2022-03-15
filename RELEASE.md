@@ -8,7 +8,7 @@ For example, you can download the `v0.2.3` Terraform Syntax release from `https:
 
 ## Increment Version
 
-1. Ensure that CHANGELOG.MD has all changes since last release. Add if any are missing.
+1. Ensure that `CHANGELOG.md` has all changes since last release. Add if any are missing.
 1. Increment `version` in package.json
 1. Commit changes
 1. Open PR
