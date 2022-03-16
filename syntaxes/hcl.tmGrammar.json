@@ -777,7 +777,7 @@
           "patterns": [
             {
               "match": "\\b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",
-              "name": "variable.function.hcl"
+              "name": "support.function.builtin.hcl"
             }
           ]
         },
