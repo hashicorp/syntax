@@ -6,7 +6,7 @@
 #      ^ source.hcl.terraform
 #       ^^ source.hcl.terraform keyword.operator.word.hcl
 #         ^ source.hcl.terraform
-#          ^^^ source.hcl.terraform variable.other.readwrite.hcl
+#          ^^^ source.hcl.terraform support.constant.terraform
 #             ^ source.hcl.terraform keyword.operator.accessor.hcl
 #              ^^^^ source.hcl.terraform variable.other.member.hcl
 #                  ^ source.hcl.terraform
