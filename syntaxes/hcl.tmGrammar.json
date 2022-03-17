@@ -31,7 +31,7 @@
       "name": "variable.other.readwrite.hcl"
     },
     "hcl_type_keywords": {
-      "match": "\\b(any|string|number|bool)\\b",
+      "match": "\\b(any|string|number|bool|list|set|map|tuple|object)\\b",
       "comment": "Type keywords known to HCL.",
       "name": "storage.type.hcl"
     },
@@ -156,9 +156,6 @@
         },
         {
           "include": "#attribute_access"
-        },
-        {
-          "include": "#structural_types"
         },
         {
           "include": "#functions"
@@ -684,89 +681,6 @@
           ]
         }
       }
-    },
-    "structural_types": {
-      "patterns": [
-        {
-          "begin": "(object)(\\()(\\{)\\s*",
-          "name": "meta.function-call.hcl",
-          "comment": "Object structural type",
-          "beginCaptures": {
-            "1": {
-              "name": "support.function.builtin.hcl"
-            },
-            "2": {
-              "name": "punctuation.section.parens.begin.hcl"
-            },
-            "3": {
-              "name": "punctuation.section.braces.begin.hcl"
-            }
-          },
-          "end": "(\\})(\\))",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.section.braces.end.hcl"
-            },
-            "2": {
-              "name": "punctuation.section.parens.end.hcl"
-            }
-          },
-          "patterns": [
-            {
-              "include": "#comma"
-            },
-            {
-              "match": "((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)\\s*(\\=(?!\\=|\\>))\\s*",
-              "comment": "Identifier \"=\"",
-              "name": "variable.declaration.hcl",
-              "captures": {
-                "1": {
-                  "name": "variable.other.readwrite.hcl"
-                },
-                "2": {
-                  "name": "keyword.operator.assignment.hcl"
-                }
-              }
-            },
-            {
-              "include": "#hcl_type_keywords"
-            }
-          ]
-        },
-        {
-          "begin": "(tuple)(\\()(\\[)\\s*",
-          "name": "meta.function-call.hcl",
-          "comment": "Tuple structural type",
-          "beginCaptures": {
-            "1": {
-              "name": "support.function.builtin.hcl"
-            },
-            "2": {
-              "name": "punctuation.section.parens.begin.hcl"
-            },
-            "3": {
-              "name": "punctuation.section.brackets.begin.hcl"
-            }
-          },
-          "end": "(\\])(\\))",
-          "endCaptures": {
-            "1": {
-              "name": "punctuation.section.brackets.end.hcl"
-            },
-            "2": {
-              "name": "punctuation.section.parens.end.hcl"
-            }
-          },
-          "patterns": [
-            {
-              "include": "#comma"
-            },
-            {
-              "include": "#hcl_type_keywords"
-            }
-          ]
-        }
-      ]
     },
     "functions": {
       "begin": "(\\w+)(\\()",
