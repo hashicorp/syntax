@@ -508,7 +508,7 @@
               "name": "punctuation.section.parens.begin.hcl"
             }
           },
-          "end": "(\\))\\s*(\\=)\\s*",
+          "end": "(\\))\\s*(=|:)\\s*",
           "endCaptures": {
             "1": {
               "name": "punctuation.section.parens.end.hcl"
@@ -842,10 +842,10 @@
       },
       "patterns": [
         {
-          "include": "#expressions"
+          "include": "#comments"
         },
         {
-          "include": "#local_identifiers"
+          "include": "#expressions"
         }
       ]
     }
