@@ -11,7 +11,7 @@
 #^^ source.hcl.terraform
 #  ^^^^^^ source.hcl.terraform meta.function-call.hcl support.function.builtin.terraform
 #        ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.begin.hcl
-#         ^^^ source.hcl.terraform meta.function-call.hcl support.constant.terraform
+#         ^^^ source.hcl.terraform meta.function-call.hcl variable.other.readwrite.terraform
 #            ^ source.hcl.terraform meta.function-call.hcl keyword.operator.accessor.hcl
 #             ^^^^^^^^^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.member.hcl
 #                          ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.end.hcl
@@ -28,7 +28,7 @@
 #                                     ^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
 >    var.instance_size               #If instance size is provided, use it.
 #^^^^ source.hcl.terraform
-#    ^^^ source.hcl.terraform support.constant.terraform
+#    ^^^ source.hcl.terraform variable.other.readwrite.terraform
 #       ^ source.hcl.terraform keyword.operator.accessor.hcl
 #        ^^^^^^^^^^^^^ source.hcl.terraform variable.other.member.hcl
 #                     ^^^^^^^^^^^^^^^ source.hcl.terraform
@@ -49,7 +49,7 @@
 >  (var.insane_mode ?
 #^^ source.hcl.terraform
 #  ^ source.hcl.terraform punctuation.section.parens.begin.hcl
-#   ^^^ source.hcl.terraform support.constant.terraform
+#   ^^^ source.hcl.terraform variable.other.readwrite.terraform
 #      ^ source.hcl.terraform keyword.operator.accessor.hcl
 #       ^^^^^^^^^^^ source.hcl.terraform variable.other.member.hcl
 #                  ^ source.hcl.terraform
@@ -58,12 +58,12 @@
 #^^^^ source.hcl.terraform
 #    ^^^^^^ source.hcl.terraform meta.function-call.hcl support.function.builtin.terraform
 #          ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.begin.hcl
-#           ^^^^^ source.hcl.terraform meta.function-call.hcl support.constant.terraform
+#           ^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.readwrite.terraform
 #                ^ source.hcl.terraform meta.function-call.hcl keyword.operator.accessor.hcl
 #                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.member.hcl
 #                                              ^ source.hcl.terraform meta.function-call.hcl punctuation.separator.hcl
 #                                               ^ source.hcl.terraform meta.function-call.hcl
-#                                                ^^^^^ source.hcl.terraform meta.function-call.hcl support.constant.terraform
+#                                                ^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.readwrite.terraform
 #                                                     ^ source.hcl.terraform meta.function-call.hcl keyword.operator.accessor.hcl
 #                                                      ^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.member.hcl
 #                                                           ^ source.hcl.terraform meta.function-call.hcl punctuation.separator.hcl
@@ -82,12 +82,12 @@
 #^^^^ source.hcl.terraform
 #    ^^^^^^ source.hcl.terraform meta.function-call.hcl support.function.builtin.terraform
 #          ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.begin.hcl
-#           ^^^^^ source.hcl.terraform meta.function-call.hcl support.constant.terraform
+#           ^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.readwrite.terraform
 #                ^ source.hcl.terraform meta.function-call.hcl keyword.operator.accessor.hcl
 #                 ^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.member.hcl
 #                                  ^ source.hcl.terraform meta.function-call.hcl punctuation.separator.hcl
 #                                   ^ source.hcl.terraform meta.function-call.hcl
-#                                    ^^^^^ source.hcl.terraform meta.function-call.hcl support.constant.terraform
+#                                    ^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.readwrite.terraform
 #                                         ^ source.hcl.terraform meta.function-call.hcl keyword.operator.accessor.hcl
 #                                          ^^^^^ source.hcl.terraform meta.function-call.hcl variable.other.member.hcl
 #                                               ^ source.hcl.terraform meta.function-call.hcl punctuation.separator.hcl

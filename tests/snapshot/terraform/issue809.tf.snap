@@ -20,7 +20,7 @@
 #                 ^ source.hcl.terraform meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >    (local.key_name): "test"
 #^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl meta.mapping.key.hcl punctuation.section.parens.begin.hcl
-#     ^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl meta.mapping.key.hcl support.constant.terraform
+#     ^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.terraform
 #          ^ source.hcl.terraform meta.block.hcl meta.braces.hcl meta.mapping.key.hcl keyword.operator.accessor.hcl
 #           ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.member.hcl
 #                   ^ source.hcl.terraform meta.block.hcl meta.braces.hcl meta.mapping.key.hcl punctuation.section.parens.end.hcl

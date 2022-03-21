@@ -77,7 +77,7 @@
 #           ^ source.hcl.terraform meta.block.hcl meta.braces.hcl
 #            ^ source.hcl.terraform meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
 #             ^ source.hcl.terraform meta.block.hcl meta.braces.hcl
-#              ^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl support.constant.terraform
+#              ^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl variable.other.readwrite.terraform
 #                   ^^^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl
 >    Owner   = local.owner
 #^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl
@@ -85,7 +85,7 @@
 #         ^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl
 #            ^ source.hcl.terraform meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
 #             ^ source.hcl.terraform meta.block.hcl meta.braces.hcl
-#              ^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl support.constant.terraform
+#              ^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl variable.other.readwrite.terraform
 #                   ^^^^^^^ source.hcl.terraform meta.block.hcl meta.braces.hcl
 >  }
 #^^ source.hcl.terraform meta.block.hcl meta.braces.hcl
@@ -112,7 +112,7 @@
 #      ^ source.hcl.terraform meta.block.hcl variable.declaration.hcl
 #       ^ source.hcl.terraform meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
 #        ^ source.hcl.terraform meta.block.hcl variable.declaration.hcl
-#         ^^^^^ source.hcl.terraform meta.block.hcl support.constant.terraform
+#         ^^^^^ source.hcl.terraform meta.block.hcl variable.other.readwrite.terraform
 #              ^ source.hcl.terraform meta.block.hcl keyword.operator.accessor.hcl
 #               ^^^^^^^^^^^ source.hcl.terraform meta.block.hcl variable.other.member.hcl
 >}

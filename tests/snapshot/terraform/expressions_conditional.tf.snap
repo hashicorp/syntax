@@ -1,5 +1,5 @@
 >var.a != "" ? var.a : "default-a"
-#^^^ source.hcl.terraform support.constant.terraform
+#^^^ source.hcl.terraform variable.other.readwrite.terraform
 #   ^ source.hcl.terraform keyword.operator.accessor.hcl
 #    ^ source.hcl.terraform variable.other.member.hcl
 #     ^ source.hcl.terraform
@@ -10,7 +10,7 @@
 #           ^ source.hcl.terraform
 #            ^ source.hcl.terraform keyword.operator.hcl
 #             ^ source.hcl.terraform
-#              ^^^ source.hcl.terraform support.constant.terraform
+#              ^^^ source.hcl.terraform variable.other.readwrite.terraform
 #                 ^ source.hcl.terraform keyword.operator.accessor.hcl
 #                  ^ source.hcl.terraform variable.other.member.hcl
 #                   ^ source.hcl.terraform
@@ -20,7 +20,7 @@
 #                       ^^^^^^^^^ source.hcl.terraform string.quoted.double.hcl
 #                                ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >var.example ? tostring(12) : "hello"
-#^^^ source.hcl.terraform support.constant.terraform
+#^^^ source.hcl.terraform variable.other.readwrite.terraform
 #   ^ source.hcl.terraform keyword.operator.accessor.hcl
 #    ^^^^^^^ source.hcl.terraform variable.other.member.hcl
 #           ^ source.hcl.terraform
@@ -37,7 +37,7 @@
 #                              ^^^^^ source.hcl.terraform string.quoted.double.hcl
 #                                   ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >var.example ? 12 : "hello"
-#^^^ source.hcl.terraform support.constant.terraform
+#^^^ source.hcl.terraform variable.other.readwrite.terraform
 #   ^ source.hcl.terraform keyword.operator.accessor.hcl
 #    ^^^^^^^ source.hcl.terraform variable.other.member.hcl
 #           ^ source.hcl.terraform
