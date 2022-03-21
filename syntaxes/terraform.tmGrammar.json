@@ -28,7 +28,7 @@
     "named_value_references": {
       "match": "\\b(var|local|module|data|path|terraform)\\b",
       "comment": "Constant values available only to Terraform.",
-      "name": "support.constant.terraform"
+      "name": "variable.other.readwrite.terraform"
     },
     "local_identifiers": {
       "match": "\\b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",

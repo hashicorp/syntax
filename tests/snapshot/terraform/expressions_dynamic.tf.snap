@@ -29,7 +29,7 @@
 #            ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl
 #             ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
 #              ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl
-#               ^^^ source.hcl.terraform meta.block.hcl meta.block.hcl support.constant.terraform
+#               ^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.readwrite.terraform
 #                  ^ source.hcl.terraform meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
 #                   ^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.member.hcl
 >    content {
@@ -99,7 +99,7 @@
 #            ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl
 #             ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
 #              ^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.declaration.hcl
-#               ^^^ source.hcl.terraform meta.block.hcl meta.block.hcl support.constant.terraform
+#               ^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.readwrite.terraform
 #                  ^ source.hcl.terraform meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
 #                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.block.hcl meta.block.hcl variable.other.member.hcl
 >    content {
