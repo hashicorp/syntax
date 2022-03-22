@@ -1,0 +1,126 @@
+scopeName: source.hcl.terraform
+name: HashiCorp Terraform
+uuid: d9db10d3-db70-48aa-8d44-f96ccbaa29f3
+fileTypes:
+  - tf
+  - tfvars
+repository:
+  block:
+    name: meta.block.hcl
+    comment: This will match Terraform blocks like `resource "aws_instance" "web" {` or `module {`
+    begin: (\w+)([\s\"\-\w]*)(\{)
+    beginCaptures:
+      "1":
+        patterns:
+          - match: \bresource|provider|variable|output|locals|module|data|terraform\b
+            comment: Known block type
+            name: entity.name.type.terraform
+          - match: \b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\b
+            comment: Unknown block type
+            name: entity.name.type.hcl
+      "2":
+        patterns:
+          - name: variable.other.enummember.hcl
+            comment: Block label
+            match: '[\"\-\w]+'
+      "3":
+        name: punctuation.section.block.begin.hcl
+    end: \}
+    endCaptures:
+      "0":
+        name: punctuation.section.block.end.hcl
+    patterns:
+      - include: "#comments"
+      - include: "#attribute_definition"
+      - include: "#block"
+      - include: "#expressions"
+
+  functions:
+    begin: (\w+)(\()
+    name: meta.function-call.hcl
+    comment: Built-in function calls
+    beginCaptures:
+      "1":
+        patterns:
+          - match: abspath|abs|ceil|floor|log|max|min|pow|signum|chomp|formatlist|indent|join|lower|regexall|regex|replace|split|strrev|substr|title|trimspace|upper|chunklist|coalescelist|coalesce|compact|concat|contains|distinct|element|flatten|index|keys|length|lookup|matchkeys|merge|range|reverse|setintersection|setproduct|setunion|slice|sort|transpose|values|zipmap|base64decode|base64encode|base64gzip|csvdecode|jsondecode|jsonencode|urlencode|yamldecode|yamlencode|dirname|pathexpand|basename|fileexists|fileset|filebase64|templatefile|formatdate|timeadd|timestamp|base64sha256|base64sha512|bcrypt|filebase64sha256|filebase64sha512|filemd5|filemd1|filesha256|filesha512|md5|rsadecrypt|sha1|sha256|sha512|uuidv5|uuid|cidrhost|cidrnetmask|cidrsubnet|tobool|tolist|tomap|tonumber|toset|tostring|file|format|map|list
+            name: support.function.builtin.terraform
+      "2":
+        name: punctuation.section.parens.begin.hcl
+    end: \)
+    endCaptures:
+      "0":
+        name: punctuation.section.parens.end.hcl
+    patterns:
+      - include: "#comments"
+      - include: "#expressions"
+      - include: "#comma"
+
+  literal_values:
+    patterns:
+      - include: "#numeric_literals"
+      - include: "#language_constants"
+      - include: "#string_literals"
+      - include: "#heredoc"
+      - include: "#hcl_type_keywords"
+      - include: "#named_value_references"
+
+  named_value_references:
+    match: \b(var|local|module|data|path|terraform)\b
+    comment: Constant values available only to Terraform.
+    name: variable.other.readwrite.terraform
+
+  objects:
+    name: meta.braces.hcl
+    begin: \{
+    beginCaptures:
+      "0":
+        name: punctuation.section.braces.begin.hcl
+    end: \}
+    endCaptures:
+      "0":
+        name: punctuation.section.braces.end.hcl
+    patterns:
+      - include: "#comments"
+      - include: "#objects"
+      - include: "#inline_for_expression"
+      - include: "#inline_if_expression"
+      - match: \b((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)\s*(\=\>?)\s*
+        comment: Literal, named object key
+        captures:
+          "1":
+            name: meta.mapping.key.hcl variable.other.readwrite.hcl
+          "2":
+            name: keyword.operator.assignment.hcl
+            patterns:
+              - match: \=\>
+                name: storage.type.function.hcl
+      - match: \b((").*("))\s*(\=)\s*
+        comment: String object key
+        captures:
+          "0":
+            patterns:
+              - include: "#named_value_references"
+          "1":
+            name: meta.mapping.key.hcl string.quoted.double.hcl
+          "2":
+            name: punctuation.definition.string.begin.hcl
+          "3":
+            name: punctuation.definition.string.end.hcl
+          "4":
+            name: keyword.operator.hcl
+      - begin: ^\s*\(
+        comment: Computed object key (any expression between parens)
+        name: meta.mapping.key.hcl
+        beginCaptures:
+          "0":
+            name: punctuation.section.parens.begin.hcl
+        end: (\))\s*(=|:)\s*
+        endCaptures:
+          "1":
+            name: punctuation.section.parens.end.hcl
+          "2":
+            name: keyword.operator.hcl
+        patterns:
+          - include: "#named_value_references"
+          - include: "#attribute_access"
+      - include: "#object_key_values"
