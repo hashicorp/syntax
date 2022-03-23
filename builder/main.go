@@ -16,7 +16,7 @@ import (
 
 func main() {
 	c := &cli.CLI{
-		Name:       "syntax",
+		Name:       "builder",
 		Version:    "",
 		Args:       os.Args[1:],
 		HelpWriter: os.Stdout,
