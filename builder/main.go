@@ -81,7 +81,7 @@ func (c *BuildCommand) Run(args []string) int {
 	if err := mainViper.ReadInConfig(); err == nil {
 		c.Ui.Info(fmt.Sprintf("Merging config file: %v", mainViper.ConfigFileUsed()))
 	} else {
-		c.Ui.Error(fmt.Sprintf("Error reading config: %v", err))
+		c.Ui.Error(fmt.Sprintf("Error reading %v: %v", mainViper.ConfigFileUsed(), err))
 		return 1
 	}
 
@@ -98,7 +98,7 @@ func (c *BuildCommand) Run(args []string) int {
 		if err := productV.ReadInConfig(); err == nil {
 			c.Ui.Info(fmt.Sprintf("Merging config file: %v", productV.ConfigFileUsed()))
 		} else {
-			c.Ui.Error(fmt.Sprintf("Error reading config: %v", err))
+			c.Ui.Error(fmt.Sprintf("Error reading %v: %v", productV.ConfigFileUsed(), err.Error()))
 			continue
 		}
 
@@ -106,7 +106,7 @@ func (c *BuildCommand) Run(args []string) int {
 		// This overrides anything already loaded so each product can replace existing
 		// rules and/or provide new ones
 		if err := mainViper.MergeConfigMap(productV.AllSettings()); err != nil {
-			c.Ui.Error(fmt.Sprintf("Unable to merge user configuration values: %s", err.Error()))
+			c.Ui.Error(fmt.Sprintf("Unable to merge values from %v: %v", productV.ConfigFileUsed(), err.Error()))
 			continue
 		}
 
@@ -115,7 +115,7 @@ func (c *BuildCommand) Run(args []string) int {
 		var config TextMateGrammar
 		err := mainViper.Unmarshal(&config)
 		if err != nil {
-			c.Ui.Error(fmt.Sprintf("Unable to merge user configuration values: %s", err.Error()))
+			c.Ui.Error(fmt.Sprintf("Unable to merge values from %s: %s", productV.ConfigFileUsed(), err.Error()))
 			continue
 		}
 
