@@ -9,6 +9,7 @@ import (
 	"path/filepath"
 	"strings"
 
+	"github.com/hashicorp/go-multierror"
 	"github.com/mitchellh/cli"
 	"github.com/spf13/viper"
 )
@@ -85,6 +86,7 @@ func (c *BuildCommand) Run(args []string) int {
 		return 1
 	}
 
+	var result *multierror.Error
 	// For each product defined, read the yml and merge into the main Viper instance
 	products := []string{"hcl", "terraform"}
 	for _, product := range products {
@@ -99,6 +101,7 @@ func (c *BuildCommand) Run(args []string) int {
 			c.Ui.Info(fmt.Sprintf("Merging config file: %v", productV.ConfigFileUsed()))
 		} else {
 			c.Ui.Error(fmt.Sprintf("Error reading %v: %v", productV.ConfigFileUsed(), err.Error()))
+			result = multierror.Append(result, err)
 			continue
 		}
 
@@ -107,6 +110,7 @@ func (c *BuildCommand) Run(args []string) int {
 		// rules and/or provide new ones
 		if err := mainViper.MergeConfigMap(productV.AllSettings()); err != nil {
 			c.Ui.Error(fmt.Sprintf("Unable to merge values from %v: %v", productV.ConfigFileUsed(), err.Error()))
+			result = multierror.Append(result, err)
 			continue
 		}
 
@@ -116,6 +120,7 @@ func (c *BuildCommand) Run(args []string) int {
 		err := mainViper.Unmarshal(&config)
 		if err != nil {
 			c.Ui.Error(fmt.Sprintf("Unable to merge values from %s: %s", productV.ConfigFileUsed(), err.Error()))
+			result = multierror.Append(result, err)
 			continue
 		}
 
@@ -125,10 +130,14 @@ func (c *BuildCommand) Run(args []string) int {
 		err = writeJSON(config, productGrammarFile)
 		if err != nil {
 			c.Ui.Error(fmt.Sprintf("Error writing grammar file: %v", err))
+			result = multierror.Append(result, err)
 		}
 	}
-
-	return 0
+	if result.ErrorOrNil() != nil {
+		return 1
+	} else {
+		return 0
+	}
 }
 
 func writeJSON(data TextMateGrammar, file string) error {
