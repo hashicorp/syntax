@@ -3,7 +3,6 @@ module github.com/hashicorp/syntax/builder
 go 1.17
 
 require (
-	github.com/ghodss/yaml v1.0.0
 	github.com/mitchellh/cli v1.1.2
 	github.com/spf13/viper v1.10.1
 )
