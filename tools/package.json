@@ -1,0 +1,14 @@
+{
+  "name": "tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "HashiCorp",
+  "license": "MPL-2.0",
+  "scripts": {
+    "generate-graph": "ts-node graph.ts"
+  },
+  "dependencies": {
+    "ts-node": "^10.7.0"
+  }
+}
