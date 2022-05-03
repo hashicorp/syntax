@@ -25,7 +25,7 @@ block {
   EOT
 }
 
-"Hello, ${var.name}!"
+"Hello, ${var.name}${var.name}!"
 
 "Hello, %{ if var.name != "" }${var.name}%{ else }unnamed%{ endif }!"
 
