@@ -69,8 +69,7 @@
 #                         ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
 #                           ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
 #                            ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
-#                             ^^^ source.hcl.terraform string.quoted.double.hcl
-#                                ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                             ^^^^ source.hcl.terraform string.quoted.double.hcl
 #                                 ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
 #                                   ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
 #                                    ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl

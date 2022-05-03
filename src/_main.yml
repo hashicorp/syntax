@@ -148,11 +148,11 @@ repository:
       - include: "#string_interpolation"
       - include: "#char_escapes"
   string_interpolation:
-    begin: (\G|[^%$])([%$]{)
+    begin: '(?<![%$])([%$]{)'
     comment: String interpolation
     name: meta.interpolation.hcl
     beginCaptures:
-      "2":
+      "1":
         name: keyword.other.interpolation.begin.hcl
     end: \}
     endCaptures:
