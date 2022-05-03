@@ -18,13 +18,13 @@
     "format": "prettier --write syntaxes/*.json",
     "test": "npm run test:snap",
     "test:snap": "npm run test:snap:hcl && npm run test:snap:sentinel && npm run test:snap:terraform",
-    "test:snap:update": "npm run test:snap:hcl -- -u && npm run test:snap:terraform -- -u",
-    "test:snap:hcl": "npx vscode-tmgrammar-snap -s source.hcl -g syntaxes/hcl.tmGrammar.json -t \"tests/snapshot/hcl/*.hcl\"",
-    "test:snap:sentinel": "npx vscode-tmgrammar-snap -s source.sentinel -g syntaxes/sentinel.tmGrammar.json -t \"tests/snapshot/sentinel/*.sentinel\"",
-    "test:snap:terraform": "npx vscode-tmgrammar-snap -s source.hcl.terraform -g syntaxes/terraform.tmGrammar.json  -g syntaxes/hcl.tmGrammar.json -t \"tests/snapshot/terraform/*.tf\""
+    "test:snap:update": "npm run test:snap:hcl -- -u && npm run test:snap:sentinel -- -u && npm run test:snap:terraform -- -u",
+    "test:snap:hcl": "npx vscode-tmgrammar-snap -s source.hcl -g syntaxes/hcl.tmGrammar.json \"tests/snapshot/hcl/*.hcl\"",
+    "test:snap:sentinel": "npx vscode-tmgrammar-snap -s source.sentinel -g syntaxes/sentinel.tmGrammar.json \"tests/snapshot/sentinel/*.sentinel\"",
+    "test:snap:terraform": "npx vscode-tmgrammar-snap -s source.hcl.terraform -g syntaxes/terraform.tmGrammar.json  -g syntaxes/hcl.tmGrammar.json \"tests/snapshot/terraform/*.tf\""
   },
   "devDependencies": {
     "prettier": "^2.5.1",
-    "vscode-tmgrammar-test": "^0.0.11"
+    "vscode-tmgrammar-test": "^0.1.1"
   }
 }
