@@ -161,8 +161,7 @@
 #                                                                            ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >"  items: ${indent(2, "[\n  foo,\n  bar,\n]\n")}"
 #^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
-# ^^^^^^^^ source.hcl string.quoted.double.hcl
-#         ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+# ^^^^^^^^^ source.hcl string.quoted.double.hcl
 #          ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
 #            ^^^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl meta.function-call.hcl support.function.builtin.hcl
 #                  ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl

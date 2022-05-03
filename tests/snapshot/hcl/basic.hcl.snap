@@ -112,8 +112,7 @@
 #        ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
 #         ^ source.hcl variable.declaration.hcl
 #          ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
-#           ^^^^^^ source.hcl string.quoted.double.hcl
-#                 ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl
+#           ^^^^^^^ source.hcl string.quoted.double.hcl
 #                  ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
 #                    ^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
 #                        ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
