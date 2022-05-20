@@ -701,11 +701,11 @@
     },
     "string_interpolation": {
       "name": "meta.interpolation.hcl",
-      "begin": "(\\G|[^%$])([%$]{)",
+      "begin": "(?<![%$])([%$]{)",
       "end": "\\}",
       "comment": "String interpolation",
       "beginCaptures": {
-        "2": {
+        "1": {
           "name": "keyword.other.interpolation.begin.hcl"
         }
       },
