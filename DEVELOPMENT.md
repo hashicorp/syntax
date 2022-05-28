@@ -23,15 +23,15 @@ npm install
 
 ## Writing TextMate Grammar
 
-The following workflow is recommended to work on Terraform TextMate grammar:
+The following workflow is recommended to work on HCL TextMate grammar.
 
-1. Add or modify grammar to the `terraform.tmGrammar.json` file inside the `syntaxes` directory.
-1. Add a new unit test file or modify existing unit test files inside the test/unit/terraform directory.
-1. Run `npm run test:grammar` until the tests pass
-1. Add a new example Terraform file or modify existing unit test files inside the test/snapshot/terraform directory.
-1. Run `npm run test:snap` until the tests pass. 
+> Note: Replace `<lang>` by `hcl`, `terraform` or `sentinel`
 
-> Tip: Running `npm run test:snap -- -u` after modifying the tmGrammar file will give you a quick visual representation of how the tokens are being resolved. This can aid in crafting unit tests.
+1. Add or modify grammar to the `<lang>.tmGrammar.json` file inside the `syntaxes` directory.
+1. Add a new example HCL file or modify existing unit test files inside the `tests/snapshot/<lang>` directory.
+1. Run `npm run test:snap:<lang>` until the tests pass.
+
+> Tip: Running `npm run test:snap:update` after modifying the tmGrammar file will give you a quick visual representation of how the tokens are being resolved. This can aid in crafting unit tests.
 
 ## Tests
 
@@ -40,12 +40,12 @@ Automated `unit` tests can be written using [vscode-tmgrammar-test](https://gith
 To start the test suite from the command-line run:
 
 ```bash
-npm test:unit
+npm test
 ```
 
 ## Writing Grammar Unit Tests
 
-Unit tests are Terraform files with `vscode-tmgrammar-test` token lines specifying which TextMate grammer should be resolved.
+Unit tests are HCL files with `vscode-tmgrammar-test` token lines specifying which TextMate grammer should be resolved.
 
 For example:
 
@@ -65,8 +65,8 @@ resource "example" "thing" {
 
 Snapshot tests comprise of two files: example files and their companion `snap` file.
 
-Snapshot test example files are Terraform files without any `vscode-tmgrammar-test` token lines. Each example file is exactly how you would see it used in production. This ensures scope, inheritance, and resolution of tokens happen exactly as they would on a user's machine.
+Snapshot test example files are HCL files without any `vscode-tmgrammar-test` token lines. Each example file is exactly how you would see it used in production. This ensures scope, inheritance, and resolution of tokens happen exactly as they would on a user's machine.
 
 The companion `snap` file is named the same as the example file with the `.snap` extension, and is the tmGrammar represenation of all resolved tokens. This file is commited alongside the example file. If anything changes with regards to how the tokens are resolved, the snapshot test will fail.
 
-> Note: If modifying an existing snapshot test, run `npm run test:snap -- -u` to update the snapshot file. This will update the snapshot file with the new modified grammar. Be sure to do this after you've tested using `npm run test:grammar` and are sure that the modified grammar is correct, otherwise you may get false positives.
+> Note: If modifying an existing snapshot test, run `npm run test:snap:update` to update the snapshot file. This will update the snapshot file with the new modified grammar. Be sure to do this after you've tested using `npm run test:snap` and are sure that the modified grammar is correct, otherwise you may get false positives.
