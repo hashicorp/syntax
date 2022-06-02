@@ -1,1 +1,0 @@
-post-processor "foo" {}
