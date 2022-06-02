@@ -1,3 +1,6 @@
+>// terraform type block
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
 >resource "aws_instance" "web" {
 #^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
 #        ^ source.hcl meta.block.hcl
@@ -52,4 +55,21 @@
 #  ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
 >}
 #^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>// packer type block
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>// As per https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md#identifiers
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>// a `-` is allowed in the identifier.
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>post-processor "foo" {}
+#^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                    ^ source.hcl meta.block.hcl
+#                     ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                      ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
 >
