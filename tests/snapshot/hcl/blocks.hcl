@@ -12,3 +12,6 @@ resource "aws_instance" "web" {
 // As per https://github.com/hashicorp/hcl/blob/main/hclsyntax/spec.md#identifiers
 // a `-` is allowed in the identifier.
 post-processor "foo" {}
+
+// dash is not expected at the beginning
+-test "foo" {}

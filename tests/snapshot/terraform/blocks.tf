@@ -12,3 +12,6 @@ resource "aws_instance" "web" {
 // a `-` is allowed in the identifier.
 // duplicated here to ensure compatibility with generic HCL
 post-processor "foo" {}
+
+// dash is not expected at the beginning
+-test "foo" {}

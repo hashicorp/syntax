@@ -73,3 +73,15 @@
 #                     ^ source.hcl.terraform meta.block.hcl punctuation.section.block.begin.hcl
 #                      ^ source.hcl.terraform meta.block.hcl punctuation.section.block.end.hcl
 >
+>// dash is not expected at the beginning
+#^^ source.hcl.terraform comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform comment.line.double-slash.hcl
+>-test "foo" {}
+#^ source.hcl.terraform keyword.operator.arithmetic.hcl
+# ^^^^ source.hcl.terraform meta.block.hcl entity.name.type.hcl
+#     ^ source.hcl.terraform meta.block.hcl
+#      ^^^^^ source.hcl.terraform meta.block.hcl variable.other.enummember.hcl
+#           ^ source.hcl.terraform meta.block.hcl
+#            ^ source.hcl.terraform meta.block.hcl punctuation.section.block.begin.hcl
+#             ^ source.hcl.terraform meta.block.hcl punctuation.section.block.end.hcl
+>
