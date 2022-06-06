@@ -29,9 +29,9 @@
 #       ^^^ source.hcl
 #          ^ source.hcl keyword.operator.accessor.hcl
 #           ^^^^ source.hcl variable.other.member.hcl
-#               ^ source.hcl
+#               ^ source.hcl punctuation.section.brackets.begin.hcl
 #                ^ source.hcl keyword.operator.splat.hcl
-#                 ^ source.hcl
+#                 ^ source.hcl punctuation.section.brackets.end.hcl
 #                  ^ source.hcl keyword.operator.accessor.hcl
 #                   ^^ source.hcl variable.other.member.hcl
 >
@@ -43,14 +43,70 @@
 #       ^^^ source.hcl
 #          ^ source.hcl keyword.operator.accessor.hcl
 #           ^^^^ source.hcl variable.other.member.hcl
-#               ^ source.hcl
+#               ^ source.hcl punctuation.section.brackets.begin.hcl
 #                ^ source.hcl keyword.operator.splat.hcl
-#                 ^ source.hcl
+#                 ^ source.hcl punctuation.section.brackets.end.hcl
 #                  ^ source.hcl keyword.operator.accessor.hcl
 #                   ^^^^^^^^^^ source.hcl variable.other.member.hcl
-#                             ^ source.hcl
+#                             ^ source.hcl punctuation.section.brackets.begin.hcl
 #                              ^ source.hcl constant.numeric.integer.hcl
-#                               ^ source.hcl
+#                               ^ source.hcl punctuation.section.brackets.end.hcl
 #                                ^ source.hcl keyword.operator.accessor.hcl
 #                                 ^^^^ source.hcl variable.other.member.hcl
+>
+>attr = var.list.*.id
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl keyword.operator.accessor.hcl
+#                ^ source.hcl keyword.operator.splat.hcl
+#                 ^ source.hcl keyword.operator.accessor.hcl
+#                  ^^ source.hcl variable.other.member.hcl
+>
+>attr = "${var.list.*.id}"
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#          ^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#             ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#              ^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
+#                  ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                   ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.splat.hcl
+#                    ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                     ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
+#                       ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                        ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>attr = "${var.list.*}"
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#          ^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.hcl
+#             ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#              ^^^^ source.hcl string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
+#                  ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                   ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.operator.splat.hcl
+#                    ^ source.hcl string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                     ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>attr = var.list.*
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl keyword.operator.accessor.hcl
+#                ^ source.hcl keyword.operator.splat.hcl
 >
