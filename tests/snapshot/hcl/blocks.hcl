@@ -15,3 +15,9 @@ post-processor "foo" {}
 
 // dash is not expected at the beginning
 -test "foo" {}
+
+// digits are not expected at the beginning
+42test "foo" {}
+
+// digits are allowed in 2nd+ positions
+test42 "foo" {}
