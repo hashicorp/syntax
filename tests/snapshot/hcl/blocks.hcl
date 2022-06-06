@@ -15,3 +15,7 @@ post-processor "foo" {}
 
 // dash is not expected at the beginning
 -test "foo" {}
+
+// all Unicode word characters are accepted
+žblock "foo" {}
+bžlock "foo" {}
