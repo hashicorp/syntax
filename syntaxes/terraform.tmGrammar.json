@@ -73,7 +73,7 @@
     },
     "block": {
       "name": "meta.block.hcl",
-      "begin": "(\\w+)([\\s\\\"\\-\\w]*)(\\{)",
+      "begin": "([\\w][\\-\\w]*)([\\s\\\"\\-\\w]*)(\\{)",
       "end": "\\}",
       "comment": "This will match Terraform blocks like `resource \"aws_instance\" \"web\" {` or `module {`",
       "beginCaptures": {

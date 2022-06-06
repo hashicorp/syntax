@@ -8,7 +8,7 @@ repository:
   block:
     name: meta.block.hcl
     comment: This will match Terraform blocks like `resource "aws_instance" "web" {` or `module {`
-    begin: (\w+)([\s\"\-\w]*)(\{)
+    begin: ([\w][\-\w]*)([\s\"\-\w]*)(\{)
     beginCaptures:
       "1":
         patterns:
