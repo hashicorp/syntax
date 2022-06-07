@@ -1,0 +1,217 @@
+>attr = var.test
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+>attr = var.test42
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^^^ source.hcl variable.other.member.hcl
+>attr = var.test42test
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^^^^^^^ source.hcl variable.other.member.hcl
+>attr = var.test-test
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^^^^^^ source.hcl variable.other.member.hcl
+>attr = var.test_test
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^^^^^^ source.hcl variable.other.member.hcl
+>attr = traversal
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^^^^^^^^ source.hcl
+>
+># numeric index
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>attr = var.test[42]
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl punctuation.section.brackets.begin.hcl
+#                ^^ source.hcl constant.numeric.integer.hcl
+#                  ^ source.hcl punctuation.section.brackets.end.hcl
+>attr = var.test[42][32]
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl punctuation.section.brackets.begin.hcl
+#                ^^ source.hcl constant.numeric.integer.hcl
+#                  ^ source.hcl punctuation.section.brackets.end.hcl
+#                   ^ source.hcl punctuation.section.brackets.begin.hcl
+#                    ^^ source.hcl constant.numeric.integer.hcl
+#                      ^ source.hcl punctuation.section.brackets.end.hcl
+>attr = var.test[42].test
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl punctuation.section.brackets.begin.hcl
+#                ^^ source.hcl constant.numeric.integer.hcl
+#                  ^ source.hcl punctuation.section.brackets.end.hcl
+#                   ^ source.hcl keyword.operator.accessor.hcl
+#                    ^^^^ source.hcl variable.other.member.hcl
+>
+># string index
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>attr = var.test["key"]
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl punctuation.section.brackets.begin.hcl
+#                ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^ source.hcl string.quoted.double.hcl
+#                    ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                     ^ source.hcl punctuation.section.brackets.end.hcl
+>attr = var.test["key"]["two"]
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl punctuation.section.brackets.begin.hcl
+#                ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^ source.hcl string.quoted.double.hcl
+#                    ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                     ^ source.hcl punctuation.section.brackets.end.hcl
+#                      ^ source.hcl punctuation.section.brackets.begin.hcl
+#                       ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                        ^^^ source.hcl string.quoted.double.hcl
+#                           ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                            ^ source.hcl punctuation.section.brackets.end.hcl
+>attr = var.test["key"].test
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl punctuation.section.brackets.begin.hcl
+#                ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^ source.hcl string.quoted.double.hcl
+#                    ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                     ^ source.hcl punctuation.section.brackets.end.hcl
+#                      ^ source.hcl keyword.operator.accessor.hcl
+#                       ^^^^ source.hcl variable.other.member.hcl
+>
+># legacy numeric index
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>attr = var.test.42
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl keyword.operator.accessor.hcl
+#                ^^ source.hcl constant.numeric.integer.hcl
+>attr = var.test.42.32
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl keyword.operator.accessor.hcl
+#                ^^ source.hcl constant.numeric.integer.hcl
+#                  ^ source.hcl keyword.operator.accessor.hcl
+#                   ^^ source.hcl constant.numeric.integer.hcl
+>attr = var.test.42.test
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl keyword.operator.accessor.hcl
+#                ^^ source.hcl constant.numeric.integer.hcl
+#                  ^ source.hcl keyword.operator.accessor.hcl
+#                   ^^^^ source.hcl variable.other.member.hcl
+>
+># incomplete expression with trailing multiplication operator
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>attr = var.list*
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^^^ source.hcl variable.other.member.hcl
+#               ^ source.hcl keyword.operator.arithmetic.hcl
+>
+># ensure this is multiplication and not splat
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>attr = var.li*st
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^ source.hcl variable.other.member.hcl
+#             ^ source.hcl keyword.operator.arithmetic.hcl
+#              ^^^ source.hcl
+>
+># invalid attribute accessor
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>attr = var.42test
+#^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl variable.declaration.hcl
+#     ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl variable.declaration.hcl
+#       ^^^ source.hcl
+#          ^ source.hcl keyword.operator.accessor.hcl
+#           ^^ source.hcl constant.numeric.integer.hcl
+#             ^^^^^ source.hcl
+>
