@@ -56,13 +56,13 @@ These files are grouped by HashiCorp product inside folders named for the produc
 
 Snapshot test example files are HashiCorp product files without any `vscode-tmgrammar-test` token lines. Each example file is exactly how you would see it used in production. This ensures scope, inheritance, and resolution of tokens happen exactly as they would on a user's machine.
 
-The companion `snap` file is named the same as the example file with the `.snap` extension, and is the tmGrammar represenation of all resolved tokens. This file is commited alongside the example file. If anything changes with regards to how the tokens are resolved, the snapshot test will fail.
+The companion `snap` file is named the same as the example file with the `.snap` extension, and is the tmGrammar representation of all resolved tokens. This file is committed alongside the example file. If anything changes with regards to how the tokens are resolved for these example files, the snapshot test will fail.
 
 > Note: If modifying an existing snapshot test, run `npm run test:snap:update` to update the snapshot file. This will update the snapshot file with the new modified grammar. Be sure to do this after you've tested using `npm run test:snap` and are sure that the modified grammar is correct, otherwise you may get false positives.
 
 For example:
 
-```bash
+```hcl
 #tests/snapshot/terraform/blocks.tf
 resource "aws_instance" "web" {
   ami           = "ami-a1b2c3d4"
