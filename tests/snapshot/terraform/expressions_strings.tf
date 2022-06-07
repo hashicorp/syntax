@@ -40,3 +40,9 @@ attr = <<EOT
 server ${ip}
 %{ endfor ~}
 EOT
+
+attr = "abc${var.name.multi.step.addr}"
+
+attr = "abc${var.name.test.0.foo}"
+
+attr = "abc${var.name.test.0}"
