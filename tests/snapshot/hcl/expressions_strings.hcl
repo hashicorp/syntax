@@ -1,10 +1,10 @@
-"hello"
+attr = "hello"
 
-"\n\r\t\"\\"
+attr = "\n\r\t\"\\"
 
-"$${}"
+attr = "$${}"
 
-"%%{}"
+attr = "%%{}"
 
 thing = <<EOT
 hello
@@ -25,20 +25,24 @@ block {
   EOT
 }
 
-"Hello, ${var.name}!"
+attr = "Hello, ${var.name}!"
 
-"Hello, %{ if var.name != "" }${var.name}%{ else }unnamed%{ endif }!"
+attr = "Hello, %{ if var.name != "" }${var.name}%{ else }unnamed%{ endif }!"
 
-<<EOT
+attr = <<EOT
 %{ for ip in aws_instance.example.*.private_ip }
 server ${ip}
 %{ endfor }
 EOT
 
-<<EOT
+attr = <<EOT
 %{ for ip in aws_instance.example.*.private_ip ~}
 server ${ip}
 %{ endfor ~}
 EOT
 
+attr = "abc${var.name.multi.step.addr}"
 
+attr = "abc${var.name.test.0.foo}"
+
+attr = "abc${var.name.test.0}"

@@ -1,0 +1,217 @@
+>attr = var.test
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+>attr = var.test42
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^^^ source.hcl.terraform variable.other.member.hcl
+>attr = var.test42test
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^^^^^^^ source.hcl.terraform variable.other.member.hcl
+>attr = var.test-test
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^^^^^^ source.hcl.terraform variable.other.member.hcl
+>attr = var.test_test
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^^^^^^ source.hcl.terraform variable.other.member.hcl
+>attr = traversal
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^^^^^^^^ source.hcl.terraform
+>
+># numeric index
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
+>attr = var.test[42]
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#                ^^ source.hcl.terraform constant.numeric.integer.hcl
+#                  ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+>attr = var.test[42][32]
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#                ^^ source.hcl.terraform constant.numeric.integer.hcl
+#                  ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+#                   ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#                    ^^ source.hcl.terraform constant.numeric.integer.hcl
+#                      ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+>attr = var.test[42].test
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#                ^^ source.hcl.terraform constant.numeric.integer.hcl
+#                  ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+#                   ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                    ^^^^ source.hcl.terraform variable.other.member.hcl
+>
+># string index
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
+>attr = var.test["key"]
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#                ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^ source.hcl.terraform string.quoted.double.hcl
+#                    ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                     ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+>attr = var.test["key"]["two"]
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#                ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^ source.hcl.terraform string.quoted.double.hcl
+#                    ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                     ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+#                      ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#                       ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                        ^^^ source.hcl.terraform string.quoted.double.hcl
+#                           ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                            ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+>attr = var.test["key"].test
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#                ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                 ^^^ source.hcl.terraform string.quoted.double.hcl
+#                    ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                     ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+#                      ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                       ^^^^ source.hcl.terraform variable.other.member.hcl
+>
+># legacy numeric index
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
+>attr = var.test.42
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                ^^ source.hcl.terraform constant.numeric.integer.hcl
+>attr = var.test.42.32
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                ^^ source.hcl.terraform constant.numeric.integer.hcl
+#                  ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                   ^^ source.hcl.terraform constant.numeric.integer.hcl
+>attr = var.test.42.test
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                ^^ source.hcl.terraform constant.numeric.integer.hcl
+#                  ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                   ^^^^ source.hcl.terraform variable.other.member.hcl
+>
+># incomplete expression with trailing multiplication operator
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
+>attr = var.list*
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform keyword.operator.arithmetic.hcl
+>
+># ensure this is multiplication and not splat
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
+>attr = var.li*st
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^ source.hcl.terraform variable.other.member.hcl
+#             ^ source.hcl.terraform keyword.operator.arithmetic.hcl
+#              ^^^ source.hcl.terraform
+>
+># invalid attribute accessor
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
+>attr = var.42test
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^ source.hcl.terraform constant.numeric.integer.hcl
+#             ^^^^^ source.hcl.terraform
+>

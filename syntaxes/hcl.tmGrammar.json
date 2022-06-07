@@ -21,9 +21,9 @@
   ],
   "repository": {
     "attribute_access": {
-      "begin": "\\.",
-      "end": "[[:alpha:]][[:alnum:]_-]*(\\[[0-9\\*]+\\])?",
-      "comment": "Matches a variable with an optional splat or index ([*]/[0])",
+      "begin": "\\.(?!\\*)",
+      "end": "[[:alpha:]][\\w-]*|\\d*",
+      "comment": "Matches traversal attribute access such as .attr",
       "beginCaptures": {
         "0": {
           "name": "keyword.operator.accessor.hcl"
@@ -33,19 +33,14 @@
         "0": {
           "patterns": [
             {
-              "match": "\\b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",
-              "comment": "Attribute name including - and _",
+              "match": "(?!null|false|true)[[:alpha:]][\\w-]*",
+              "comment": "Attribute name",
               "name": "variable.other.member.hcl"
             },
             {
               "match": "\\d+",
               "comment": "Optional attribute index",
               "name": "constant.numeric.integer.hcl"
-            },
-            {
-              "match": "\\*",
-              "comment": "Optional attribute-only splat",
-              "name": "keyword.operator.splat.hcl"
             }
           ]
         }
@@ -67,6 +62,21 @@
         },
         "4": {
           "name": "keyword.operator.assignment.hcl"
+        }
+      }
+    },
+    "attribute_splat": {
+      "begin": "\\.",
+      "end": "\\*",
+      "comment": "Legacy attribute-only splat",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.operator.accessor.hcl"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "keyword.operator.splat.hcl"
         }
       }
     },
@@ -131,7 +141,7 @@
     },
     "brackets": {
       "begin": "\\[",
-      "end": "(\\*?)\\]",
+      "end": "\\]",
       "beginCaptures": {
         "0": {
           "name": "punctuation.section.brackets.begin.hcl"
@@ -140,12 +150,14 @@
       "endCaptures": {
         "0": {
           "name": "punctuation.section.brackets.end.hcl"
-        },
-        "1": {
-          "name": "keyword.operator.splat.hcl"
         }
       },
       "patterns": [
+        {
+          "name": "keyword.operator.splat.hcl",
+          "match": "\\*",
+          "comment": "Splat operator"
+        },
         {
           "include": "#comma"
         },
@@ -222,6 +234,9 @@
         },
         {
           "include": "#attribute_access"
+        },
+        {
+          "include": "#attribute_splat"
         },
         {
           "include": "#functions"
@@ -573,6 +588,9 @@
           "patterns": [
             {
               "include": "#attribute_access"
+            },
+            {
+              "include": "#attribute_splat"
             }
           ]
         },
