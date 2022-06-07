@@ -1,26 +1,42 @@
->"hello"
-#^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
-# ^^^^^ source.hcl.terraform string.quoted.double.hcl
-#      ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+>attr = "hello"
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^^^^^ source.hcl.terraform string.quoted.double.hcl
+#             ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >
->"\n\r\t\"\\"
-#^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
-# ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
-#   ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
-#     ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
-#       ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
-#         ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
-#           ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+>attr = "\n\r\t\"\\"
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
+#          ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
+#            ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
+#              ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
+#                ^^ source.hcl.terraform string.quoted.double.hcl constant.character.escape.hcl
+#                  ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >
->"$${}"
-#^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
-# ^^^^ source.hcl.terraform string.quoted.double.hcl
-#     ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+>attr = "$${}"
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^^^^ source.hcl.terraform string.quoted.double.hcl
+#            ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >
->"%%{}"
-#^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
-# ^^^^ source.hcl.terraform string.quoted.double.hcl
-#     ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+>attr = "%%{}"
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^^^^ source.hcl.terraform string.quoted.double.hcl
+#            ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >
 >thing = <<EOT
 #^^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
@@ -78,61 +94,73 @@
 >}
 #^ source.hcl.terraform meta.block.hcl punctuation.section.block.end.hcl
 >
->"Hello, ${var.name}${var.name}!"
-#^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
-# ^^^^^^^ source.hcl.terraform string.quoted.double.hcl
-#        ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
-#          ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.terraform
-#             ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
-#              ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
-#                  ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
-#                   ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+>attr = "Hello, ${var.name}${var.name}!"
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^^^^^^^ source.hcl.terraform string.quoted.double.hcl
+#               ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                 ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.terraform
+#                    ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                     ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
+#                         ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                          ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                            ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.terraform
+#                               ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                                ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
+#                                    ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                                     ^ source.hcl.terraform string.quoted.double.hcl
+#                                      ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+>
+>attr = "Hello, %{ if var.name != "" }${var.name}%{ else }unnamed%{ endif }!"
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^^^^^^^ source.hcl.terraform string.quoted.double.hcl
+#               ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                 ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                  ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
+#                    ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
 #                     ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.terraform
 #                        ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
 #                         ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
-#                             ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
-#                              ^ source.hcl.terraform string.quoted.double.hcl
-#                               ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                             ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                              ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.hcl
+#                                ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                                 ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                                  ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                   ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                                    ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                                     ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                                       ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.terraform
+#                                          ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
+#                                           ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
+#                                               ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                                                ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                                                  ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                                                   ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
+#                                                       ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                                                        ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                                                         ^^^^^^^ source.hcl.terraform string.quoted.double.hcl
+#                                                                ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
+#                                                                  ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                                                                   ^^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
+#                                                                        ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
+#                                                                         ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
+#                                                                          ^ source.hcl.terraform string.quoted.double.hcl
+#                                                                           ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
 >
->"Hello, %{ if var.name != "" }${var.name}%{ else }unnamed%{ endif }!"
-#^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
-# ^^^^^^^ source.hcl.terraform string.quoted.double.hcl
-#        ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
-#          ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#           ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
-#             ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#              ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.terraform
-#                 ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
-#                  ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
-#                      ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#                       ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.hcl
-#                         ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#                          ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
-#                           ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
-#                            ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#                             ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
-#                              ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
-#                                ^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.readwrite.terraform
-#                                   ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.operator.accessor.hcl
-#                                    ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl variable.other.member.hcl
-#                                        ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
-#                                         ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
-#                                           ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#                                            ^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
-#                                                ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#                                                 ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
-#                                                  ^^^^^^^ source.hcl.terraform string.quoted.double.hcl
-#                                                         ^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
-#                                                           ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#                                                            ^^^^^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.control.hcl
-#                                                                 ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl
-#                                                                  ^ source.hcl.terraform string.quoted.double.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
-#                                                                   ^ source.hcl.terraform string.quoted.double.hcl
-#                                                                    ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.end.hcl
->
-><<EOT
-#^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
-#  ^^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>attr = <<EOT
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
+#         ^^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
 >%{ for ip in aws_instance.example.*.private_ip }
 #^^ source.hcl.terraform string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
 #  ^ source.hcl.terraform string.unquoted.heredoc.hcl meta.interpolation.hcl
@@ -164,9 +192,13 @@
 >EOT
 #^^^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
 >
-><<EOT
-#^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
-#  ^^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
+>attr = <<EOT
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.operator.heredoc.hcl
+#         ^^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
 >%{ for ip in aws_instance.example.*.private_ip ~}
 #^^ source.hcl.terraform string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.begin.hcl
 #  ^ source.hcl.terraform string.unquoted.heredoc.hcl meta.interpolation.hcl
@@ -197,6 +229,4 @@
 #           ^ source.hcl.terraform string.unquoted.heredoc.hcl meta.interpolation.hcl keyword.other.interpolation.end.hcl
 >EOT
 #^^^^ source.hcl.terraform string.unquoted.heredoc.hcl keyword.control.heredoc.hcl
->
->
 >

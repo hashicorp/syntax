@@ -1,44 +1,56 @@
->[for o in var.list : o.id]
-#^ source.hcl.terraform punctuation.section.brackets.begin.hcl
-# ^^^ source.hcl.terraform keyword.control.hcl
-#    ^ source.hcl.terraform
-#     ^ source.hcl.terraform variable.other.readwrite.hcl
-#      ^ source.hcl.terraform
-#       ^^ source.hcl.terraform keyword.operator.word.hcl
-#         ^ source.hcl.terraform
-#          ^^^ source.hcl.terraform variable.other.readwrite.terraform
-#             ^ source.hcl.terraform keyword.operator.accessor.hcl
-#              ^^^^ source.hcl.terraform variable.other.member.hcl
-#                  ^ source.hcl.terraform
-#                   ^ source.hcl.terraform keyword.operator.hcl
-#                    ^ source.hcl.terraform
-#                     ^ source.hcl.terraform variable.other.readwrite.hcl
-#                      ^ source.hcl.terraform keyword.operator.accessor.hcl
-#                       ^^ source.hcl.terraform variable.other.member.hcl
-#                         ^ source.hcl.terraform punctuation.section.brackets.end.hcl
+>attr = [for o in var.list : o.id]
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^ source.hcl.terraform punctuation.section.brackets.begin.hcl
+#        ^^^ source.hcl.terraform keyword.control.hcl
+#           ^ source.hcl.terraform
+#            ^ source.hcl.terraform variable.other.readwrite.hcl
+#             ^ source.hcl.terraform
+#              ^^ source.hcl.terraform keyword.operator.word.hcl
+#                ^ source.hcl.terraform
+#                 ^^^ source.hcl.terraform variable.other.readwrite.terraform
+#                    ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                     ^^^^ source.hcl.terraform variable.other.member.hcl
+#                         ^ source.hcl.terraform
+#                          ^ source.hcl.terraform keyword.operator.hcl
+#                           ^ source.hcl.terraform
+#                            ^ source.hcl.terraform variable.other.readwrite.hcl
+#                             ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                              ^^ source.hcl.terraform variable.other.member.hcl
+#                                ^ source.hcl.terraform punctuation.section.brackets.end.hcl
 >
->var.list[*].id
-#^^^ source.hcl.terraform variable.other.readwrite.terraform
-#   ^ source.hcl.terraform keyword.operator.accessor.hcl
-#    ^^^^ source.hcl.terraform variable.other.member.hcl
-#        ^ source.hcl.terraform
-#         ^ source.hcl.terraform keyword.operator.splat.hcl
-#          ^ source.hcl.terraform
-#           ^ source.hcl.terraform keyword.operator.accessor.hcl
-#            ^^ source.hcl.terraform variable.other.member.hcl
+>attr = var.list[*].id
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform variable.other.readwrite.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform
+#                ^ source.hcl.terraform keyword.operator.splat.hcl
+#                 ^ source.hcl.terraform
+#                  ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                   ^^ source.hcl.terraform variable.other.member.hcl
 >
->var.list[*].interfaces[0].name
-#^^^ source.hcl.terraform variable.other.readwrite.terraform
-#   ^ source.hcl.terraform keyword.operator.accessor.hcl
-#    ^^^^ source.hcl.terraform variable.other.member.hcl
-#        ^ source.hcl.terraform
-#         ^ source.hcl.terraform keyword.operator.splat.hcl
-#          ^ source.hcl.terraform
-#           ^ source.hcl.terraform keyword.operator.accessor.hcl
-#            ^^^^^^^^^^ source.hcl.terraform variable.other.member.hcl
-#                      ^ source.hcl.terraform
-#                       ^ source.hcl.terraform constant.numeric.integer.hcl
-#                        ^ source.hcl.terraform
-#                         ^ source.hcl.terraform keyword.operator.accessor.hcl
-#                          ^^^^ source.hcl.terraform variable.other.member.hcl
+>attr = var.list[*].interfaces[0].name
+#^^^^ source.hcl.terraform variable.declaration.hcl variable.other.readwrite.hcl
+#    ^ source.hcl.terraform variable.declaration.hcl
+#     ^ source.hcl.terraform variable.declaration.hcl keyword.operator.assignment.hcl
+#      ^ source.hcl.terraform variable.declaration.hcl
+#       ^^^ source.hcl.terraform variable.other.readwrite.terraform
+#          ^ source.hcl.terraform keyword.operator.accessor.hcl
+#           ^^^^ source.hcl.terraform variable.other.member.hcl
+#               ^ source.hcl.terraform
+#                ^ source.hcl.terraform keyword.operator.splat.hcl
+#                 ^ source.hcl.terraform
+#                  ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                   ^^^^^^^^^^ source.hcl.terraform variable.other.member.hcl
+#                             ^ source.hcl.terraform
+#                              ^ source.hcl.terraform constant.numeric.integer.hcl
+#                               ^ source.hcl.terraform
+#                                ^ source.hcl.terraform keyword.operator.accessor.hcl
+#                                 ^^^^ source.hcl.terraform variable.other.member.hcl
 >
