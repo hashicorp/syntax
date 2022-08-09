@@ -1,0 +1,33 @@
+scopeName: source.hcl.sentinel
+name: HashiCorp Sentinel Configuration
+uuid: aa94bcc5-d57d-4d1f-a906-b8b8690e8c00
+fileTypes:
+  - hcl
+repository:
+  block:
+    name: meta.block.hcl
+    comment: This will match HCL blocks like `thing1 "one" "two" {` or `thing2 {`
+    # Sentinel attributes can include a forward slash in the name
+    begin: ([\w][\-\w]*)([\s\"\-\w\/]*)(\{)
+    beginCaptures:
+      "1":
+        patterns:
+          - match: \b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\b
+            comment: Block type
+            name: entity.name.type.hcl
+      "2":
+        patterns:
+          - name: variable.other.enummember.hcl
+            comment: Block label
+            match: '[\"\-\w\/]+'
+      "3":
+        name: punctuation.section.block.begin.hcl
+    end: \}
+    endCaptures:
+      "0":
+        name: punctuation.section.block.end.hcl
+    patterns:
+      - include: "#comments"
+      - include: "#attribute_definition"
+      - include: "#block"
+      - include: "#expressions"

@@ -1,0 +1,72 @@
+>param "day" {
+#^^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#     ^ source.hcl.sentinel meta.block.hcl
+#      ^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#           ^ source.hcl.sentinel meta.block.hcl
+#            ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  value = "monday"
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#          ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#           ^^^^^^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl
+#                 ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>
+>param "hour" {
+#^^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#     ^ source.hcl.sentinel meta.block.hcl
+#      ^^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#            ^ source.hcl.sentinel meta.block.hcl
+#             ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  value = 7
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#          ^ source.hcl.sentinel meta.block.hcl constant.numeric.integer.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>
+>test {
+#^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#    ^ source.hcl.sentinel meta.block.hcl
+#     ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  rules = {
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>    main          = false
+#^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#    ^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#        ^^^^^^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#                  ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                   ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#                    ^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl constant.language.hcl
+>    is_open_hours = false
+#^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#    ^^^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#                 ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#                  ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                   ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#                    ^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl constant.language.hcl
+>    is_weekday    = true
+#^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#    ^^^^^^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#              ^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#                  ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                   ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#                    ^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl constant.language.hcl
+>  }
+#^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#  ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>

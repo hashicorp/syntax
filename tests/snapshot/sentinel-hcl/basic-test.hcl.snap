@@ -1,0 +1,93 @@
+>mock "tfplan/v2" {
+#^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#    ^ source.hcl.sentinel meta.block.hcl
+#     ^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#                ^ source.hcl.sentinel meta.block.hcl
+#                 ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  module {
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^^ source.hcl.sentinel meta.block.hcl meta.block.hcl entity.name.type.hcl
+#        ^ source.hcl.sentinel meta.block.hcl meta.block.hcl
+#         ^ source.hcl.sentinel meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>    source = "../../testdata/mock-tfplan-success.sentinel"
+#^^^^ source.hcl.sentinel meta.block.hcl meta.block.hcl
+#    ^^^^^^ source.hcl.sentinel meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl.sentinel meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl.sentinel meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl.sentinel meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                                                         ^ source.hcl.sentinel meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  }
+#^^ source.hcl.sentinel meta.block.hcl meta.block.hcl
+#  ^ source.hcl.sentinel meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>
+>mock "time" {
+#^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#    ^ source.hcl.sentinel meta.block.hcl
+#     ^^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#           ^ source.hcl.sentinel meta.block.hcl
+#            ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  data = {
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#      ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#       ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#         ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>    now = {
+#^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#    ^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#       ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#        ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>      hour = 9
+#^^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#      ^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#           ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#            ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#             ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl constant.numeric.integer.hcl
+>      minute = 42
+#^^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#      ^^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#            ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#             ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#               ^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl constant.numeric.integer.hcl
+>    }
+#^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#    ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>  }
+#^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#  ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>
+>test {
+#^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#    ^ source.hcl.sentinel meta.block.hcl
+#     ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  rules = {
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>    main = true
+#^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#    ^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#        ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#         ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#           ^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl constant.language.hcl
+>  }
+#^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#  ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>

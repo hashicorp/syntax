@@ -1,0 +1,117 @@
+>module "something" {
+#^^^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl.sentinel meta.block.hcl
+#       ^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#                  ^ source.hcl.sentinel meta.block.hcl
+#                   ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  source = "./modules/something.sentinel"
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#          ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl
+#                                        ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>
+>policy "policy1" {
+#^^^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl.sentinel meta.block.hcl
+#       ^^^^^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#                ^ source.hcl.sentinel meta.block.hcl
+#                 ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  source = "./policies/policy1/policy1.sentinel"
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#          ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl
+#                                               ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  enforcement_level = "hard-mandatory"
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^^^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#                   ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#                    ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                     ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#                      ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                       ^^^^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl
+#                                     ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>
+>policy "policy2" {
+#^^^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl.sentinel meta.block.hcl
+#       ^^^^^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#                ^ source.hcl.sentinel meta.block.hcl
+#                 ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  source = "./policies/policy2/policy2.sentinel"
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#          ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl
+#                                               ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>
+>global "time" {
+#^^^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl.sentinel meta.block.hcl
+#       ^^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#             ^ source.hcl.sentinel meta.block.hcl
+#              ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  value = {
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>    now = {
+#^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#    ^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#       ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#        ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>      day = 31
+#^^^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#      ^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#         ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#          ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#           ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#            ^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl constant.numeric.integer.hcl
+>    }
+#^^^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl
+#    ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>  }
+#^^ source.hcl.sentinel meta.block.hcl meta.braces.hcl
+#  ^ source.hcl.sentinel meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>
+>param "foo" {
+#^^^^^ source.hcl.sentinel meta.block.hcl entity.name.type.hcl
+#     ^ source.hcl.sentinel meta.block.hcl
+#      ^^^^^ source.hcl.sentinel meta.block.hcl variable.other.enummember.hcl
+#           ^ source.hcl.sentinel meta.block.hcl
+#            ^ source.hcl.sentinel meta.block.hcl punctuation.section.block.begin.hcl
+>  value = "bar"
+#^^ source.hcl.sentinel meta.block.hcl
+#  ^^^^^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#       ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#        ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl.sentinel meta.block.hcl variable.declaration.hcl
+#          ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#           ^^^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl
+#              ^ source.hcl.sentinel meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>}
+#^ source.hcl.sentinel meta.block.hcl punctuation.section.block.end.hcl
+>

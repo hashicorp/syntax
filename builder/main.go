@@ -85,7 +85,7 @@ func (c *BuildCommand) Run(args []string) int {
 
 	var result *multierror.Error
 	// For each product defined, read the yml and merge into the main Viper instance
-	products := []string{"hcl", "terraform"}
+	products := []string{"hcl", "terraform", "sentinel-hcl"}
 	for _, product := range products {
 		c.Ui.Info(fmt.Sprintf("Evaluating %s", product))
 
