@@ -58,7 +58,7 @@ repository:
         name: punctuation.definition.comment.hcl
     end: \*/
   attribute_definition:
-    match: (\()?((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)(\))?\s*(\=(?!\=|\>))\s*
+    match: (\()?(\b(?!null\s|false\s|true\s)[[:alpha:]][[:alnum:]_-]*)(\))?\s*(\=(?!\=|\>))\s*
     comment: Identifier "=" with optional parens
     name: variable.declaration.hcl
     captures:
@@ -149,7 +149,7 @@ repository:
       - include: "#string_interpolation"
       - include: "#char_escapes"
   string_interpolation:
-    begin: '(?<![%$])([%$]{)'
+    begin: "(?<![%$])([%$]{)"
     comment: String interpolation
     name: meta.interpolation.hcl
     beginCaptures:
