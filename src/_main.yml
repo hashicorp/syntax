@@ -58,7 +58,7 @@ repository:
         name: punctuation.definition.comment.hcl
     end: \*/
   attribute_definition:
-    match: (\()?(\b(?!null\s|false\s|true\s)[[:alpha:]][[:alnum:]_-]*)(\))?\s*(\=(?!\=|\>))\s*
+    match: (\()?(\b(?!null\b|false\b|true\b)[[:alpha:]][[:alnum:]_-]*)(\))?\s*(\=(?!\=|\>))\s*
     comment: Identifier "=" with optional parens
     name: variable.declaration.hcl
     captures:

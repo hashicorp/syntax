@@ -59,6 +59,40 @@
 #                ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                 ^^^ source.hcl meta.block.hcl string.quoted.double.hcl
 #                    ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  nullable=true
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#          ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#           ^^^^ source.hcl meta.block.hcl constant.language.hcl
+>  falseyy=""
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#         ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#          ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#           ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  trueyy=""
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#        ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#         ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#          ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  null=true
+#^^ source.hcl meta.block.hcl
+#  ^^^^ source.hcl meta.block.hcl constant.language.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^^^^ source.hcl meta.block.hcl constant.language.hcl
+>  false=""
+#^^ source.hcl meta.block.hcl
+#  ^^^^^ source.hcl meta.block.hcl constant.language.hcl
+#       ^ source.hcl meta.block.hcl
+#        ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#         ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  true=""
+#^^ source.hcl meta.block.hcl
+#  ^^^^ source.hcl meta.block.hcl constant.language.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#        ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 >}
 #^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
 >

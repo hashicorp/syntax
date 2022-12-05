@@ -6,4 +6,10 @@ variable "foo" {
   null        = "true"
   false       = "true"
   true        = "bar"
+  nullable=true
+  falseyy=""
+  trueyy=""
+  null=true
+  false=""
+  true=""
 }
