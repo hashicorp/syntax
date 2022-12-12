@@ -3,7 +3,7 @@ module github.com/hashicorp/syntax/builder
 go 1.19
 
 require (
-	github.com/hashicorp/go-multierror v1.0.0
+	github.com/hashicorp/go-multierror v1.1.1
 	github.com/mitchellh/cli v1.1.5
 	github.com/spf13/viper v1.14.0
 )
