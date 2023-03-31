@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 scopeName: source.hcl.terraform
 name: HashiCorp Terraform
 uuid: d9db10d3-db70-48aa-8d44-f96ccbaa29f3

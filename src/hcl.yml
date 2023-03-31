@@ -1,3 +1,6 @@
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
 scopeName: source.hcl
 name: HashiCorp HCL
 uuid: a14187be-98d8-42c1-ac89-bb5eaccf911e
