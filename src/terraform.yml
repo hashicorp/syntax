@@ -15,7 +15,7 @@ repository:
     beginCaptures:
       "1":
         patterns:
-          - match: \bdata|locals|module|output|provider|resource|terraform|variable\b
+          - match: \bdata|check|import|locals|module|output|provider|resource|terraform|variable\b
             comment: Known block type
             name: entity.name.type.terraform
           - match: \b(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\b
