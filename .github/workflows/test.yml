@@ -14,7 +14,7 @@ jobs:
     timeout-minutes: 3
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # https://github.com/actions/checkout/releases/tag/v4.1.0
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
       - name: Install copywrite
         uses: hashicorp/setup-copywrite@v1.1.2
       - name: Validate Header Compliance
@@ -23,8 +23,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@8ade135a41bc03ea155e62e844d188df1ea18608 # https://github.com/actions/checkout/releases/tag/v4.1.0
-    - uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # https://github.com/actions/setup-node/releases/tag/v3.8.1
+    - uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+    - uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3.8.1
       with:
         node-version-file: '.nvmrc'
     - name: Install modules
