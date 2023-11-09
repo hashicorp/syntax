@@ -56,6 +56,7 @@
   "scripts": {
     "check": "prettier --check syntaxes/*.json",
     "format": "prettier --write syntaxes/*.json",
+    "build": "go run ./cmd/builder build",
     "test": "npm run test:snap",
     "test:snap": "npm run test:snap:hcl && npm run test:snap:sentinel && npm run test:snap:terraform",
     "test:snap:update": "npm run test:snap:hcl -- -u && npm run test:snap:sentinel -- -u && npm run test:snap:terraform -- -u",
