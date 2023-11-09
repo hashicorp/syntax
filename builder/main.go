@@ -81,9 +81,12 @@ func (c *BuildCommand) Run(args []string) int {
 		return 1
 	}
 
+	syntaxSourcePath := filepath.Join(wd, "../src")
+	syntaxDeployPath := filepath.Join(wd, "../syntaxes")
+
 	// The _main.yml file is where all rules in the Patterns and the Repository are defined
 	// Each product file provides specific overrides for rules defined in _main.yml
-	mainFile := filepath.Join(wd, "../src/_main.yml")
+	mainFile := filepath.Join(syntaxSourcePath, "_main.yml")
 
 	var result *multierror.Error
 	// For each product defined, read the yml and merge into the main Viper instance
@@ -101,7 +104,7 @@ func (c *BuildCommand) Run(args []string) int {
 			return 1
 		}
 
-		productFile := filepath.Join(wd, fmt.Sprintf("../src/%s.yml", product))
+		productFile := filepath.Join(syntaxSourcePath, fmt.Sprintf("%s.yml", product))
 		c.Ui.Info(fmt.Sprintf("Processing: %s", productFile))
 
 		// Create a product Viper instance that reads each product yml for rules
@@ -130,7 +133,7 @@ func (c *BuildCommand) Run(args []string) int {
 		}
 
 		// Write the struct to JSON. We can modify this to include writing to other formats in the future
-		productGrammarFile := filepath.Join(wd, fmt.Sprintf("../syntaxes/%s.tmGrammar.json", product))
+		productGrammarFile := filepath.Join(syntaxDeployPath, fmt.Sprintf("%s.tmGrammar.json", product))
 		c.Ui.Info(fmt.Sprintf("Writing %s", productGrammarFile))
 		err = writeJSON(config, productGrammarFile)
 		if err != nil {
