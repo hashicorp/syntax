@@ -7,7 +7,6 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"strings"
@@ -164,7 +163,7 @@ func writeJSON(data TextMateGrammar, file string) error {
 		return err
 	}
 
-	err = ioutil.WriteFile(file, out.Bytes(), 0644)
+	err = os.WriteFile(file, out.Bytes(), 0644)
 	if err != nil {
 		return err
 	}
