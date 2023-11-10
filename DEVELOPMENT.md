@@ -4,7 +4,7 @@ We are an open source project on GitHub and would enjoy your contributions! Plea
 
 ### Requirements
 
-- Node >= 16.13.2
+- Node >= 18.x
 - npm >= 8.x
 - Go >= 1.17
 
@@ -27,7 +27,7 @@ npm install
 The following workflow is recommended to work on any of the HashiCorp TextMate grammars in this repo:
 
 1. Add or modify grammar in the `src/_main.yml` or product specific YAML file in like `src/terraform.yml`.
-1. Change directory to `builder` and run `go run main.go build`
+1. Run `npm run build`
 1. Add a new test case file or modify existing test case files inside the `tests/snapshot/<lang>` directory. Make sure to put the new file in the correct folder or it will not be tested.
 1. Run `npm run test:snap:<lang>` until the tests pass.
 

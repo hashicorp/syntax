@@ -5,3 +5,9 @@ updates:
     schedule:
       interval: "daily"
     labels: ["dependencies"]
+  - package-ecosystem: "npm"
+    versioning-strategy: lockfile-only
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels: ["dependencies"]

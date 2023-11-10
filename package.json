@@ -13,15 +13,56 @@
     "url": "https://github.com/hashicorp/syntax/issues"
   },
   "homepage": "https://github.com/hashicorp/syntax#readme",
+  "contributes": {
+    "languages": [
+      {
+        "id": "hcl",
+        "extensions": [
+          ".hcl"
+        ]
+      },
+      {
+        "id": "terraform",
+        "extensions": [
+          ".tf",
+          ".tfvars"
+        ]
+      },
+      {
+        "id": "sentinel",
+        "extensions": [
+          ".sentinel"
+        ]
+      }
+    ],
+    "grammars": [
+      {
+        "language": "hcl",
+        "scopeName": "source.hcl",
+        "path": "syntaxes/hcl.tmGrammar.json"
+      },
+      {
+        "language": "terraform",
+        "scopeName": "source.hcl.terraform",
+        "path": "syntaxes/terraform.tmGrammar.json"
+      },
+      {
+        "language": "sentinel",
+        "scopeName": "source.sentinel",
+        "path": "syntaxes/sentinel.tmGrammar.json"
+      }
+    ]
+  },
   "scripts": {
     "check": "prettier --check syntaxes/*.json",
     "format": "prettier --write syntaxes/*.json",
+    "build": "go run ./cmd/builder build",
     "test": "npm run test:snap",
     "test:snap": "npm run test:snap:hcl && npm run test:snap:sentinel && npm run test:snap:terraform",
     "test:snap:update": "npm run test:snap:hcl -- -u && npm run test:snap:sentinel -- -u && npm run test:snap:terraform -- -u",
-    "test:snap:hcl": "npx vscode-tmgrammar-snap -s source.hcl -g syntaxes/hcl.tmGrammar.json \"tests/snapshot/hcl/*.hcl\"",
-    "test:snap:sentinel": "npx vscode-tmgrammar-snap -s source.sentinel -g syntaxes/sentinel.tmGrammar.json \"tests/snapshot/sentinel/*.sentinel\"",
-    "test:snap:terraform": "npx vscode-tmgrammar-snap -s source.hcl.terraform -g syntaxes/terraform.tmGrammar.json  -g syntaxes/hcl.tmGrammar.json \"tests/snapshot/terraform/*.tf\""
+    "test:snap:hcl": "npx vscode-tmgrammar-snap \"tests/snapshot/hcl/*.hcl\"",
+    "test:snap:sentinel": "npx vscode-tmgrammar-snap \"tests/snapshot/sentinel/*.sentinel\"",
+    "test:snap:terraform": "npx vscode-tmgrammar-snap \"tests/snapshot/terraform/*.tf\""
   },
   "devDependencies": {
     "prettier": "^2.5.1",
