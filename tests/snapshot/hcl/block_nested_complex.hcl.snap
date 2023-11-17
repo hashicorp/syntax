@@ -1,0 +1,119 @@
+>resource "aws_instance" "web" {
+#^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#        ^ source.hcl meta.block.hcl
+#         ^^^^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                       ^ source.hcl meta.block.hcl
+#                        ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                             ^ source.hcl meta.block.hcl
+#                              ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>  // The trailing { can confuse the regex into thinking it's a block
+#^^ source.hcl meta.block.hcl
+#  ^^ source.hcl meta.block.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl comment.line.double-slash.hcl
+>  type = list(object({
+#^^ source.hcl meta.block.hcl
+#  ^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#      ^ source.hcl meta.block.hcl variable.declaration.hcl
+#       ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#        ^ source.hcl meta.block.hcl variable.declaration.hcl
+#         ^^^^ source.hcl meta.block.hcl storage.type.hcl
+#             ^ source.hcl meta.block.hcl punctuation.section.parens.begin.hcl
+#              ^^^^^^ source.hcl meta.block.hcl storage.type.hcl
+#                    ^ source.hcl meta.block.hcl punctuation.section.parens.begin.hcl
+#                     ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>    internal = number
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#    ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#            ^ source.hcl meta.block.hcl meta.braces.hcl
+#             ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl meta.block.hcl meta.braces.hcl
+#               ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl storage.type.hcl
+>    external = number
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#    ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#            ^ source.hcl meta.block.hcl meta.braces.hcl
+#             ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl meta.block.hcl meta.braces.hcl
+#               ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl storage.type.hcl
+>    protocol = string
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#    ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#            ^ source.hcl meta.block.hcl meta.braces.hcl
+#             ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl meta.block.hcl meta.braces.hcl
+#               ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl storage.type.hcl
+>  }))
+#^^ source.hcl meta.block.hcl meta.braces.hcl
+#  ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+#   ^ source.hcl meta.block.hcl punctuation.section.parens.end.hcl
+#    ^ source.hcl meta.block.hcl punctuation.section.parens.end.hcl
+>
+>// The trailing { can confuse the regex into thinking it's a block
+#^^ source.hcl meta.block.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl comment.line.double-slash.hcl
+>  default = [{
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#         ^ source.hcl meta.block.hcl variable.declaration.hcl
+#          ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#           ^ source.hcl meta.block.hcl variable.declaration.hcl
+#            ^ source.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
+#             ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+>      internal = 8300
+#^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#      ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#              ^ source.hcl meta.block.hcl meta.braces.hcl
+#               ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                ^ source.hcl meta.block.hcl meta.braces.hcl
+#                 ^^^^ source.hcl meta.block.hcl meta.braces.hcl constant.numeric.integer.hcl
+>      external = 8300
+#^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#      ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#              ^ source.hcl meta.block.hcl meta.braces.hcl
+#               ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                ^ source.hcl meta.block.hcl meta.braces.hcl
+#                 ^^^^ source.hcl meta.block.hcl meta.braces.hcl constant.numeric.integer.hcl
+>      protocol = "tcp"
+#^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#      ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
+#              ^ source.hcl meta.block.hcl meta.braces.hcl
+#               ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
+#                ^ source.hcl meta.block.hcl meta.braces.hcl
+#                 ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                  ^^^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl
+#                     ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>    }
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#    ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+>  ]
+#^^ source.hcl meta.block.hcl
+#  ^ source.hcl meta.block.hcl punctuation.section.brackets.end.hcl
+>
+>  # This is a nested block and should highlight correctly
+#^^ source.hcl meta.block.hcl
+#  ^ source.hcl meta.block.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl comment.line.number-sign.hcl
+>  nested-resource "aws_instance" "foo" {
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
+#                 ^ source.hcl meta.block.hcl meta.block.hcl
+#                  ^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.other.enummember.hcl
+#                                ^ source.hcl meta.block.hcl meta.block.hcl
+#                                 ^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.other.enummember.hcl
+#                                      ^ source.hcl meta.block.hcl meta.block.hcl
+#                                       ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>    type = "nested"
+#^^^^ source.hcl meta.block.hcl meta.block.hcl
+#    ^^^^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#        ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#         ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#          ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#           ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#            ^^^^^^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl
+#                  ^ source.hcl meta.block.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>  }
+#^^ source.hcl meta.block.hcl meta.block.hcl
+#  ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>

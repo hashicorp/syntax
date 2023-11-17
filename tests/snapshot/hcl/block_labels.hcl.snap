@@ -1,0 +1,244 @@
+>// generic blocks with multiple labels as strings
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>block0 {}
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#        ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>block0-newline {
+#^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>block1 "foo" {}
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#            ^ source.hcl meta.block.hcl
+#             ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#              ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>block1-newline "foo" {
+#^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                    ^ source.hcl meta.block.hcl
+#                     ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>block2 "foo" "bar" {}
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#            ^ source.hcl meta.block.hcl
+#             ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                  ^ source.hcl meta.block.hcl
+#                   ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                    ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>block2-newline "foo" "bar" {
+#^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                    ^ source.hcl meta.block.hcl
+#                     ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                          ^ source.hcl meta.block.hcl
+#                           ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>block3 "foo" "bar" "baz" {}
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#            ^ source.hcl meta.block.hcl
+#             ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                  ^ source.hcl meta.block.hcl
+#                   ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                        ^ source.hcl meta.block.hcl
+#                         ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                          ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>block3-newline "foo" "bar" "baz" {
+#^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                    ^ source.hcl meta.block.hcl
+#                     ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                          ^ source.hcl meta.block.hcl
+#                           ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                ^ source.hcl meta.block.hcl
+#                                 ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>block4 "foo" "bar" "baz" "lorum" {}
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#            ^ source.hcl meta.block.hcl
+#             ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                  ^ source.hcl meta.block.hcl
+#                   ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                        ^ source.hcl meta.block.hcl
+#                         ^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                ^ source.hcl meta.block.hcl
+#                                 ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                                  ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>block4-newline "foo" "bar" "baz" "lorum" {
+#^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                    ^ source.hcl meta.block.hcl
+#                     ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                          ^ source.hcl meta.block.hcl
+#                           ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                ^ source.hcl meta.block.hcl
+#                                 ^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                        ^ source.hcl meta.block.hcl
+#                                         ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>block5 "foo" "bar" "baz" "lorum" "ipsum" {}
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#      ^ source.hcl meta.block.hcl
+#       ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#            ^ source.hcl meta.block.hcl
+#             ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                  ^ source.hcl meta.block.hcl
+#                   ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                        ^ source.hcl meta.block.hcl
+#                         ^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                ^ source.hcl meta.block.hcl
+#                                 ^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                        ^ source.hcl meta.block.hcl
+#                                         ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                                          ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>block5-newline "foo" "bar" "baz" "lorum" "ipsum" {
+#^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#              ^ source.hcl meta.block.hcl
+#               ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                    ^ source.hcl meta.block.hcl
+#                     ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                          ^ source.hcl meta.block.hcl
+#                           ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                ^ source.hcl meta.block.hcl
+#                                 ^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                        ^ source.hcl meta.block.hcl
+#                                         ^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                                ^ source.hcl meta.block.hcl
+#                                                 ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>// generic blocks with indentifier labels
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>blocklabel1 foo bar lorum-ipsum {}
+#^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#           ^ source.hcl meta.block.hcl
+#            ^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#               ^ source.hcl meta.block.hcl
+#                ^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                   ^ source.hcl meta.block.hcl
+#                    ^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                               ^ source.hcl meta.block.hcl
+#                                ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                                 ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>blocklabel1-newline foo bar lorum-ipsum {
+#^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                   ^ source.hcl meta.block.hcl
+#                    ^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                       ^ source.hcl meta.block.hcl
+#                        ^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                           ^ source.hcl meta.block.hcl
+#                            ^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                       ^ source.hcl meta.block.hcl
+#                                        ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>blocklabelmixed "foo" bar "loru" m-ipsum {}
+#^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#               ^ source.hcl meta.block.hcl
+#                ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                     ^ source.hcl meta.block.hcl
+#                      ^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                         ^ source.hcl meta.block.hcl
+#                          ^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                ^ source.hcl meta.block.hcl
+#                                 ^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                        ^ source.hcl meta.block.hcl
+#                                         ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                                          ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>blocklabelmixed-newline "foo" bar "loru" m-ipsum {
+#^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                       ^ source.hcl meta.block.hcl
+#                        ^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                             ^ source.hcl meta.block.hcl
+#                              ^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                 ^ source.hcl meta.block.hcl
+#                                  ^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                        ^ source.hcl meta.block.hcl
+#                                         ^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                                ^ source.hcl meta.block.hcl
+#                                                 ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>// utf8 labels
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>blockutf8 "foož:/ᚠᚢ" {}
+#^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#         ^ source.hcl meta.block.hcl
+#          ^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                    ^ source.hcl meta.block.hcl
+#                     ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                      ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>blockutf8-newline "foož:/ᚠᚢ" {
+#^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                 ^ source.hcl meta.block.hcl
+#                  ^^^^^^^^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                            ^ source.hcl meta.block.hcl
+#                             ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>// edgecases
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>blockempty "" {}
+#^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#          ^ source.hcl meta.block.hcl
+#           ^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#             ^ source.hcl meta.block.hcl
+#              ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#               ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>blockempty-newline "" {
+#^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                  ^ source.hcl meta.block.hcl
+#                   ^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                     ^ source.hcl meta.block.hcl
+#                      ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>block-single-char-indentifier a {}
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                             ^ source.hcl meta.block.hcl
+#                              ^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                               ^ source.hcl meta.block.hcl
+#                                ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                                 ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>block-single-char-indentifier-newline a {
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                                     ^ source.hcl meta.block.hcl
+#                                      ^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                       ^ source.hcl meta.block.hcl
+#                                        ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
