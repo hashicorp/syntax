@@ -207,3 +207,38 @@
 >}
 #^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
 >
+>// edgecases
+#^^ source.hcl comment.line.double-slash.hcl punctuation.definition.comment.hcl
+#  ^^^^^^^^^^ source.hcl comment.line.double-slash.hcl
+>blockempty "" {}
+#^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#          ^ source.hcl meta.block.hcl
+#           ^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#             ^ source.hcl meta.block.hcl
+#              ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#               ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>blockempty-newline "" {
+#^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                  ^ source.hcl meta.block.hcl
+#                   ^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                     ^ source.hcl meta.block.hcl
+#                      ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
+>block-single-char-indentifier a {}
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                             ^ source.hcl meta.block.hcl
+#                              ^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                               ^ source.hcl meta.block.hcl
+#                                ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                                 ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>block-single-char-indentifier-newline a {
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#                                     ^ source.hcl meta.block.hcl
+#                                      ^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#                                       ^ source.hcl meta.block.hcl
+#                                        ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+>}
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>

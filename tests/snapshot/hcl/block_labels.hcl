@@ -36,3 +36,12 @@ blocklabelmixed-newline "foo" bar "loru" m-ipsum {
 blockutf8 "foož:/ᚠᚢ" {}
 blockutf8-newline "foož:/ᚠᚢ" {
 }
+
+// edgecases
+blockempty "" {}
+blockempty-newline "" {
+}
+
+block-single-char-indentifier a {}
+block-single-char-indentifier-newline a {
+}
