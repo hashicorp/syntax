@@ -35,3 +35,8 @@ upper("hello")
 # known
 
 foo("bar")
+
+# provider defined functions
+
+provider::framework::example("hi")
+invalid::namespaced::function("bye")

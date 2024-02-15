@@ -357,3 +357,28 @@
 #        ^ source.hcl.terraform meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #         ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.end.hcl
 >
+># provider defined functions
+#^ source.hcl.terraform comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform comment.line.number-sign.hcl
+>
+>provider::framework::example("hi")
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl.terraform meta.function-call.hcl support.function.provider
+#                            ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                             ^ source.hcl.terraform meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                              ^^ source.hcl.terraform meta.function-call.hcl string.quoted.double.hcl
+#                                ^ source.hcl.terraform meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                 ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.end.hcl
+>invalid::namespaced::function("bye")
+#^^^^^^^ source.hcl.terraform
+#       ^ source.hcl.terraform
+#        ^ source.hcl.terraform
+#         ^^^^^^^^^^ source.hcl.terraform
+#                   ^ source.hcl.terraform
+#                    ^ source.hcl.terraform
+#                     ^^^^^^^^ source.hcl.terraform meta.function-call.hcl
+#                             ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                              ^ source.hcl.terraform meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                               ^^^ source.hcl.terraform meta.function-call.hcl string.quoted.double.hcl
+#                                  ^ source.hcl.terraform meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                   ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.end.hcl
+>
