@@ -284,7 +284,7 @@
     },
     "functions": {
       "name": "meta.function-call.hcl",
-      "begin": "(\\w+|(?:provider::\\w+::\\w+))(\\()",
+      "begin": "([:\\-\\w]+)(\\()",
       "end": "\\)",
       "comment": "Built-in function calls",
       "beginCaptures": {
@@ -295,7 +295,7 @@
               "name": "support.function.builtin.terraform"
             },
             {
-              "match": "\\bprovider::(?!null|false|true)[[:alpha:]][[:alnum:]_-]*::(?!null|false|true)[[:alpha:]][[:alnum:]_-]*\\b",
+              "match": "\\bprovider::(?!false|true)[^\\d\\W][\\w_-]*::(?!null|false|true)[^\\d\\W][\\w_-]*\\b",
               "name": "support.function.provider"
             }
           ]
