@@ -295,7 +295,7 @@
               "name": "support.function.builtin.terraform"
             },
             {
-              "match": "\\bprovider::[^\\d\\W][\\w_-]*::[^\\d\\W][\\w_-]*\\b",
+              "match": "\\bprovider::[[:alpha:]][\\w_-]*::[[:alpha:]][\\w_-]*\\b",
               "name": "support.function.provider"
             }
           ]
