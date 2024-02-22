@@ -21,10 +21,6 @@ jobs:
         run: npm ci
       - name: build
         run: npm run build
-      - name: Setup Copywrite tool
-        uses: hashicorp/setup-copywrite@v1.1.2
-      - name: Add headers using Copywrite tool
-        run: copywrite headers
       - name: Find mutations
         id: self_mutation
         run: |-
