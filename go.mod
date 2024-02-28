@@ -1,6 +1,6 @@
 module github.com/hashicorp/syntax/builder
 
-go 1.19
+go 1.22
 
 require (
 	github.com/hashicorp/go-multierror v1.1.1
