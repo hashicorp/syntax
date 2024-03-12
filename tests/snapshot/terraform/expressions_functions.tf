@@ -40,3 +40,8 @@ foo("bar")
 
 provider::framework::example("hi")
 invalid::namespaced::function("bye")
+
+provider::aws::abs(4)
+core::abs(4)
+
+provider::local::direxists("/path")
