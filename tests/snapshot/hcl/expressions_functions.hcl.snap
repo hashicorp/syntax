@@ -357,3 +357,26 @@
 #        ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #         ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 >
+>prefix::namespace::func("bar")
+#^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.function-call.hcl support.function.namespaced.hcl
+#                       ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                        ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                         ^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
+#                            ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                             ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
+>prefix::namespace::func()
+#^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.function-call.hcl support.function.namespaced.hcl
+#                       ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                        ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
+>
+>namespace::short("bar")
+#^^^^^^^^^^^^^^^^ source.hcl meta.function-call.hcl support.function.namespaced.hcl
+#                ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                 ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                  ^^^ source.hcl meta.function-call.hcl string.quoted.double.hcl
+#                     ^ source.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                      ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
+>namespace::short_name()
+#^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.function-call.hcl support.function.namespaced.hcl
+#                     ^ source.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                      ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl

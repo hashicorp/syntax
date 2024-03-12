@@ -35,3 +35,9 @@ upper("hello")
 # known
 
 foo("bar")
+
+prefix::namespace::func("bar")
+prefix::namespace::func()
+
+namespace::short("bar")
+namespace::short_name()
