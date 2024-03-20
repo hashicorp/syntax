@@ -264,16 +264,13 @@ repository:
       - include: "#objects"
       - include: "#inline_for_expression"
       - include: "#inline_if_expression"
-      - match: \b((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)\s*(\=\>?)\s*
+      - match: \b((?!null|false|true)[[:alpha:]][[:alnum:]_-]*)\s*(\=(?!=))\s*
         comment: Literal, named object key
         captures:
           "1":
             name: meta.mapping.key.hcl variable.other.readwrite.hcl
           "2":
             name: keyword.operator.assignment.hcl
-            patterns:
-              - match: \=\>
-                name: storage.type.function.hcl
       - match: \b((").*("))\s*(\=)\s*
         comment: String object key
         captures:

@@ -58,11 +58,9 @@
 #             ^ source.hcl meta.block.hcl meta.braces.hcl
 #              ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
 #               ^ source.hcl meta.block.hcl meta.braces.hcl
-#                ^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#                    ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
-#                        ^ source.hcl meta.block.hcl meta.braces.hcl
-#                         ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
-#                          ^^ source.hcl meta.block.hcl meta.braces.hcl
+#                ^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#                         ^^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.hcl
+#                           ^ source.hcl meta.block.hcl meta.braces.hcl
 #                            ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                             ^^^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl
 #                                ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
