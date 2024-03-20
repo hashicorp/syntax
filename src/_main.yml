@@ -229,7 +229,7 @@ repository:
       - match: \.\.\.
         name: keyword.operator.hcl
       - match: "\\:"
-        scope: keyword.operator.hcl
+        name: keyword.operator.hcl
   brackets:
     begin: \[
     beginCaptures:

@@ -13,7 +13,7 @@
 #                 ^ source.hcl keyword.operator.accessor.hcl
 #                  ^ source.hcl variable.other.member.hcl
 #                   ^ source.hcl
-#                    ^ source.hcl
+#                    ^ source.hcl keyword.operator.hcl
 #                     ^ source.hcl
 #                      ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                       ^^^^^^^^^ source.hcl string.quoted.double.hcl
@@ -30,7 +30,7 @@
 #                       ^^ source.hcl meta.function-call.hcl constant.numeric.integer.hcl
 #                         ^ source.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 #                          ^ source.hcl
-#                           ^ source.hcl
+#                           ^ source.hcl keyword.operator.hcl
 #                            ^ source.hcl
 #                             ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                              ^^^^^ source.hcl string.quoted.double.hcl
@@ -44,7 +44,7 @@
 #             ^ source.hcl
 #              ^^ source.hcl constant.numeric.integer.hcl
 #                ^ source.hcl
-#                 ^ source.hcl
+#                 ^ source.hcl keyword.operator.hcl
 #                  ^ source.hcl
 #                   ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                    ^^^^^ source.hcl string.quoted.double.hcl
