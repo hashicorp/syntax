@@ -553,7 +553,7 @@
           }
         },
         {
-          "match": "\\b((\").*(\"))\\s*(\\=)\\s*",
+          "match": "^\\s*((\").*(\"))\\s*(\\=)\\s*",
           "comment": "String object key",
           "captures": {
             "1": {

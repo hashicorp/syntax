@@ -271,7 +271,7 @@ repository:
             name: meta.mapping.key.hcl variable.other.readwrite.hcl
           "2":
             name: keyword.operator.assignment.hcl
-      - match: \b((").*("))\s*(\=)\s*
+      - match: ^\s*((").*("))\s*(\=)\s*
         comment: String object key
         captures:
           "1":
