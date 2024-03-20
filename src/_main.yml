@@ -90,7 +90,7 @@ repository:
             match: '\"[^\"\r\n]*\"'
           - name: variable.other.enummember.hcl
             comment: Block label (Indentifier)
-            match: '[[:alpha:]][[:alnum:]_-]*'
+            match: "[[:alpha:]][[:alnum:]_-]*"
       "3":
         name: punctuation.section.block.begin.hcl
     end: \}
