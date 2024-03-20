@@ -691,6 +691,7 @@
           "match": "\\.\\.\\."
         },
         {
+          "name": "keyword.operator.hcl",
           "match": "\\:"
         }
       ]

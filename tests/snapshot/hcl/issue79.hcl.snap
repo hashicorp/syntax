@@ -33,7 +33,7 @@
 #                                 ^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
 #                                     ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                                      ^ source.hcl meta.block.hcl
-#                                       ^ source.hcl meta.block.hcl
+#                                       ^ source.hcl meta.block.hcl keyword.operator.hcl
 #                                        ^ source.hcl meta.block.hcl
 #                                         ^ source.hcl meta.block.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                                          ^^^^^ source.hcl meta.block.hcl string.quoted.double.hcl
@@ -73,7 +73,7 @@
 #                                     ^^^^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl
 #                                         ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
 #                                          ^ source.hcl meta.block.hcl meta.braces.hcl
-#                                           ^ source.hcl meta.block.hcl meta.braces.hcl
+#                                           ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.hcl
 #                                            ^ source.hcl meta.block.hcl meta.braces.hcl
 #                                             ^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                                              ^^^^^ source.hcl meta.block.hcl meta.braces.hcl string.quoted.double.hcl

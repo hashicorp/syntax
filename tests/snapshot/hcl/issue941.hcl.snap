@@ -41,7 +41,7 @@
 #                                     ^^^^^^^ source.hcl comment.line.number-sign.hcl
 >  :                                 #Comment
 #^^ source.hcl
-#  ^ source.hcl
+#  ^ source.hcl keyword.operator.hcl
 #   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl
 #                                    ^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
 #                                     ^^^^^^^ source.hcl comment.line.number-sign.hcl
@@ -73,7 +73,7 @@
 #                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
 >    :                                                              #
 #^^^^ source.hcl
-#    ^ source.hcl
+#    ^ source.hcl keyword.operator.hcl
 #     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl
 #                                                                   ^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
 >    lookup(local.instance_size_map, local.cloud, null)             #If instance size is not provided and var.insane_mode is false, lookup in this table.

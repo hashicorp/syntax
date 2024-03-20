@@ -14,7 +14,7 @@
 #                 ^ source.hcl.terraform keyword.operator.accessor.hcl
 #                  ^ source.hcl.terraform variable.other.member.hcl
 #                   ^ source.hcl.terraform
-#                    ^ source.hcl.terraform
+#                    ^ source.hcl.terraform keyword.operator.hcl
 #                     ^ source.hcl.terraform
 #                      ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                       ^^^^^^^^^ source.hcl.terraform string.quoted.double.hcl
@@ -31,7 +31,7 @@
 #                       ^^ source.hcl.terraform meta.function-call.hcl constant.numeric.integer.hcl
 #                         ^ source.hcl.terraform meta.function-call.hcl punctuation.section.parens.end.hcl
 #                          ^ source.hcl.terraform
-#                           ^ source.hcl.terraform
+#                           ^ source.hcl.terraform keyword.operator.hcl
 #                            ^ source.hcl.terraform
 #                             ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                              ^^^^^ source.hcl.terraform string.quoted.double.hcl
@@ -45,7 +45,7 @@
 #             ^ source.hcl.terraform
 #              ^^ source.hcl.terraform constant.numeric.integer.hcl
 #                ^ source.hcl.terraform
-#                 ^ source.hcl.terraform
+#                 ^ source.hcl.terraform keyword.operator.hcl
 #                  ^ source.hcl.terraform
 #                   ^ source.hcl.terraform string.quoted.double.hcl punctuation.definition.string.begin.hcl
 #                    ^^^^^ source.hcl.terraform string.quoted.double.hcl
