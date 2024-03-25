@@ -230,6 +230,8 @@ repository:
         name: keyword.operator.hcl
       - match: "\\:"
         name: keyword.operator.hcl
+      - match: \=\>
+        name: keyword.operator.hcl
   brackets:
     begin: \[
     beginCaptures:
