@@ -45,3 +45,5 @@ blockempty-newline "" {
 block-single-char-indentifier a {}
 block-single-char-indentifier-newline a {
 }
+
+byte_match_statement_rules = local.enabled && var.byte_match_statement_rules != null ? {
