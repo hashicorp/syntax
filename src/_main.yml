@@ -76,7 +76,7 @@ repository:
   block:
     name: meta.block.hcl
     comment: This will match HCL blocks like `thing1 "one" "two" {` or `thing2 {`
-    begin: ([\w][\-\w]*)([^{\r\n]*)(\{)
+    begin: ([\w][\-\w]*)([^?{\r\n]*)(\{)
     beginCaptures:
       "1":
         patterns:

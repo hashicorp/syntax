@@ -242,3 +242,24 @@
 >}
 #^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
 >
+>byte_match_statement_rules = local.enabled && var.byte_match_statement_rules != null ? {
+#^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#                          ^ source.hcl variable.declaration.hcl
+#                           ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                            ^ source.hcl variable.declaration.hcl
+#                             ^^^^^ source.hcl
+#                                  ^ source.hcl keyword.operator.accessor.hcl
+#                                   ^^^^^^^ source.hcl variable.other.member.hcl
+#                                          ^ source.hcl
+#                                           ^^ source.hcl keyword.operator.logical.hcl
+#                                             ^^^^ source.hcl
+#                                                 ^ source.hcl keyword.operator.accessor.hcl
+#                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl variable.other.member.hcl
+#                                                                            ^ source.hcl
+#                                                                             ^^ source.hcl keyword.operator.hcl
+#                                                                               ^ source.hcl
+#                                                                                ^^^^ source.hcl constant.language.hcl
+#                                                                                    ^ source.hcl
+#                                                                                     ^ source.hcl keyword.operator.hcl
+#                                                                                      ^ source.hcl
+#                                                                                       ^ source.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
