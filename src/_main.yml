@@ -340,15 +340,15 @@ repository:
         name: storage.type.function.hcl
       - include: "#for_expression_body"
   inline_for_expression:
-    begin: (for)\b
-    beginCaptures:
+    match: (for)\b(.*)\n
+    captures:
       "1":
         name: keyword.control.hcl
-    end: \n
-    patterns:
-      - match: \=\>
-        name: storage.type.function.hcl
-      - include: "#for_expression_body"
+      "2":
+        patterns:
+          - match: \=\>
+            name: storage.type.function.hcl
+          - include: "#for_expression_body"
   inline_if_expression:
     begin: (if)\b
     beginCaptures:

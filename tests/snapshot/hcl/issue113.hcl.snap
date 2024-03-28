@@ -60,23 +60,23 @@
 #                                                                     ^ source.hcl meta.block.hcl
 #                                                                      ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >      priority = rule.priority
-#^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#      ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
-#              ^ source.hcl meta.block.hcl meta.braces.hcl
-#               ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
-#                ^ source.hcl meta.block.hcl meta.braces.hcl
-#                 ^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#^^^^^^ source.hcl meta.block.hcl
+#      ^^^^^^^^ source.hcl meta.block.hcl variable.other.readwrite.hcl
+#              ^^^ source.hcl meta.block.hcl
+#                 ^^^^ source.hcl meta.block.hcl variable.other.readwrite.hcl
+#                     ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                      ^^^^^^^^ source.hcl meta.block.hcl variable.other.member.hcl
 >      type     = rule.type
-#^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#      ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
-#          ^^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#               ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
-#                ^ source.hcl meta.block.hcl meta.braces.hcl
-#                 ^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#^^^^^^ source.hcl meta.block.hcl
+#      ^^^^ source.hcl meta.block.hcl variable.other.readwrite.hcl
+#          ^^^^^^^ source.hcl meta.block.hcl
+#                 ^^^^ source.hcl meta.block.hcl variable.other.readwrite.hcl
+#                     ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                      ^^^^ source.hcl meta.block.hcl variable.other.member.hcl
 >  }] : []
-#^^ source.hcl meta.block.hcl meta.braces.hcl
-#  ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
-#   ^^ source.hcl meta.block.hcl
+#^^^ source.hcl meta.block.hcl
+#   ^ source.hcl meta.block.hcl punctuation.section.brackets.end.hcl
+#    ^ source.hcl meta.block.hcl
 #     ^ source.hcl meta.block.hcl keyword.operator.hcl
 #      ^ source.hcl meta.block.hcl
 #       ^ source.hcl meta.block.hcl punctuation.section.brackets.begin.hcl
@@ -84,137 +84,151 @@
 >
 >  content {
 #^^ source.hcl meta.block.hcl
-#  ^^^^^^^ source.hcl meta.block.hcl variable.other.readwrite.hcl
-#         ^ source.hcl meta.block.hcl
-#          ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+#  ^^^^^^^ source.hcl meta.block.hcl meta.block.hcl entity.name.type.hcl
+#         ^ source.hcl meta.block.hcl meta.block.hcl
+#          ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >    priority = text_transformation.value.priority
-#^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#    ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
-#            ^ source.hcl meta.block.hcl meta.braces.hcl
-#             ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
-#              ^ source.hcl meta.block.hcl meta.braces.hcl
-#               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#^^^^ source.hcl meta.block.hcl meta.block.hcl
+#    ^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#            ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#               ^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl
+#                                  ^ source.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                   ^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
+#                                        ^ source.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                         ^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
 >    type     = text_transformation.value.type
-#^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#    ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
-#        ^^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#             ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
-#              ^ source.hcl meta.block.hcl meta.braces.hcl
-#               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#^^^^ source.hcl meta.block.hcl meta.block.hcl
+#    ^^^^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#        ^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#             ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#              ^ source.hcl meta.block.hcl meta.block.hcl variable.declaration.hcl
+#               ^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.block.hcl
+#                                  ^ source.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                   ^^^^^ source.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
+#                                        ^ source.hcl meta.block.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                         ^^^^ source.hcl meta.block.hcl meta.block.hcl variable.other.member.hcl
 >  }
-#^^ source.hcl meta.block.hcl meta.braces.hcl
-#  ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+#^^ source.hcl meta.block.hcl meta.block.hcl
+#  ^ source.hcl meta.block.hcl meta.block.hcl punctuation.section.block.end.hcl
 >}
-#^^ source.hcl meta.block.hcl
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
 >
 >locals {
-#^^^^^^ source.hcl meta.block.hcl variable.other.readwrite.hcl
+#^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
 #      ^ source.hcl meta.block.hcl
-#       ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+#       ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
 >  byte_match_statement_rules = local.enabled && var.byte_match_statement_rules != null ? {
-#^^ source.hcl meta.block.hcl meta.braces.hcl
-#  ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.mapping.key.hcl variable.other.readwrite.hcl
-#                            ^ source.hcl meta.block.hcl meta.braces.hcl
-#                             ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.assignment.hcl
-#                              ^ source.hcl meta.block.hcl meta.braces.hcl
-#                               ^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#                                             ^^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.logical.hcl
-#                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
-#                                                                               ^^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.hcl
-#                                                                                 ^ source.hcl meta.block.hcl meta.braces.hcl
-#                                                                                  ^^^^ source.hcl meta.block.hcl meta.braces.hcl constant.language.hcl
-#                                                                                      ^ source.hcl meta.block.hcl meta.braces.hcl
-#                                                                                       ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.hcl
-#                                                                                        ^ source.hcl meta.block.hcl meta.braces.hcl
-#                                                                                         ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+#^^ source.hcl meta.block.hcl
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl variable.declaration.hcl variable.other.readwrite.hcl
+#                            ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                             ^ source.hcl meta.block.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#                              ^ source.hcl meta.block.hcl variable.declaration.hcl
+#                               ^^^^^ source.hcl meta.block.hcl
+#                                    ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                     ^^^^^^^ source.hcl meta.block.hcl variable.other.member.hcl
+#                                            ^ source.hcl meta.block.hcl
+#                                             ^^ source.hcl meta.block.hcl keyword.operator.logical.hcl
+#                                               ^^^^ source.hcl meta.block.hcl
+#                                                   ^ source.hcl meta.block.hcl keyword.operator.accessor.hcl
+#                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl variable.other.member.hcl
+#                                                                              ^ source.hcl meta.block.hcl
+#                                                                               ^^ source.hcl meta.block.hcl keyword.operator.hcl
+#                                                                                 ^ source.hcl meta.block.hcl
+#                                                                                  ^^^^ source.hcl meta.block.hcl constant.language.hcl
+#                                                                                      ^ source.hcl meta.block.hcl
+#                                                                                       ^ source.hcl meta.block.hcl keyword.operator.hcl
+#                                                                                        ^ source.hcl meta.block.hcl
+#                                                                                         ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
 >    for rule in flatten(var.byte_match_statement_rules) :
-#^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
-#    ^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl keyword.control.hcl
-#       ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
-#        ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl variable.other.readwrite.hcl
-#            ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
-#             ^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl keyword.operator.word.hcl
-#               ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
-#                ^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl support.function.builtin.hcl
-#                       ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
-#                        ^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#                           ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.accessor.hcl
-#                            ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl variable.other.member.hcl
-#                                                      ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
-#                                                       ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
-#                                                        ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl keyword.operator.hcl
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#    ^^^ source.hcl meta.block.hcl meta.braces.hcl keyword.control.hcl
+#       ^ source.hcl meta.block.hcl meta.braces.hcl
+#        ^^^^ source.hcl meta.block.hcl meta.braces.hcl variable.other.readwrite.hcl
+#            ^ source.hcl meta.block.hcl meta.braces.hcl
+#             ^^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.word.hcl
+#               ^ source.hcl meta.block.hcl meta.braces.hcl
+#                ^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl support.function.builtin.hcl
+#                       ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                        ^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#                           ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.accessor.hcl
+#                            ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl variable.other.member.hcl
+#                                                      ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
+#                                                       ^ source.hcl meta.block.hcl meta.braces.hcl
+#                                                        ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.hcl
 >    format("%s-%s",
-#^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
-#    ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl support.function.builtin.hcl
-#          ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
-#           ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
-#            ^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl string.quoted.double.hcl
-#                 ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
-#                  ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl punctuation.separator.hcl
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl
+#    ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl support.function.builtin.hcl
+#          ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#           ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#            ^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl string.quoted.double.hcl
+#                 ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                  ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl punctuation.separator.hcl
 >      lookup(rule, "name", null) != null ? rule.name : format("%s-byte-match-%d", module.this.id, rule.priority),
-#^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#      ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl support.function.builtin.hcl
-#            ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
-#             ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
-#                 ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.separator.hcl
-#                  ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
-#                   ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
-#                    ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl
-#                        ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
-#                         ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.separator.hcl
-#                          ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
-#                           ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl constant.language.hcl
-#                               ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
-#                                ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#                                 ^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.hcl
-#                                   ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#                                    ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl constant.language.hcl
-#                                        ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#                                         ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.hcl
-#                                          ^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#                                               ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.accessor.hcl
-#                                                ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl variable.other.member.hcl
-#                                                    ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#                                                     ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.hcl
-#                                                      ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#                                                       ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl support.function.builtin.hcl
-#                                                             ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
-#                                                              ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
-#                                                               ^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl
-#                                                                               ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
-#                                                                                ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.separator.hcl
-#                                                                                 ^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
-#                                                                                        ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl keyword.operator.accessor.hcl
-#                                                                                         ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl variable.other.member.hcl
-#                                                                                             ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl keyword.operator.accessor.hcl
-#                                                                                              ^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl variable.other.member.hcl
-#                                                                                                ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.separator.hcl
-#                                                                                                 ^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
-#                                                                                                      ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl keyword.operator.accessor.hcl
-#                                                                                                       ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl variable.other.member.hcl
-#                                                                                                               ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
-#                                                                                                                ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl punctuation.separator.hcl
+#^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#      ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl support.function.builtin.hcl
+#            ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#             ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
+#                 ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.separator.hcl
+#                  ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
+#                   ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                    ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl
+#                        ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                         ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.separator.hcl
+#                          ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
+#                           ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl constant.language.hcl
+#                               ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
+#                                ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#                                 ^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.hcl
+#                                   ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#                                    ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl constant.language.hcl
+#                                        ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#                                         ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.hcl
+#                                          ^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#                                               ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.accessor.hcl
+#                                                ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl variable.other.member.hcl
+#                                                    ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#                                                     ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.hcl
+#                                                      ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#                                                       ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl support.function.builtin.hcl
+#                                                             ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.section.parens.begin.hcl
+#                                                              ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                                                               ^^^^^^^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl
+#                                                                               ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+#                                                                                ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.separator.hcl
+#                                                                                 ^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
+#                                                                                        ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl keyword.operator.accessor.hcl
+#                                                                                         ^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl variable.other.member.hcl
+#                                                                                             ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl keyword.operator.accessor.hcl
+#                                                                                              ^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl variable.other.member.hcl
+#                                                                                                ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.separator.hcl
+#                                                                                                 ^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl
+#                                                                                                      ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl keyword.operator.accessor.hcl
+#                                                                                                       ^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl variable.other.member.hcl
+#                                                                                                               ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
+#                                                                                                                ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl punctuation.separator.hcl
 >      rule.action,
-#^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#          ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.accessor.hcl
-#           ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl variable.other.member.hcl
-#                 ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl punctuation.separator.hcl
+#^^^^^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#          ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl keyword.operator.accessor.hcl
+#           ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl variable.other.member.hcl
+#                 ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl punctuation.separator.hcl
 >    ) => rule
-#^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl
-#    ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
-#     ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
-#      ^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl keyword.operator.hcl
-#        ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
->  } : {}
-#^^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl
-#  ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
-#   ^ source.hcl meta.block.hcl meta.braces.hcl
-#    ^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.hcl
+#^^^^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl
+#    ^ source.hcl meta.block.hcl meta.braces.hcl meta.function-call.hcl punctuation.section.parens.end.hcl
 #     ^ source.hcl meta.block.hcl meta.braces.hcl
-#      ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
-#       ^ source.hcl meta.block.hcl meta.braces.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+#      ^^ source.hcl meta.block.hcl meta.braces.hcl keyword.operator.hcl
+#        ^^^^^^ source.hcl meta.block.hcl meta.braces.hcl
+>  } : {}
+#^^ source.hcl meta.block.hcl meta.braces.hcl
+#  ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+#   ^ source.hcl meta.block.hcl
+#    ^ source.hcl meta.block.hcl keyword.operator.hcl
+#     ^ source.hcl meta.block.hcl
+#      ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.begin.hcl
+#       ^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >}
-#^ source.hcl meta.block.hcl meta.braces.hcl punctuation.section.braces.end.hcl
+#^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
 >
 >
 >
