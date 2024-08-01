@@ -1,0 +1,36 @@
+># https://developer.hashicorp.com/sentinel/docs/language/imports
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>import "calendar"
+#^^^^^^ source.sentinel keyword.control.declaration.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                ^ source.sentinel string.quoted.double.untitled
+>
+>import "name"
+#^^^^^^ source.sentinel keyword.control.declaration.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+>
+>import "name1" as one
+#^^^^^^ source.sentinel keyword.control.declaration.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel
+#               ^^ source.sentinel keyword.other.sentinel
+#                 ^^^^^ source.sentinel
+>import "name2" as two
+#^^^^^^ source.sentinel keyword.control.declaration.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel
+#               ^^ source.sentinel keyword.other.sentinel
+#                 ^^^^^ source.sentinel
+>

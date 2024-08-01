@@ -1,0 +1,41 @@
+# https://developer.hashicorp.com/sentinel/docs/language/conditionals
+
+# Single line if statements
+if value is 18 { print("condition met") }
+if value { print("condition met") }
+if value["key"] > 12 { print("condition met") }
+
+# Multi-line if statements
+if value is 18 {
+	print("condition met")
+}
+
+if value {
+	print("condition met")
+}
+
+if value["key"] > 12 {
+	print("condition met")
+}
+
+# Multi-line if-elseif-else statements
+if value is 18 { print("condition met") } else if value { print("condition met") } else { print("condition met") }
+
+# Multi-line if-elseif-else statements
+if value is 18 {
+	print("condition met")
+} else if value {
+	print("condition met")
+} else {
+	print("condition met")
+}
+
+// Case statements
+case x { when "foo", "bar": return true; else: return false }
+
+case x {
+	when "foo", "bar":
+		return true
+	else:
+		return false
+}

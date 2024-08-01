@@ -1,0 +1,43 @@
+# https://developer.hashicorp.com/sentinel/docs/language/boolexpr
+
+value = (p and q) or r
+value = p and (q or r)
+
+value = 42 == -1
+value = 42 != -1
+value = 42 < -1
+value = 42 <= -1
+value = 42 > -1
+value = 42 >= -1
+
+# Sets
+value = [1, 2, 3] contains 2
+value = [1, 2, 3] contains 5
+value = [1, 2, 3] contains "value"
+value = [1, 2, 3] not contains "value"
+
+value = { "a": 1, "b": 2 } contains "a"
+value = { "a": 1, "b": 2 } contains "c"
+value = { "a": 1, "b": 2 } contains 2
+value = { "a": 1, "b": 2 } not contains 2
+
+# Matches
+value = "test" matches "e"
+value = "test" matches "^e"
+value = "TEST" matches "test"
+value = "TEST" matches "(?i)test"
+value = "ABC123" matches "[A-Z]+\\d+"
+value = "test" not matches "e"
+
+# Any, All
+all group.tasks as t { t.driver is "vmware" }
+any group.tasks as t { t.driver is "vmware" }
+
+any ["a", "b"] as char { char is "a" } or other_value is "another"
+
+# Emptiness/Defined
+value = x is empty
+value = x is not empty
+
+value = x is defined
+value = x is not defined

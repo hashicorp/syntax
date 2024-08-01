@@ -1,0 +1,6 @@
+# https://developer.hashicorp.com/sentinel/docs/language/arithmetic
+value = 4 + 8
+value = 8 * 2
+value = 8 / 4
+value = 8 / 5
+value = 8 % 5

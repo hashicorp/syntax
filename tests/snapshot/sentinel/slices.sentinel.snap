@@ -1,0 +1,54 @@
+># https://developer.hashicorp.com/sentinel/docs/language/slices
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>a = [1, 2, 3, 4, 5]
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^^ source.sentinel
+#     ^ source.sentinel constant.numeric.number.sentinel
+#      ^^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^^ source.sentinel
+#           ^ source.sentinel constant.numeric.number.sentinel
+#            ^^ source.sentinel
+#              ^ source.sentinel constant.numeric.number.sentinel
+#               ^^ source.sentinel
+#                 ^ source.sentinel constant.numeric.number.sentinel
+#                  ^^ source.sentinel
+>b = a[1:4]
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^^^ source.sentinel
+#      ^ source.sentinel constant.numeric.number.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^^ source.sentinel
+>
+>a = "hello"
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel string.quoted.double.untitled
+#     ^^^^^ source.sentinel string.quoted.double.untitled
+#          ^ source.sentinel string.quoted.double.untitled
+>b = a[1:4]
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^^^ source.sentinel
+#      ^ source.sentinel constant.numeric.number.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^^ source.sentinel
+>
+>b = a[:2]
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^^^^ source.sentinel
+#       ^ source.sentinel constant.numeric.number.sentinel
+#        ^^ source.sentinel
+>b = a[2:]
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^^^ source.sentinel
+#      ^ source.sentinel constant.numeric.number.sentinel
+#       ^^^ source.sentinel
+>

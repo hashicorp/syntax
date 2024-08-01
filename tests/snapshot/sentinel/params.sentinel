@@ -1,0 +1,6 @@
+# https://developer.hashicorp.com/sentinel/docs/language/parameters
+
+param foo
+param bar default 42
+
+param someting default [1,2,3]

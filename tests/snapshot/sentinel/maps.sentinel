@@ -1,0 +1,43 @@
+# https://developer.hashicorp.com/sentinel/docs/language/maps
+
+// Empty map
+{}
+
+// Map with a single value on one line
+{ "key": "value" }
+
+// Map with multiple values with differing types on multiple lines
+{
+		"key": "value",
+		42: true,
+}
+
+map = { "key": "value", 42: true, }
+
+foo["key"] // "value"
+foo[42]    // true
+map[0]     // undefined
+
+map = { "key": "value" }
+
+map[42] = true   // Add a new key/value
+map["key"] = 12  // Modify the value of "key"
+
+
+map = { "key": "value" }
+delete(map, "key")    // map is now empty
+delete(map, "other")  // no effect for non-existent key
+
+
+data = { "a": 2, "b": 3 }
+keys(data)       // ["b", "a"]
+values(data)     // [2, 3]
+
+{"foo": "bar"} is {"foo": "bar"}               // true
+{"foo": "bar"} is {"baz": "bar"}               // false
+{"foo": "bar"} is {"foo": "baz"}               // false
+{"foo": "bar"} is {"foo": "bar", "baz": "qux"} // false
+{1: "a"} is {1.0: "a"}                         // true (int/float comparable)
+
+// also true (maps are not ordered):
+{"m": {"a": "b"}, "l": ["a"]} is {"l": ["a"], "m": {"a": " b"}}

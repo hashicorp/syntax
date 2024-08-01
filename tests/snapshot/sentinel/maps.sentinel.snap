@@ -1,0 +1,336 @@
+># https://developer.hashicorp.com/sentinel/docs/language/maps
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>// Empty map
+#^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>{}
+#^^^ source.sentinel
+>
+>// Map with a single value on one line
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>{ "key": "value" }
+#^^ source.sentinel
+#  ^ source.sentinel string.quoted.double.untitled
+#   ^^^ source.sentinel string.quoted.double.untitled
+#      ^ source.sentinel string.quoted.double.untitled
+#       ^^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^^^ source.sentinel string.quoted.double.untitled
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^^ source.sentinel
+>
+>// Map with multiple values with differing types on multiple lines
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>{
+#^^ source.sentinel
+>		"key": "value",
+#^^ source.sentinel
+#  ^ source.sentinel string.quoted.double.untitled
+#   ^^^ source.sentinel string.quoted.double.untitled
+#      ^ source.sentinel string.quoted.double.untitled
+#       ^^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^^^ source.sentinel string.quoted.double.untitled
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^ source.sentinel
+>		42: true,
+#^^ source.sentinel
+#  ^^ source.sentinel constant.numeric.number.sentinel
+#    ^^ source.sentinel
+#      ^^^^ source.sentinel constant.language.sentinel
+#          ^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+>map = { "key": "value", 42: true, }
+#^^^ source.sentinel keyword.control.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel keyword.operator.symbol.sentinel
+#     ^^^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^ source.sentinel
+#                        ^^ source.sentinel constant.numeric.number.sentinel
+#                          ^^ source.sentinel
+#                            ^^^^ source.sentinel constant.language.sentinel
+#                                ^^^^ source.sentinel
+>
+>foo["key"] // "value"
+#^^^^ source.sentinel
+#    ^ source.sentinel string.quoted.double.untitled
+#     ^^^ source.sentinel string.quoted.double.untitled
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^ source.sentinel
+#           ^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>foo[42]    // true
+#^^^^ source.sentinel
+#    ^^ source.sentinel constant.numeric.number.sentinel
+#      ^^^^^ source.sentinel
+#           ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>map[0]     // undefined
+#^^^ source.sentinel keyword.control.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel constant.numeric.number.sentinel
+#     ^^^^^^ source.sentinel
+#           ^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>map = { "key": "value" }
+#^^^ source.sentinel keyword.control.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel keyword.operator.symbol.sentinel
+#     ^^^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^^ source.sentinel
+>
+>map[42] = true   // Add a new key/value
+#^^^ source.sentinel keyword.control.sentinel
+#   ^ source.sentinel
+#    ^^ source.sentinel constant.numeric.number.sentinel
+#      ^^ source.sentinel
+#        ^ source.sentinel keyword.operator.symbol.sentinel
+#         ^ source.sentinel
+#          ^^^^ source.sentinel constant.language.sentinel
+#              ^^^ source.sentinel
+#                 ^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>map["key"] = 12  // Modify the value of "key"
+#^^^ source.sentinel keyword.control.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel string.quoted.double.untitled
+#     ^^^ source.sentinel string.quoted.double.untitled
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel
+#             ^^ source.sentinel constant.numeric.number.sentinel
+#               ^^ source.sentinel
+#                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>
+>map = { "key": "value" }
+#^^^ source.sentinel keyword.control.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel keyword.operator.symbol.sentinel
+#     ^^^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^^ source.sentinel
+>delete(map, "key")    // map is now empty
+#^^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^ source.sentinel
+#       ^^^ source.sentinel keyword.control.sentinel
+#          ^^ source.sentinel
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^^ source.sentinel string.quoted.double.untitled
+#                ^ source.sentinel string.quoted.double.untitled
+#                 ^^^^^ source.sentinel
+#                      ^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>delete(map, "other")  // no effect for non-existent key
+#^^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^ source.sentinel
+#       ^^^ source.sentinel keyword.control.sentinel
+#          ^^ source.sentinel
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^^^^ source.sentinel string.quoted.double.untitled
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^^^ source.sentinel
+#                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>
+>data = { "a": 2, "b": 3 }
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^^^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^^ source.sentinel
+#              ^ source.sentinel constant.numeric.number.sentinel
+#               ^^ source.sentinel
+#                 ^ source.sentinel string.quoted.double.untitled
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^^ source.sentinel
+#                      ^ source.sentinel constant.numeric.number.sentinel
+#                       ^^^ source.sentinel
+>keys(data)       // ["b", "a"]
+#^^^^ source.sentinel support.function.builtin.sentinel
+#    ^^^^^^^^^^^^^ source.sentinel
+#                 ^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>values(data)     // [2, 3]
+#^^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^^^^^^^^^^^ source.sentinel
+#                 ^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>{"foo": "bar"} is {"foo": "bar"}               // true
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^^^ source.sentinel string.quoted.double.untitled
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^^ source.sentinel keyword.control.sentinel
+#                 ^^ source.sentinel
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^^^ source.sentinel string.quoted.double.untitled
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^ source.sentinel
+#                          ^ source.sentinel string.quoted.double.untitled
+#                           ^^^ source.sentinel string.quoted.double.untitled
+#                              ^ source.sentinel string.quoted.double.untitled
+#                               ^^^^^^^^^^^^^^^^ source.sentinel
+#                                               ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>{"foo": "bar"} is {"baz": "bar"}               // false
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^^^ source.sentinel string.quoted.double.untitled
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^^ source.sentinel keyword.control.sentinel
+#                 ^^ source.sentinel
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^^^ source.sentinel string.quoted.double.untitled
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^ source.sentinel
+#                          ^ source.sentinel string.quoted.double.untitled
+#                           ^^^ source.sentinel string.quoted.double.untitled
+#                              ^ source.sentinel string.quoted.double.untitled
+#                               ^^^^^^^^^^^^^^^^ source.sentinel
+#                                               ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>{"foo": "bar"} is {"foo": "baz"}               // false
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^^^ source.sentinel string.quoted.double.untitled
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^^ source.sentinel keyword.control.sentinel
+#                 ^^ source.sentinel
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^^^ source.sentinel string.quoted.double.untitled
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^ source.sentinel
+#                          ^ source.sentinel string.quoted.double.untitled
+#                           ^^^ source.sentinel string.quoted.double.untitled
+#                              ^ source.sentinel string.quoted.double.untitled
+#                               ^^^^^^^^^^^^^^^^ source.sentinel
+#                                               ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>{"foo": "bar"} is {"foo": "bar", "baz": "qux"} // false
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^^^ source.sentinel string.quoted.double.untitled
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^^ source.sentinel keyword.control.sentinel
+#                 ^^ source.sentinel
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^^^ source.sentinel string.quoted.double.untitled
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^ source.sentinel
+#                          ^ source.sentinel string.quoted.double.untitled
+#                           ^^^ source.sentinel string.quoted.double.untitled
+#                              ^ source.sentinel string.quoted.double.untitled
+#                               ^^ source.sentinel
+#                                 ^ source.sentinel string.quoted.double.untitled
+#                                  ^^^ source.sentinel string.quoted.double.untitled
+#                                     ^ source.sentinel string.quoted.double.untitled
+#                                      ^^ source.sentinel
+#                                        ^ source.sentinel string.quoted.double.untitled
+#                                         ^^^ source.sentinel string.quoted.double.untitled
+#                                            ^ source.sentinel string.quoted.double.untitled
+#                                             ^^ source.sentinel
+#                                               ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>{1: "a"} is {1.0: "a"}                         // true (int/float comparable)
+#^ source.sentinel
+# ^ source.sentinel constant.numeric.number.sentinel
+#  ^^ source.sentinel
+#    ^ source.sentinel string.quoted.double.untitled
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^ source.sentinel string.quoted.double.untitled
+#       ^^ source.sentinel
+#         ^^ source.sentinel keyword.control.sentinel
+#           ^^ source.sentinel
+#             ^^^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^ source.sentinel string.quoted.double.untitled
+#                     ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
+#                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>// also true (maps are not ordered):
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>{"m": {"a": "b"}, "l": ["a"]} is {"l": ["a"], "m": {"a": " b"}}
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^ source.sentinel string.quoted.double.untitled
+#   ^ source.sentinel string.quoted.double.untitled
+#    ^^^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^ source.sentinel
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel string.quoted.double.untitled
+#               ^^^ source.sentinel
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^ source.sentinel string.quoted.double.untitled
+#                     ^^^ source.sentinel
+#                        ^ source.sentinel string.quoted.double.untitled
+#                         ^ source.sentinel string.quoted.double.untitled
+#                          ^ source.sentinel string.quoted.double.untitled
+#                           ^^^ source.sentinel
+#                              ^^ source.sentinel keyword.control.sentinel
+#                                ^^ source.sentinel
+#                                  ^ source.sentinel string.quoted.double.untitled
+#                                   ^ source.sentinel string.quoted.double.untitled
+#                                    ^ source.sentinel string.quoted.double.untitled
+#                                     ^^^ source.sentinel
+#                                        ^ source.sentinel string.quoted.double.untitled
+#                                         ^ source.sentinel string.quoted.double.untitled
+#                                          ^ source.sentinel string.quoted.double.untitled
+#                                           ^^^ source.sentinel
+#                                              ^ source.sentinel string.quoted.double.untitled
+#                                               ^ source.sentinel string.quoted.double.untitled
+#                                                ^ source.sentinel string.quoted.double.untitled
+#                                                 ^^^ source.sentinel
+#                                                    ^ source.sentinel string.quoted.double.untitled
+#                                                     ^ source.sentinel string.quoted.double.untitled
+#                                                      ^ source.sentinel string.quoted.double.untitled
+#                                                       ^^ source.sentinel
+#                                                         ^ source.sentinel string.quoted.double.untitled
+#                                                          ^^ source.sentinel string.quoted.double.untitled
+#                                                            ^ source.sentinel string.quoted.double.untitled
+#                                                             ^^^ source.sentinel
+>

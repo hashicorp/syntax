@@ -1,0 +1,76 @@
+># https://developer.hashicorp.com/sentinel/docs/language/variables
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>a = 1       // a = 1
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel constant.numeric.number.sentinel
+#     ^^^^^^^ source.sentinel
+#            ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>b = a       // b = 1
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^^^^^^^^^ source.sentinel
+#            ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>a = "value" // a = "value", b = 1
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel string.quoted.double.untitled
+#     ^^^^^ source.sentinel string.quoted.double.untitled
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel
+#            ^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>c = a       // c = "value", b = 1
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^^^^^^^^^ source.sentinel
+#            ^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>a = c // Error!
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^^^ source.sentinel
+#      ^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>c = 1
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel constant.numeric.number.sentinel
+>
+>s = "1.1"
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel string.quoted.double.untitled
+#     ^^^ source.sentinel string.quoted.double.untitled
+#        ^ source.sentinel string.quoted.double.untitled
+>a = int(s)   // a = 1
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^^^ source.sentinel support.function.builtin.sentinel
+#       ^^^^^^ source.sentinel
+#             ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>a = float(s) // a = 1.1
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^^^^^ source.sentinel support.function.builtin.sentinel
+#         ^^^^ source.sentinel
+#             ^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>a = 1
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^ source.sentinel constant.numeric.number.sentinel
+>s = string(a) // s = "1"
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^^^^^^ source.sentinel support.function.builtin.sentinel
+#          ^^^^ source.sentinel
+#              ^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>

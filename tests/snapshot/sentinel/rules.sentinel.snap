@@ -1,0 +1,193 @@
+># https://developer.hashicorp.com/sentinel/docs/language/rules
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>main = rule {
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^^^^ source.sentinel keyword.other.sentinel
+#           ^^^ source.sentinel
+>		((day is "saturday" or day is "sunday") and homework is "") or
+#^^^^^^^^ source.sentinel
+#        ^^ source.sentinel keyword.control.sentinel
+#          ^ source.sentinel
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                    ^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel
+#                      ^^ source.sentinel keyword.control.sentinel
+#                        ^^^^^ source.sentinel
+#                             ^^ source.sentinel keyword.control.sentinel
+#                               ^ source.sentinel
+#                                ^ source.sentinel string.quoted.double.untitled
+#                                 ^^^^^^ source.sentinel string.quoted.double.untitled
+#                                       ^ source.sentinel string.quoted.double.untitled
+#                                        ^^ source.sentinel
+#                                          ^^^ source.sentinel keyword.control.sentinel
+#                                             ^^^^^^^^^^ source.sentinel
+#                                                       ^^ source.sentinel keyword.control.sentinel
+#                                                         ^ source.sentinel
+#                                                          ^ source.sentinel string.quoted.double.untitled
+#                                                           ^ source.sentinel string.quoted.double.untitled
+#                                                            ^^ source.sentinel
+#                                                              ^^ source.sentinel keyword.control.sentinel
+>		(day in ["monday", "tuesday", "wednesday", "thursday", "friday"] and
+#^^^^^^^ source.sentinel
+#       ^^ source.sentinel keyword.control.sentinel
+#         ^^ source.sentinel
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^^^^^^ source.sentinel string.quoted.double.untitled
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^^ source.sentinel
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^^^^^^ source.sentinel string.quoted.double.untitled
+#                             ^ source.sentinel string.quoted.double.untitled
+#                              ^^ source.sentinel
+#                                ^ source.sentinel string.quoted.double.untitled
+#                                 ^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                          ^ source.sentinel string.quoted.double.untitled
+#                                           ^^ source.sentinel
+#                                             ^ source.sentinel string.quoted.double.untitled
+#                                              ^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                                      ^ source.sentinel string.quoted.double.untitled
+#                                                       ^^ source.sentinel
+#                                                         ^ source.sentinel string.quoted.double.untitled
+#                                                          ^^^^^^ source.sentinel string.quoted.double.untitled
+#                                                                ^ source.sentinel string.quoted.double.untitled
+#                                                                 ^^ source.sentinel
+#                                                                   ^^^ source.sentinel keyword.control.sentinel
+>		not school_today and homework is "")
+#^^ source.sentinel
+#  ^^^ source.sentinel keyword.control.sentinel
+#     ^^^^^^^^^^^^^^ source.sentinel
+#                   ^^^ source.sentinel keyword.control.sentinel
+#                      ^^^^^^^^^^ source.sentinel
+#                                ^^ source.sentinel keyword.control.sentinel
+#                                  ^ source.sentinel
+#                                   ^ source.sentinel string.quoted.double.untitled
+#                                    ^ source.sentinel string.quoted.double.untitled
+#                                     ^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+>is_weekend = rule { day in ["saturday", "sunday"] }
+#^^^^^^^^^^^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel
+#             ^^^^ source.sentinel keyword.other.sentinel
+#                 ^^^^^^^ source.sentinel
+#                        ^^ source.sentinel keyword.control.sentinel
+#                          ^^ source.sentinel
+#                            ^ source.sentinel string.quoted.double.untitled
+#                             ^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                     ^ source.sentinel string.quoted.double.untitled
+#                                      ^^ source.sentinel
+#                                        ^ source.sentinel string.quoted.double.untitled
+#                                         ^^^^^^ source.sentinel string.quoted.double.untitled
+#                                               ^ source.sentinel string.quoted.double.untitled
+#                                                ^^^^ source.sentinel
+>
+>is_valid_weekend = rule { is_weekend and homework is "" }
+#^^^^^^^^^^^^^^^^^ source.sentinel
+#                 ^ source.sentinel keyword.operator.symbol.sentinel
+#                  ^ source.sentinel
+#                   ^^^^ source.sentinel keyword.other.sentinel
+#                       ^^^^^^^^^^^^^^ source.sentinel
+#                                     ^^^ source.sentinel keyword.control.sentinel
+#                                        ^^^^^^^^^^ source.sentinel
+#                                                  ^^ source.sentinel keyword.control.sentinel
+#                                                    ^ source.sentinel
+#                                                     ^ source.sentinel string.quoted.double.untitled
+#                                                      ^ source.sentinel string.quoted.double.untitled
+#                                                       ^^^ source.sentinel
+>is_valid_weekday = rule { not is_weekend and not school_today and homework is "" }
+#^^^^^^^^^^^^^^^^^ source.sentinel
+#                 ^ source.sentinel keyword.operator.symbol.sentinel
+#                  ^ source.sentinel
+#                   ^^^^ source.sentinel keyword.other.sentinel
+#                       ^^^ source.sentinel
+#                          ^^^ source.sentinel keyword.control.sentinel
+#                             ^^^^^^^^^^^^ source.sentinel
+#                                         ^^^ source.sentinel keyword.control.sentinel
+#                                            ^ source.sentinel
+#                                             ^^^ source.sentinel keyword.control.sentinel
+#                                                ^^^^^^^^^^^^^^ source.sentinel
+#                                                              ^^^ source.sentinel keyword.control.sentinel
+#                                                                 ^^^^^^^^^^ source.sentinel
+#                                                                           ^^ source.sentinel keyword.control.sentinel
+#                                                                             ^ source.sentinel
+#                                                                              ^ source.sentinel string.quoted.double.untitled
+#                                                                               ^ source.sentinel string.quoted.double.untitled
+#                                                                                ^^^ source.sentinel
+>
+>main = rule { is_valid_weekend or is_valid_weekday }
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^^^^ source.sentinel keyword.other.sentinel
+#           ^^^^^^^^^^^^^^^^^^^^ source.sentinel
+#                               ^^ source.sentinel keyword.control.sentinel
+#                                 ^^^^^^^^^^^^^^^^^^^^ source.sentinel
+>
+>example_no_when = rule { (is_prefix and is_numeric) or not is_prefix }
+#^^^^^^^^^^^^^^^^ source.sentinel
+#                ^ source.sentinel keyword.operator.symbol.sentinel
+#                 ^ source.sentinel
+#                  ^^^^ source.sentinel keyword.other.sentinel
+#                      ^^^^^^^^^^^^^^ source.sentinel
+#                                    ^^^ source.sentinel keyword.control.sentinel
+#                                       ^^^^^^^^^^^^^ source.sentinel
+#                                                    ^^ source.sentinel keyword.control.sentinel
+#                                                      ^ source.sentinel
+#                                                       ^^^ source.sentinel keyword.control.sentinel
+#                                                          ^^^^^^^^^^^^^ source.sentinel
+>
+>example_when    = rule when is_prefix { is_numeric }
+#^^^^^^^^^^^^^^^^ source.sentinel
+#                ^ source.sentinel keyword.operator.symbol.sentinel
+#                 ^ source.sentinel
+#                  ^^^^ source.sentinel keyword.other.sentinel
+#                      ^ source.sentinel
+#                       ^^^^ source.sentinel keyword.other.sentinel
+#                           ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
+>
+>main = rule {
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^^^^ source.sentinel keyword.other.sentinel
+#           ^^^ source.sentinel
+>		filter days as d {
+#^^ source.sentinel
+#  ^^^^^^ source.sentinel keyword.control.sentinel
+#        ^^^^^^ source.sentinel
+#              ^^ source.sentinel keyword.other.sentinel
+#                ^^^^^ source.sentinel
+>				d.day not in ["saturday", "sunday"] and
+#^^^^^^^^^^ source.sentinel
+#          ^^^ source.sentinel keyword.control.sentinel
+#             ^ source.sentinel
+#              ^^ source.sentinel keyword.control.sentinel
+#                ^^ source.sentinel
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                           ^ source.sentinel string.quoted.double.untitled
+#                            ^^ source.sentinel
+#                              ^ source.sentinel string.quoted.double.untitled
+#                               ^^^^^^ source.sentinel string.quoted.double.untitled
+#                                     ^ source.sentinel string.quoted.double.untitled
+#                                      ^^ source.sentinel
+#                                        ^^^ source.sentinel keyword.control.sentinel
+>						d.homework is not ""
+#^^^^^^^^^^^^^^^^^ source.sentinel
+#                 ^^ source.sentinel keyword.control.sentinel
+#                   ^ source.sentinel
+#                    ^^^ source.sentinel keyword.control.sentinel
+#                       ^ source.sentinel
+#                        ^ source.sentinel string.quoted.double.untitled
+#                         ^ source.sentinel string.quoted.double.untitled
+>		}
+#^^^^ source.sentinel
+>}
+#^^ source.sentinel
+>

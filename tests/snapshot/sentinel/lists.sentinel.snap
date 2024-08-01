@@ -1,0 +1,165 @@
+># https://developer.hashicorp.com/sentinel/docs/language/lists
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>[]                  // An empty list
+#^^^^^^^^^^^^^^^^^^^^ source.sentinel
+#                    ^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>["foo"]             // Single element list
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^^^ source.sentinel string.quoted.double.untitled
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^^^^^^^^^^^^^^ source.sentinel
+#                    ^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>["foo", 1, 2, true] // Multi element list with different types
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^^^ source.sentinel string.quoted.double.untitled
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^^ source.sentinel
+#           ^ source.sentinel constant.numeric.number.sentinel
+#            ^^ source.sentinel
+#              ^^^^ source.sentinel constant.language.sentinel
+#                  ^^ source.sentinel
+#                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>["foo", [1, 2]]     // List containing another list
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^^^ source.sentinel string.quoted.double.untitled
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^^^ source.sentinel
+#         ^ source.sentinel constant.numeric.number.sentinel
+#          ^^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+#             ^^^^^^^ source.sentinel
+#                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>
+>value = append([1,2], 3)      // [1, 2, 3]
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^ source.sentinel support.function.builtin.sentinel
+#              ^^ source.sentinel
+#                ^ source.sentinel constant.numeric.number.sentinel
+#                 ^ source.sentinel
+#                  ^ source.sentinel constant.numeric.number.sentinel
+#                   ^^^ source.sentinel
+#                      ^ source.sentinel constant.numeric.number.sentinel
+#                       ^^^^^^^ source.sentinel
+#                              ^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = append([1,2], "foo")  // [1, 2, "foo"]
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^ source.sentinel support.function.builtin.sentinel
+#              ^^ source.sentinel
+#                ^ source.sentinel constant.numeric.number.sentinel
+#                 ^ source.sentinel
+#                  ^ source.sentinel constant.numeric.number.sentinel
+#                   ^^^ source.sentinel
+#                      ^ source.sentinel string.quoted.double.untitled
+#                       ^^^ source.sentinel string.quoted.double.untitled
+#                          ^ source.sentinel string.quoted.double.untitled
+#                           ^^^ source.sentinel
+#                              ^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = append([1,2], [3])    // [1, 2, [3]]
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^ source.sentinel support.function.builtin.sentinel
+#              ^^ source.sentinel
+#                ^ source.sentinel constant.numeric.number.sentinel
+#                 ^ source.sentinel
+#                  ^ source.sentinel constant.numeric.number.sentinel
+#                   ^^^^ source.sentinel
+#                       ^ source.sentinel constant.numeric.number.sentinel
+#                        ^^^^^^ source.sentinel
+#                              ^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = append(1, 3)          // error()
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^ source.sentinel support.function.builtin.sentinel
+#              ^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^ source.sentinel constant.numeric.number.sentinel
+#                   ^^^^^^^^^^^ source.sentinel
+#                              ^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>[1, 2] is [1, 2]                       // true
+#^ source.sentinel
+# ^ source.sentinel constant.numeric.number.sentinel
+#  ^^ source.sentinel
+#    ^ source.sentinel constant.numeric.number.sentinel
+#     ^^ source.sentinel
+#       ^^ source.sentinel keyword.control.sentinel
+#         ^^ source.sentinel
+#           ^ source.sentinel constant.numeric.number.sentinel
+#            ^^ source.sentinel
+#              ^ source.sentinel constant.numeric.number.sentinel
+#               ^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
+#                                       ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>[1, 2] is [2, 1]                       // false
+#^ source.sentinel
+# ^ source.sentinel constant.numeric.number.sentinel
+#  ^^ source.sentinel
+#    ^ source.sentinel constant.numeric.number.sentinel
+#     ^^ source.sentinel
+#       ^^ source.sentinel keyword.control.sentinel
+#         ^^ source.sentinel
+#           ^ source.sentinel constant.numeric.number.sentinel
+#            ^^ source.sentinel
+#              ^ source.sentinel constant.numeric.number.sentinel
+#               ^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
+#                                       ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>["a"] is ["a", "b"]                    // false
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^ source.sentinel string.quoted.double.untitled
+#   ^ source.sentinel string.quoted.double.untitled
+#    ^^ source.sentinel
+#      ^^ source.sentinel keyword.control.sentinel
+#        ^^ source.sentinel
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^ source.sentinel string.quoted.double.untitled
+#                 ^ source.sentinel string.quoted.double.untitled
+#                  ^^^^^^^^^^^^^^^^^^^^^ source.sentinel
+#                                       ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>["a", ["b", "c"]] is ["a", ["b", "c"]] // true
+#^ source.sentinel
+# ^ source.sentinel string.quoted.double.untitled
+#  ^ source.sentinel string.quoted.double.untitled
+#   ^ source.sentinel string.quoted.double.untitled
+#    ^^^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^ source.sentinel
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel string.quoted.double.untitled
+#               ^^^ source.sentinel
+#                  ^^ source.sentinel keyword.control.sentinel
+#                    ^^ source.sentinel
+#                      ^ source.sentinel string.quoted.double.untitled
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^ source.sentinel string.quoted.double.untitled
+#                         ^^^ source.sentinel
+#                            ^ source.sentinel string.quoted.double.untitled
+#                             ^ source.sentinel string.quoted.double.untitled
+#                              ^ source.sentinel string.quoted.double.untitled
+#                               ^^ source.sentinel
+#                                 ^ source.sentinel string.quoted.double.untitled
+#                                  ^ source.sentinel string.quoted.double.untitled
+#                                   ^ source.sentinel string.quoted.double.untitled
+#                                    ^^^ source.sentinel
+#                                       ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>

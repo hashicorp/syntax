@@ -1,0 +1,28 @@
+># https://developer.hashicorp.com/sentinel/docs/language/spec#comments
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+># Single line comment
+#^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>comment
+#^^^^^^^^ source.sentinel
+>
+>comment # Single line comment
+#^^^^^^^^ source.sentinel
+#        ^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>// Single line comment
+#^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>comment
+#^^^^^^^^ source.sentinel
+>
+>/* multi
+#^^ source.sentinel comment.line.block.sentinel
+#  ^^^^^^^ source.sentinel comment.line.block.sentinel
+>line
+#^^^^^ source.sentinel comment.line.block.sentinel
+>    comment */
+#^^^^^^^^^^^^ source.sentinel comment.line.block.sentinel
+#            ^^ source.sentinel comment.line.block.sentinel
+>comment
+#^^^^^^^^ source.sentinel
+>

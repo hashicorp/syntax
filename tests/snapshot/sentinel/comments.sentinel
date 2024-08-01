@@ -1,0 +1,14 @@
+# https://developer.hashicorp.com/sentinel/docs/language/spec#comments
+
+# Single line comment
+comment
+
+comment # Single line comment
+
+// Single line comment
+comment
+
+/* multi
+line
+    comment */
+comment

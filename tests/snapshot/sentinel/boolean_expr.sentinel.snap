@@ -1,0 +1,398 @@
+># https://developer.hashicorp.com/sentinel/docs/language/boolexpr
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>value = (p and q) or r
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^^ source.sentinel
+#           ^^^ source.sentinel keyword.control.sentinel
+#              ^^^^ source.sentinel
+#                  ^^ source.sentinel keyword.control.sentinel
+#                    ^^^ source.sentinel
+>value = p and (q or r)
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^^^ source.sentinel keyword.control.sentinel
+#             ^^^^ source.sentinel
+#                 ^^ source.sentinel keyword.control.sentinel
+#                   ^^^^ source.sentinel
+>
+>value = 42 == -1
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+#          ^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel keyword.operator.symbol.sentinel
+#             ^ source.sentinel
+#              ^ source.sentinel keyword.operator.symbol.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+>value = 42 != -1
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+#          ^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel keyword.operator.symbol.sentinel
+#             ^ source.sentinel
+#              ^ source.sentinel keyword.operator.symbol.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+>value = 42 < -1
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+#          ^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel
+#             ^ source.sentinel keyword.operator.symbol.sentinel
+#              ^ source.sentinel constant.numeric.number.sentinel
+>value = 42 <= -1
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+#          ^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel keyword.operator.symbol.sentinel
+#             ^ source.sentinel
+#              ^ source.sentinel keyword.operator.symbol.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+>value = 42 > -1
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+#          ^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel
+#             ^ source.sentinel keyword.operator.symbol.sentinel
+#              ^ source.sentinel constant.numeric.number.sentinel
+>value = 42 >= -1
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+#          ^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel keyword.operator.symbol.sentinel
+#             ^ source.sentinel
+#              ^ source.sentinel keyword.operator.symbol.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+>
+># Sets
+#^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>value = [1, 2, 3] contains 2
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^ source.sentinel
+#         ^ source.sentinel constant.numeric.number.sentinel
+#          ^^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+#             ^^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^^^^^^^^ source.sentinel keyword.control.sentinel
+#                          ^ source.sentinel
+#                           ^ source.sentinel constant.numeric.number.sentinel
+>value = [1, 2, 3] contains 5
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^ source.sentinel
+#         ^ source.sentinel constant.numeric.number.sentinel
+#          ^^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+#             ^^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^^^^^^^^ source.sentinel keyword.control.sentinel
+#                          ^ source.sentinel
+#                           ^ source.sentinel constant.numeric.number.sentinel
+>value = [1, 2, 3] contains "value"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^ source.sentinel
+#         ^ source.sentinel constant.numeric.number.sentinel
+#          ^^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+#             ^^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^^^^^^^^ source.sentinel keyword.control.sentinel
+#                          ^ source.sentinel
+#                           ^ source.sentinel string.quoted.double.untitled
+#                            ^^^^^ source.sentinel string.quoted.double.untitled
+#                                 ^ source.sentinel string.quoted.double.untitled
+>value = [1, 2, 3] not contains "value"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^ source.sentinel
+#         ^ source.sentinel constant.numeric.number.sentinel
+#          ^^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+#             ^^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^^^ source.sentinel keyword.control.sentinel
+#                     ^ source.sentinel
+#                      ^^^^^^^^ source.sentinel keyword.control.sentinel
+#                              ^ source.sentinel
+#                               ^ source.sentinel string.quoted.double.untitled
+#                                ^^^^^ source.sentinel string.quoted.double.untitled
+#                                     ^ source.sentinel string.quoted.double.untitled
+>
+>value = { "a": 1, "b": 2 } contains "a"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^ source.sentinel string.quoted.double.untitled
+#                     ^^ source.sentinel
+#                       ^ source.sentinel constant.numeric.number.sentinel
+#                        ^^^ source.sentinel
+#                           ^^^^^^^^ source.sentinel keyword.control.sentinel
+#                                   ^ source.sentinel
+#                                    ^ source.sentinel string.quoted.double.untitled
+#                                     ^ source.sentinel string.quoted.double.untitled
+#                                      ^ source.sentinel string.quoted.double.untitled
+>value = { "a": 1, "b": 2 } contains "c"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^ source.sentinel string.quoted.double.untitled
+#                     ^^ source.sentinel
+#                       ^ source.sentinel constant.numeric.number.sentinel
+#                        ^^^ source.sentinel
+#                           ^^^^^^^^ source.sentinel keyword.control.sentinel
+#                                   ^ source.sentinel
+#                                    ^ source.sentinel string.quoted.double.untitled
+#                                     ^ source.sentinel string.quoted.double.untitled
+#                                      ^ source.sentinel string.quoted.double.untitled
+>value = { "a": 1, "b": 2 } contains 2
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^ source.sentinel string.quoted.double.untitled
+#                     ^^ source.sentinel
+#                       ^ source.sentinel constant.numeric.number.sentinel
+#                        ^^^ source.sentinel
+#                           ^^^^^^^^ source.sentinel keyword.control.sentinel
+#                                   ^ source.sentinel
+#                                    ^ source.sentinel constant.numeric.number.sentinel
+>value = { "a": 1, "b": 2 } not contains 2
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^ source.sentinel string.quoted.double.untitled
+#                     ^^ source.sentinel
+#                       ^ source.sentinel constant.numeric.number.sentinel
+#                        ^^^ source.sentinel
+#                           ^^^ source.sentinel keyword.control.sentinel
+#                              ^ source.sentinel
+#                               ^^^^^^^^ source.sentinel keyword.control.sentinel
+#                                       ^ source.sentinel
+#                                        ^ source.sentinel constant.numeric.number.sentinel
+>
+># Matches
+#^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>value = "test" matches "e"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel
+#               ^^^^^^^ source.sentinel keyword.control.sentinel
+#                      ^ source.sentinel
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^ source.sentinel string.quoted.double.untitled
+#                         ^ source.sentinel string.quoted.double.untitled
+>value = "test" matches "^e"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel
+#               ^^^^^^^ source.sentinel keyword.control.sentinel
+#                      ^ source.sentinel
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^ source.sentinel string.quoted.double.untitled
+#                          ^ source.sentinel string.quoted.double.untitled
+>value = "TEST" matches "test"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel
+#               ^^^^^^^ source.sentinel keyword.control.sentinel
+#                      ^ source.sentinel
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^^^ source.sentinel string.quoted.double.untitled
+#                            ^ source.sentinel string.quoted.double.untitled
+>value = "TEST" matches "(?i)test"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel
+#               ^^^^^^^ source.sentinel keyword.control.sentinel
+#                      ^ source.sentinel
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                ^ source.sentinel string.quoted.double.untitled
+>value = "ABC123" matches "[A-Z]+\\d+"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^^^ source.sentinel string.quoted.double.untitled
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^ source.sentinel
+#                 ^^^^^^^ source.sentinel keyword.control.sentinel
+#                        ^ source.sentinel
+#                         ^ source.sentinel string.quoted.double.untitled
+#                          ^^^^^^ source.sentinel string.quoted.double.untitled
+#                                ^^ source.sentinel string.quoted.double.untitled constant.character.escape.single.sentinel
+#                                  ^^ source.sentinel string.quoted.double.untitled
+#                                    ^ source.sentinel string.quoted.double.untitled
+>value = "test" not matches "e"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel
+#               ^^^ source.sentinel keyword.control.sentinel
+#                  ^ source.sentinel
+#                   ^^^^^^^ source.sentinel keyword.control.sentinel
+#                          ^ source.sentinel
+#                           ^ source.sentinel string.quoted.double.untitled
+#                            ^ source.sentinel string.quoted.double.untitled
+#                             ^ source.sentinel string.quoted.double.untitled
+>
+># Any, All
+#^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>all group.tasks as t { t.driver is "vmware" }
+#^^^ source.sentinel keyword.control.sentinel
+#   ^^^^^^^^^^^^^ source.sentinel
+#                ^^ source.sentinel keyword.other.sentinel
+#                  ^^^^^^^^^^^^^^ source.sentinel
+#                                ^^ source.sentinel keyword.control.sentinel
+#                                  ^ source.sentinel
+#                                   ^ source.sentinel string.quoted.double.untitled
+#                                    ^^^^^^ source.sentinel string.quoted.double.untitled
+#                                          ^ source.sentinel string.quoted.double.untitled
+#                                           ^^^ source.sentinel
+>any group.tasks as t { t.driver is "vmware" }
+#^^^ source.sentinel keyword.control.sentinel
+#   ^^^^^^^^^^^^^ source.sentinel
+#                ^^ source.sentinel keyword.other.sentinel
+#                  ^^^^^^^^^^^^^^ source.sentinel
+#                                ^^ source.sentinel keyword.control.sentinel
+#                                  ^ source.sentinel
+#                                   ^ source.sentinel string.quoted.double.untitled
+#                                    ^^^^^^ source.sentinel string.quoted.double.untitled
+#                                          ^ source.sentinel string.quoted.double.untitled
+#                                           ^^^ source.sentinel
+>
+>any ["a", "b"] as char { char is "a" } or other_value is "another"
+#^^^ source.sentinel keyword.control.sentinel
+#   ^^ source.sentinel
+#     ^ source.sentinel string.quoted.double.untitled
+#      ^ source.sentinel string.quoted.double.untitled
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^ source.sentinel
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel
+#               ^^ source.sentinel keyword.other.sentinel
+#                 ^^^^^^^^^^^^^ source.sentinel
+#                              ^^ source.sentinel keyword.control.sentinel
+#                                ^ source.sentinel
+#                                 ^ source.sentinel string.quoted.double.untitled
+#                                  ^ source.sentinel string.quoted.double.untitled
+#                                   ^ source.sentinel string.quoted.double.untitled
+#                                    ^^^ source.sentinel
+#                                       ^^ source.sentinel keyword.control.sentinel
+#                                         ^^^^^^^^^^^^^ source.sentinel
+#                                                      ^^ source.sentinel keyword.control.sentinel
+#                                                        ^ source.sentinel
+#                                                         ^ source.sentinel string.quoted.double.untitled
+#                                                          ^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                                                 ^ source.sentinel string.quoted.double.untitled
+>
+># Emptiness/Defined
+#^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>value = x is empty
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^^ source.sentinel keyword.control.sentinel
+#            ^^^^^^^ source.sentinel
+>value = x is not empty
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^^ source.sentinel keyword.control.sentinel
+#            ^ source.sentinel
+#             ^^^ source.sentinel keyword.control.sentinel
+#                ^^^^^^^ source.sentinel
+>
+>value = x is defined
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^^ source.sentinel keyword.control.sentinel
+#            ^^^^^^^^^ source.sentinel
+>value = x is not defined
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^^ source.sentinel
+#          ^^ source.sentinel keyword.control.sentinel
+#            ^ source.sentinel
+#             ^^^ source.sentinel keyword.control.sentinel
+#                ^^^^^^^^^ source.sentinel
+>

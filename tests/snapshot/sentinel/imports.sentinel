@@ -1,0 +1,8 @@
+# https://developer.hashicorp.com/sentinel/docs/language/imports
+
+import "calendar"
+
+import "name"
+
+import "name1" as one
+import "name2" as two

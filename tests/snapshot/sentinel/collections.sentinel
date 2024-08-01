@@ -1,0 +1,15 @@
+# https://developer.hashicorp.com/sentinel/docs/language/collection-operations
+
+# filter
+filter list as value { condition }      // Single-iterator, list
+filter list as idx, value { condition } // Double-iterator, list
+
+filter map as key { condition }         // Single-iterator, map
+filter map as key, value { condition }  // Double-iterator, map
+
+# map
+l = [1, 2]
+r = map l as v { v % 2 } // [false, true]
+
+m = { "a": "foo", "b": "bar" }
+r = map m as k, v { v } // ["foo", "bar"]

@@ -1,0 +1,68 @@
+># https://developer.hashicorp.com/sentinel/docs/language/loops
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>for { "a": 1, "b": 2 } as name {
+#^^^ source.sentinel keyword.control.sentinel
+#   ^^^ source.sentinel
+#      ^ source.sentinel string.quoted.double.untitled
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^ source.sentinel
+#           ^ source.sentinel constant.numeric.number.sentinel
+#            ^^ source.sentinel
+#              ^ source.sentinel string.quoted.double.untitled
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^ source.sentinel string.quoted.double.untitled
+#                 ^^ source.sentinel
+#                   ^ source.sentinel constant.numeric.number.sentinel
+#                    ^^^ source.sentinel
+#                       ^^ source.sentinel keyword.other.sentinel
+#                         ^^^^^^^^ source.sentinel
+>    append(list, name)
+#^^^^ source.sentinel
+#    ^^^^^^ source.sentinel support.function.builtin.sentinel
+#          ^^^^^^^^^^^^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+>for list as value {
+#^^^ source.sentinel keyword.control.sentinel
+#   ^^^^^^ source.sentinel
+#         ^^ source.sentinel keyword.other.sentinel
+#           ^^^^^^^^^ source.sentinel
+>    a = 42
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+>}
+#^^ source.sentinel
+>for list as value { a = 42 }
+#^^^ source.sentinel keyword.control.sentinel
+#   ^^^^^^ source.sentinel
+#         ^^ source.sentinel keyword.other.sentinel
+#           ^^^^^^^^^^^ source.sentinel
+#                      ^ source.sentinel keyword.operator.symbol.sentinel
+#                       ^ source.sentinel
+#                        ^^ source.sentinel constant.numeric.number.sentinel
+#                          ^^^ source.sentinel
+>
+>for [1, 2, 3] as num {
+#^^^ source.sentinel keyword.control.sentinel
+#   ^^ source.sentinel
+#     ^ source.sentinel constant.numeric.number.sentinel
+#      ^^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^^ source.sentinel
+#           ^ source.sentinel constant.numeric.number.sentinel
+#            ^^ source.sentinel
+#              ^^ source.sentinel keyword.other.sentinel
+#                ^^^^^^^ source.sentinel
+>    count += num
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^^^^^ source.sentinel
+>}
+#^^ source.sentinel
+>
