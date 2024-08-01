@@ -1,0 +1,10 @@
+# https://developer.hashicorp.com/sentinel/docs/language/logging-errors
+
+value = 42
+print("the value is", value) // the value is 42
+
+map = { "foo": false }
+print(map) // { "foo": false }
+
+one_is_zero = rule { 1 == 0 }
+print(one_is_zero) // false

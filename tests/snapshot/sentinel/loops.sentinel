@@ -1,0 +1,14 @@
+# https://developer.hashicorp.com/sentinel/docs/language/loops
+
+for { "a": 1, "b": 2 } as name {
+    append(list, name)
+}
+
+for list as value {
+    a = 42
+}
+for list as value { a = 42 }
+
+for [1, 2, 3] as num {
+    count += num
+}

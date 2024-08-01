@@ -1,0 +1,218 @@
+># https://developer.hashicorp.com/sentinel/docs/language/conditionals
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+># Single line if statements
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>if value is 18 { print("condition met") }
+#^^ source.sentinel keyword.control.sentinel
+#  ^^^^^^^ source.sentinel
+#         ^^ source.sentinel keyword.control.sentinel
+#           ^ source.sentinel
+#            ^^ source.sentinel constant.numeric.number.sentinel
+#              ^^^ source.sentinel
+#                 ^^^^^ source.sentinel support.function.builtin.sentinel
+#                      ^ source.sentinel
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                     ^ source.sentinel string.quoted.double.untitled
+#                                      ^^^^ source.sentinel
+>if value { print("condition met") }
+#^^ source.sentinel keyword.control.sentinel
+#  ^^^^^^^^^ source.sentinel
+#           ^^^^^ source.sentinel support.function.builtin.sentinel
+#                ^ source.sentinel
+#                 ^ source.sentinel string.quoted.double.untitled
+#                  ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                               ^ source.sentinel string.quoted.double.untitled
+#                                ^^^^ source.sentinel
+>if value["key"] > 12 { print("condition met") }
+#^^ source.sentinel keyword.control.sentinel
+#  ^^^^^^^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^^ source.sentinel
+#                ^ source.sentinel keyword.operator.symbol.sentinel
+#                 ^ source.sentinel
+#                  ^^ source.sentinel constant.numeric.number.sentinel
+#                    ^^^ source.sentinel
+#                       ^^^^^ source.sentinel support.function.builtin.sentinel
+#                            ^ source.sentinel
+#                             ^ source.sentinel string.quoted.double.untitled
+#                              ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                           ^ source.sentinel string.quoted.double.untitled
+#                                            ^^^^ source.sentinel
+>
+># Multi-line if statements
+#^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>if value is 18 {
+#^^ source.sentinel keyword.control.sentinel
+#  ^^^^^^^ source.sentinel
+#         ^^ source.sentinel keyword.control.sentinel
+#           ^ source.sentinel
+#            ^^ source.sentinel constant.numeric.number.sentinel
+#              ^^^ source.sentinel
+>	print("condition met")
+#^ source.sentinel
+# ^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+>if value {
+#^^ source.sentinel keyword.control.sentinel
+#  ^^^^^^^^^ source.sentinel
+>	print("condition met")
+#^ source.sentinel
+# ^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+>if value["key"] > 12 {
+#^^ source.sentinel keyword.control.sentinel
+#  ^^^^^^^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^^ source.sentinel
+#                ^ source.sentinel keyword.operator.symbol.sentinel
+#                 ^ source.sentinel
+#                  ^^ source.sentinel constant.numeric.number.sentinel
+#                    ^^^ source.sentinel
+>	print("condition met")
+#^ source.sentinel
+# ^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+># Multi-line if-elseif-else statements
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>if value is 18 { print("condition met") } else if value { print("condition met") } else { print("condition met") }
+#^^ source.sentinel keyword.control.sentinel
+#  ^^^^^^^ source.sentinel
+#         ^^ source.sentinel keyword.control.sentinel
+#           ^ source.sentinel
+#            ^^ source.sentinel constant.numeric.number.sentinel
+#              ^^^ source.sentinel
+#                 ^^^^^ source.sentinel support.function.builtin.sentinel
+#                      ^ source.sentinel
+#                       ^ source.sentinel string.quoted.double.untitled
+#                        ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                     ^ source.sentinel string.quoted.double.untitled
+#                                      ^^^^ source.sentinel
+#                                          ^^^^ source.sentinel keyword.control.sentinel
+#                                              ^ source.sentinel
+#                                               ^^ source.sentinel keyword.control.sentinel
+#                                                 ^^^^^^^^^ source.sentinel
+#                                                          ^^^^^ source.sentinel support.function.builtin.sentinel
+#                                                               ^ source.sentinel
+#                                                                ^ source.sentinel string.quoted.double.untitled
+#                                                                 ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                                                              ^ source.sentinel string.quoted.double.untitled
+#                                                                               ^^^^ source.sentinel
+#                                                                                   ^^^^ source.sentinel keyword.control.sentinel
+#                                                                                       ^^^ source.sentinel
+#                                                                                          ^^^^^ source.sentinel support.function.builtin.sentinel
+#                                                                                               ^ source.sentinel
+#                                                                                                ^ source.sentinel string.quoted.double.untitled
+#                                                                                                 ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                                                                                                              ^ source.sentinel string.quoted.double.untitled
+#                                                                                                               ^^^^ source.sentinel
+>
+># Multi-line if-elseif-else statements
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>if value is 18 {
+#^^ source.sentinel keyword.control.sentinel
+#  ^^^^^^^ source.sentinel
+#         ^^ source.sentinel keyword.control.sentinel
+#           ^ source.sentinel
+#            ^^ source.sentinel constant.numeric.number.sentinel
+#              ^^^ source.sentinel
+>	print("condition met")
+#^ source.sentinel
+# ^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^ source.sentinel
+>} else if value {
+#^^ source.sentinel
+#  ^^^^ source.sentinel keyword.control.sentinel
+#      ^ source.sentinel
+#       ^^ source.sentinel keyword.control.sentinel
+#         ^^^^^^^^^ source.sentinel
+>	print("condition met")
+#^ source.sentinel
+# ^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^ source.sentinel
+>} else {
+#^^ source.sentinel
+#  ^^^^ source.sentinel keyword.control.sentinel
+#      ^^^ source.sentinel
+>	print("condition met")
+#^ source.sentinel
+# ^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                     ^ source.sentinel string.quoted.double.untitled
+#                      ^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+>// Case statements
+#^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>case x { when "foo", "bar": return true; else: return false }
+#^^^^ source.sentinel keyword.control.sentinel
+#    ^^^^^ source.sentinel
+#         ^^^^ source.sentinel keyword.control.when.sentinel
+#             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
+#                                              ^ source.sentinel
+#                                               ^^^^^^ source.sentinel keyword.control.sentinel
+#                                                     ^ source.sentinel
+#                                                      ^^^^^ source.sentinel constant.language.sentinel
+#                                                           ^^^ source.sentinel
+>
+>case x {
+#^^^^ source.sentinel keyword.control.sentinel
+#    ^^^^^ source.sentinel
+>	when "foo", "bar":
+#^ source.sentinel
+# ^^^^ source.sentinel keyword.control.when.sentinel
+#     ^^^^^^^^^^^^^^ source.sentinel
+>		return true
+#^^ source.sentinel
+#  ^^^^^^ source.sentinel keyword.control.sentinel
+#        ^ source.sentinel
+#         ^^^^ source.sentinel constant.language.sentinel
+>	else:
+#^ source.sentinel
+# ^^^^ source.sentinel keyword.control.else.sentinel
+#     ^ source.sentinel
+>		return false
+#^^ source.sentinel
+#  ^^^^^^ source.sentinel keyword.control.sentinel
+#        ^ source.sentinel
+#         ^^^^^ source.sentinel constant.language.sentinel
+>}
+#^^ source.sentinel
+>

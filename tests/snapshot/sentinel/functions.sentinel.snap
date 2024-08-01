@@ -1,0 +1,149 @@
+># https://developer.hashicorp.com/sentinel/docs/language/functions
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>func sum(a, b) {
+#^^^^ source.sentinel keyword.other.sentinel
+#    ^^^^^^^^^^^^^ source.sentinel
+>  return a + b
+#^^ source.sentinel
+#  ^^^^^^ source.sentinel keyword.control.sentinel
+#        ^^^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+>func makeAdder(a) {
+#^^^^ source.sentinel keyword.other.sentinel
+#    ^^^^^^^^^^^^^^^^ source.sentinel
+>  return func(b) {
+#^^ source.sentinel
+#  ^^^^^^ source.sentinel keyword.control.sentinel
+#        ^ source.sentinel
+#         ^^^^ source.sentinel keyword.other.sentinel
+#             ^^^^^^ source.sentinel
+>    return a + b
+#^^^^ source.sentinel
+#    ^^^^^^ source.sentinel keyword.control.sentinel
+#          ^^^ source.sentinel
+#             ^ source.sentinel keyword.operator.symbol.sentinel
+#              ^^^ source.sentinel
+>  }
+#^^^^ source.sentinel
+>}
+#^^ source.sentinel
+>
+>add1 = func(x) { return x + 1 }
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^^^^ source.sentinel keyword.other.sentinel
+#           ^^^^^^ source.sentinel
+#                 ^^^^^^ source.sentinel keyword.control.sentinel
+#                       ^^^ source.sentinel
+#                          ^ source.sentinel keyword.operator.symbol.sentinel
+#                           ^ source.sentinel
+#                            ^ source.sentinel constant.numeric.number.sentinel
+#                             ^^^ source.sentinel
+>
+>add2 = func add1(x) {
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^^^^ source.sentinel keyword.other.sentinel
+#           ^^^^^^^^^^^ source.sentinel
+>  return x + 1
+#^^ source.sentinel
+#  ^^^^^^ source.sentinel keyword.control.sentinel
+#        ^^^ source.sentinel
+#           ^ source.sentinel keyword.operator.symbol.sentinel
+#            ^ source.sentinel
+#             ^ source.sentinel constant.numeric.number.sentinel
+>}
+#^^ source.sentinel
+>
+>f = func() {
+#^^ source.sentinel
+#  ^ source.sentinel keyword.operator.symbol.sentinel
+#   ^ source.sentinel
+#    ^^^^ source.sentinel keyword.other.sentinel
+#        ^^^^^ source.sentinel
+>    a = 42
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+>    print(a) // 42
+#^^^^ source.sentinel
+#    ^^^^^ source.sentinel support.function.builtin.sentinel
+#         ^^^^ source.sentinel
+#             ^^^^^ source.sentinel comment.line.double-slash.sentinel
+>    return undefined
+#^^^^ source.sentinel
+#    ^^^^^^ source.sentinel keyword.control.sentinel
+#          ^ source.sentinel
+#           ^^^^^^^^^ source.sentinel constant.language.sentinel
+>}
+#^^ source.sentinel
+>
+>print(a) // undefined
+#^^^^^ source.sentinel support.function.builtin.sentinel
+#     ^^^^ source.sentinel
+#         ^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>fib = func(x) {
+#^^^^ source.sentinel
+#    ^ source.sentinel keyword.operator.symbol.sentinel
+#     ^ source.sentinel
+#      ^^^^ source.sentinel keyword.other.sentinel
+#          ^^^^^^ source.sentinel
+>    if x <= 0 {
+#^^^^ source.sentinel
+#    ^^ source.sentinel keyword.control.sentinel
+#      ^^^ source.sentinel
+#         ^ source.sentinel keyword.operator.symbol.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+#             ^^^ source.sentinel
+>        return undefined
+#^^^^^^^^ source.sentinel
+#        ^^^^^^ source.sentinel keyword.control.sentinel
+#              ^ source.sentinel
+#               ^^^^^^^^^ source.sentinel constant.language.sentinel
+>    }
+#^^^^^^ source.sentinel
+>
+>    if x == 1 {
+#^^^^ source.sentinel
+#    ^^ source.sentinel keyword.control.sentinel
+#      ^^^ source.sentinel
+#         ^ source.sentinel keyword.operator.symbol.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+#             ^^^ source.sentinel
+>        return 1
+#^^^^^^^^ source.sentinel
+#        ^^^^^^ source.sentinel keyword.control.sentinel
+#              ^ source.sentinel
+#               ^ source.sentinel constant.numeric.number.sentinel
+>    } else {
+#^^^^^^ source.sentinel
+#      ^^^^ source.sentinel keyword.control.sentinel
+#          ^^^ source.sentinel
+>        return x + fib(x - 1)
+#^^^^^^^^ source.sentinel
+#        ^^^^^^ source.sentinel keyword.control.sentinel
+#              ^^^ source.sentinel
+#                 ^ source.sentinel keyword.operator.symbol.sentinel
+#                  ^^^^^^^ source.sentinel
+#                         ^ source.sentinel keyword.operator.symbol.sentinel
+#                          ^ source.sentinel
+#                           ^ source.sentinel constant.numeric.number.sentinel
+#                            ^^ source.sentinel
+>    }
+#^^^^^^ source.sentinel
+>}
+#^^ source.sentinel
+>

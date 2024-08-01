@@ -1,0 +1,326 @@
+># https://developer.hashicorp.com/sentinel/docs/language/values
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+># Int
+#^^^^^ source.sentinel comment.line.number-sign.sentinel
+>value = 42
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^ source.sentinel constant.numeric.number.sentinel
+>value = 0600
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^ source.sentinel constant.numeric.oct.sentinel
+>value = 0xBadFace
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^^^^ source.sentinel constant.numeric.hex.sentinel
+>value = 170141183460469
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^^^^^^^^^^ source.sentinel constant.numeric.number.sentinel
+>
+># Float
+#^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>value = 0.
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^^ source.sentinel
+>value = 72.40
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^ source.sentinel constant.numeric.number.sentinel
+>value = 072.40  // == 72.40
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^ source.sentinel constant.numeric.oct.sentinel
+#           ^^^ source.sentinel constant.numeric.number.sentinel
+#              ^^ source.sentinel
+#                ^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = 2.71828
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^^ source.sentinel constant.numeric.number.sentinel
+>value = 1.e+0
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^ source.sentinel constant.numeric.number.sentinel
+>value = 6.67428e-11
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^^^^^^ source.sentinel constant.numeric.number.sentinel
+>value = 1E6
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^ source.sentinel constant.numeric.number.sentinel
+>value = .25
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^ source.sentinel
+#         ^^ source.sentinel constant.numeric.number.sentinel
+>value = .12345E+5
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^^ source.sentinel
+#         ^^^^^^^^ source.sentinel constant.numeric.number.sentinel
+>
+># Strings
+#^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>value = "\n"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^ source.sentinel string.quoted.double.untitled constant.character.escape.single.sentinel
+#           ^ source.sentinel string.quoted.double.untitled
+>value = "\""                 // same as `"`
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^ source.sentinel string.quoted.double.untitled constant.character.escape.single.sentinel
+#           ^ source.sentinel string.quoted.double.untitled
+#            ^^^^^^^^^^^^^^^^^ source.sentinel
+#                             ^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = "Hello, world!\n"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
+#                      ^^ source.sentinel string.quoted.double.untitled constant.character.escape.single.sentinel
+#                        ^ source.sentinel string.quoted.double.untitled
+>value = "日本語"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+>value = "\u65e5本\U00008a9e"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^^^ source.sentinel string.quoted.double.untitled constant.character.escape.unicode32.sentinel
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^^^^^^^^^ source.sentinel string.quoted.double.untitled constant.character.escape.unicode64.sentinel
+#                          ^ source.sentinel string.quoted.double.untitled
+>value = "\xff\u00FF"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^ source.sentinel string.quoted.double.untitled constant.character.escape.hex.sentinel
+#             ^^^^^^ source.sentinel string.quoted.double.untitled constant.character.escape.unicode32.sentinel
+#                   ^ source.sentinel string.quoted.double.untitled
+>value = "\uD800"             // illegal: surrogate half
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^^^ source.sentinel string.quoted.double.untitled constant.character.escape.unicode32.sentinel
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^^^^^^^^^^^^ source.sentinel
+#                             ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = "\U00110000"         // illegal: invalid Unicode code point
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^^^^^^^^ source.sentinel string.quoted.double.untitled constant.character.escape.unicode64.sentinel
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^^^^^^^^^ source.sentinel
+#                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+># Conversions
+#^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>value = int(42)   // 42
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^ source.sentinel support.function.builtin.sentinel
+#           ^ source.sentinel
+#            ^^ source.sentinel constant.numeric.number.sentinel
+#              ^^^^ source.sentinel
+#                  ^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = int("42") // 42
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^ source.sentinel support.function.builtin.sentinel
+#           ^ source.sentinel
+#            ^ source.sentinel string.quoted.double.untitled
+#             ^^ source.sentinel string.quoted.double.untitled
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^ source.sentinel
+#                  ^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = int(42.8) // 42
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^ source.sentinel support.function.builtin.sentinel
+#           ^ source.sentinel
+#            ^^^^ source.sentinel constant.numeric.number.sentinel
+#                ^^ source.sentinel
+#                  ^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = int(true) // 1
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^ source.sentinel support.function.builtin.sentinel
+#           ^ source.sentinel
+#            ^^^^ source.sentinel constant.language.sentinel
+#                ^^ source.sentinel
+#                  ^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>value = float(1.2)   // 1.2
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^ source.sentinel support.function.builtin.sentinel
+#             ^ source.sentinel
+#              ^^^ source.sentinel constant.numeric.number.sentinel
+#                 ^^^^ source.sentinel
+#                     ^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = float(1)     // 1.0
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^ source.sentinel support.function.builtin.sentinel
+#             ^ source.sentinel
+#              ^ source.sentinel constant.numeric.number.sentinel
+#               ^^^^^^ source.sentinel
+#                     ^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = float("4.2") // 4.2
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^ source.sentinel support.function.builtin.sentinel
+#             ^ source.sentinel
+#              ^ source.sentinel string.quoted.double.untitled
+#               ^^^ source.sentinel string.quoted.double.untitled
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^^ source.sentinel
+#                     ^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = float(true)  // 1.0
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^ source.sentinel support.function.builtin.sentinel
+#             ^ source.sentinel
+#              ^^^^ source.sentinel constant.language.sentinel
+#                  ^^^ source.sentinel
+#                     ^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>value = string("foo") // "foo"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^ source.sentinel support.function.builtin.sentinel
+#              ^ source.sentinel
+#               ^ source.sentinel string.quoted.double.untitled
+#                ^^^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^^ source.sentinel
+#                      ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = string(88)    // "88"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^ source.sentinel support.function.builtin.sentinel
+#              ^ source.sentinel
+#               ^^ source.sentinel constant.numeric.number.sentinel
+#                 ^^^^^ source.sentinel
+#                      ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = string(0xF)   // "15"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^ source.sentinel support.function.builtin.sentinel
+#              ^ source.sentinel
+#               ^^^ source.sentinel constant.numeric.hex.sentinel
+#                  ^^^^ source.sentinel
+#                      ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = string(true)  // "true"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^^^ source.sentinel support.function.builtin.sentinel
+#              ^ source.sentinel
+#               ^^^^ source.sentinel constant.language.sentinel
+#                   ^^^ source.sentinel
+#                      ^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>
+>value = bool("true")  // true
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^ source.sentinel support.function.builtin.sentinel
+#            ^ source.sentinel
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^^^^ source.sentinel string.quoted.double.untitled
+#                  ^ source.sentinel string.quoted.double.untitled
+#                   ^^^ source.sentinel
+#                      ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = bool(1)       // true
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^ source.sentinel support.function.builtin.sentinel
+#            ^ source.sentinel
+#             ^ source.sentinel constant.numeric.number.sentinel
+#              ^^^^^^^^ source.sentinel
+#                      ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = bool(-1)      // true
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^ source.sentinel support.function.builtin.sentinel
+#            ^ source.sentinel
+#             ^ source.sentinel keyword.operator.symbol.sentinel
+#              ^ source.sentinel constant.numeric.number.sentinel
+#               ^^^^^^^ source.sentinel
+#                      ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = bool(0.1)     // true
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^ source.sentinel support.function.builtin.sentinel
+#            ^ source.sentinel
+#             ^^^ source.sentinel constant.numeric.number.sentinel
+#                ^^^^^^ source.sentinel
+#                      ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = bool("false") // false
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^ source.sentinel support.function.builtin.sentinel
+#            ^ source.sentinel
+#             ^ source.sentinel string.quoted.double.untitled
+#              ^^^^^ source.sentinel string.quoted.double.untitled
+#                   ^ source.sentinel string.quoted.double.untitled
+#                    ^^ source.sentinel
+#                      ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>value = bool(0)       // false
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^^^^ source.sentinel support.function.builtin.sentinel
+#            ^ source.sentinel
+#             ^ source.sentinel constant.numeric.number.sentinel
+#              ^^^^^^^^ source.sentinel
+#                      ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+>

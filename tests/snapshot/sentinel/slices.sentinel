@@ -1,0 +1,9 @@
+# https://developer.hashicorp.com/sentinel/docs/language/slices
+a = [1, 2, 3, 4, 5]
+b = a[1:4]
+
+a = "hello"
+b = a[1:4]
+
+b = a[:2]
+b = a[2:]

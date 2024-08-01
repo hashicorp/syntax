@@ -1,0 +1,37 @@
+# https://developer.hashicorp.com/sentinel/docs/language/functions
+
+func sum(a, b) {
+  return a + b
+}
+
+func makeAdder(a) {
+  return func(b) {
+    return a + b
+  }
+}
+
+add1 = func(x) { return x + 1 }
+
+add2 = func add1(x) {
+  return x + 1
+}
+
+f = func() {
+    a = 42
+    print(a) // 42
+    return undefined
+}
+
+print(a) // undefined
+
+fib = func(x) {
+    if x <= 0 {
+        return undefined
+    }
+
+    if x == 1 {
+        return 1
+    } else {
+        return x + fib(x - 1)
+    }
+}

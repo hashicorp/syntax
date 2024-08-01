@@ -1,0 +1,10 @@
+# https://developer.hashicorp.com/sentinel/docs/language/undefined
+
+foo() else 42
+foo.bar else ""
+config["bad-key"] else "default"
+
+// In more complex scenarios
+
+foo() else 42 == 12
+a = config.value else "default"

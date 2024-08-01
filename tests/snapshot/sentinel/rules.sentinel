@@ -1,0 +1,25 @@
+# https://developer.hashicorp.com/sentinel/docs/language/rules
+
+main = rule {
+		((day is "saturday" or day is "sunday") and homework is "") or
+		(day in ["monday", "tuesday", "wednesday", "thursday", "friday"] and
+		not school_today and homework is "")
+}
+
+is_weekend = rule { day in ["saturday", "sunday"] }
+
+is_valid_weekend = rule { is_weekend and homework is "" }
+is_valid_weekday = rule { not is_weekend and not school_today and homework is "" }
+
+main = rule { is_valid_weekend or is_valid_weekday }
+
+example_no_when = rule { (is_prefix and is_numeric) or not is_prefix }
+
+example_when    = rule when is_prefix { is_numeric }
+
+main = rule {
+		filter days as d {
+				d.day not in ["saturday", "sunday"] and
+						d.homework is not ""
+		}
+}

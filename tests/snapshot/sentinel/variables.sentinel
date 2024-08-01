@@ -1,0 +1,16 @@
+# https://developer.hashicorp.com/sentinel/docs/language/variables
+
+a = 1       // a = 1
+b = a       // b = 1
+a = "value" // a = "value", b = 1
+c = a       // c = "value", b = 1
+
+a = c // Error!
+c = 1
+
+s = "1.1"
+a = int(s)   // a = 1
+a = float(s) // a = 1.1
+
+a = 1
+s = string(a) // s = "1"

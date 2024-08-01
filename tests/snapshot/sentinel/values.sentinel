@@ -1,0 +1,51 @@
+# https://developer.hashicorp.com/sentinel/docs/language/values
+
+# Int
+value = 42
+value = 0600
+value = 0xBadFace
+value = 170141183460469
+
+# Float
+value = 0.
+value = 72.40
+value = 072.40  // == 72.40
+value = 2.71828
+value = 1.e+0
+value = 6.67428e-11
+value = 1E6
+value = .25
+value = .12345E+5
+
+# Strings
+value = "\n"
+value = "\""                 // same as `"`
+value = "Hello, world!\n"
+value = "日本語"
+value = "\u65e5本\U00008a9e"
+value = "\xff\u00FF"
+value = "\uD800"             // illegal: surrogate half
+value = "\U00110000"         // illegal: invalid Unicode code point
+
+# Conversions
+value = int(42)   // 42
+value = int("42") // 42
+value = int(42.8) // 42
+value = int(true) // 1
+
+value = float(1.2)   // 1.2
+value = float(1)     // 1.0
+value = float("4.2") // 4.2
+value = float(true)  // 1.0
+
+value = string("foo") // "foo"
+value = string(88)    // "88"
+value = string(0xF)   // "15"
+value = string(true)  // "true"
+
+value = bool("true")  // true
+value = bool(1)       // true
+value = bool(-1)      // true
+value = bool(0.1)     // true
+value = bool("false") // false
+value = bool(0)       // false

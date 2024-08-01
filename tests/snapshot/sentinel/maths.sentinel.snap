@@ -1,0 +1,48 @@
+># https://developer.hashicorp.com/sentinel/docs/language/arithmetic
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>value = 4 + 8
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+>value = 8 * 2
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+>value = 8 / 4
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+>value = 8 / 5
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+>value = 8 % 5
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel constant.numeric.number.sentinel
+#         ^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^ source.sentinel
+#            ^ source.sentinel constant.numeric.number.sentinel
+>
