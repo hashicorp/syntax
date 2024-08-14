@@ -8,16 +8,7 @@
       "include": "#comments"
     },
     {
-      "name": "constant.numeric.hex.sentinel",
-      "match": "\\b0[xX][a-fA-F0-9]+\\b"
-    },
-    {
-      "name": "constant.numeric.oct.sentinel",
-      "match": "\\b0[0-7]+\\b"
-    },
-    {
-      "name": "constant.numeric.number.sentinel",
-      "match": "\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))([eE][-+]?[0-9]+)?\\b"
+      "include": "#numeric_literals"
     },
     {
       "name": "constant.language.sentinel",
@@ -115,7 +106,23 @@
         }
       }
     },
-   "string_literals": {
+    "numeric_literals": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hex.sentinel",
+          "match": "\\b0[xX][a-fA-F0-9]+\\b"
+        },
+        {
+          "name": "constant.numeric.oct.sentinel",
+          "match": "\\b0[0-7]+\\b"
+        },
+        {
+          "name": "constant.numeric.number.sentinel",
+          "match": "\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))([eE][-+]?[0-9]+)?\\b"
+        }
+      ]
+    },
+    "string_literals": {
       "name": "string.quoted.double.untitled",
       "begin": "\"",
       "end": "\"",
