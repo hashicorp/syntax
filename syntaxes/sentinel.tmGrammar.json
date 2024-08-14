@@ -64,31 +64,7 @@
       "match": "\\b(as|default|when)\\b"
     },
     {
-      "name": "string.quoted.double.untitled",
-      "begin": "\"",
-      "end": "\"",
-      "patterns": [
-        {
-          "name": "constant.character.escape.single.sentinel",
-          "match": "\\\\[abfnrtv\\\\\"]"
-        },
-        {
-          "name": "constant.character.escape.hex.sentinel",
-          "match": "\\\\x[a-fA-F0-9]+"
-        },
-        {
-          "name": "constant.character.escape.oct.sentinel",
-          "match": "\\\\[0-7]{3}"
-        },
-        {
-          "name": "constant.character.escape.unicode32.sentinel",
-          "match": "\\\\u[a-fA-F0-9]{4}"
-        },
-        {
-          "name": "constant.character.escape.unicode64.sentinel",
-          "match": "\\\\U[a-fA-F0-9]{8}"
-        }
-      ]
+      "include": "#string_literals"
     },
     {
       "name": "support.function.builtin.sentinel",
@@ -138,6 +114,33 @@
           "name": "punctuation.definition.comment.sentinel"
         }
       }
+    },
+   "string_literals": {
+      "name": "string.quoted.double.untitled",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.single.sentinel",
+          "match": "\\\\[abfnrtv\\\\\"]"
+        },
+        {
+          "name": "constant.character.escape.hex.sentinel",
+          "match": "\\\\x[a-fA-F0-9]+"
+        },
+        {
+          "name": "constant.character.escape.oct.sentinel",
+          "match": "\\\\[0-7]{3}"
+        },
+        {
+          "name": "constant.character.escape.unicode32.sentinel",
+          "match": "\\\\u[a-fA-F0-9]{4}"
+        },
+        {
+          "name": "constant.character.escape.unicode64.sentinel",
+          "match": "\\\\U[a-fA-F0-9]{8}"
+        }
+      ]
     }
   }
 }
