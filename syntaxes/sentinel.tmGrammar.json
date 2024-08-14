@@ -11,8 +11,7 @@
       "include": "#numeric_literals"
     },
     {
-      "name": "constant.language.sentinel",
-      "match": "\\b(true|false|null|undefined)\\b"
+      "include": "#language_constants"
     },
     {
       "captures": {
@@ -105,6 +104,10 @@
           "name": "punctuation.definition.comment.sentinel"
         }
       }
+    },
+    "language_constants": {
+      "name": "constant.language.sentinel",
+      "match": "\\b(true|false|null|undefined)\\b"
     },
     "numeric_literals": {
       "patterns": [
