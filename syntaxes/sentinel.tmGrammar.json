@@ -5,17 +5,7 @@
   "fileTypes": ["sentinel"],
   "patterns": [
     {
-      "name": "comment.line.double-slash.sentinel",
-      "match": "\\/\\/.*$"
-    },
-    {
-      "name": "comment.line.number-sign.sentinel",
-      "match": "#.*$"
-    },
-    {
-      "begin": "/\\*",
-      "end": "\\*/",
-      "name": "comment.line.block.sentinel"
+      "include": "#comments"
     },
     {
       "name": "constant.numeric.hex.sentinel",
@@ -74,6 +64,9 @@
       "match": "\\b(as|default|when)\\b"
     },
     {
+      "name": "string.quoted.double.untitled",
+      "begin": "\"",
+      "end": "\"",
       "patterns": [
         {
           "name": "constant.character.escape.single.sentinel",
@@ -95,14 +88,56 @@
           "name": "constant.character.escape.unicode64.sentinel",
           "match": "\\\\U[a-fA-F0-9]{8}"
         }
-      ],
-      "begin": "\"",
-      "end": "\"",
-      "name": "string.quoted.double.untitled"
+      ]
     },
     {
       "name": "support.function.builtin.sentinel",
       "match": "\\b(append|delete|error|keys|length|print|range|values|int|float|string|bool)\\b"
     }
-  ]
+  ],
+  "repository": {
+    "block_inline_comments": {
+      "name": "comment.block.sentinel",
+      "begin": "/\\*",
+      "end": "\\*/",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.sentinel"
+        }
+      }
+    },
+    "comments": {
+      "patterns": [
+        {
+          "include": "#hash_line_comments"
+        },
+        {
+          "include": "#double_slash_line_comments"
+        },
+        {
+          "include": "#block_inline_comments"
+        }
+      ]
+    },
+    "double_slash_line_comments": {
+      "name": "comment.line.double-slash.sentinel",
+      "begin": "//",
+      "end": "$\\n?",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.sentinel"
+        }
+      }
+    },
+    "hash_line_comments": {
+      "name": "comment.line.number-sign.sentinel",
+      "begin": "#",
+      "end": "$\\n?",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.sentinel"
+        }
+      }
+    }
+  }
 }

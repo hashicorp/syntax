@@ -1,5 +1,6 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/boolexpr
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 >value = (p and q) or r
 #^^^^^^ source.sentinel
@@ -84,7 +85,8 @@
 #               ^ source.sentinel constant.numeric.number.sentinel
 >
 ># Sets
-#^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^ source.sentinel comment.line.number-sign.sentinel
 >value = [1, 2, 3] contains 2
 #^^^^^^ source.sentinel
 #      ^ source.sentinel keyword.operator.symbol.sentinel
@@ -228,7 +230,8 @@
 #                                        ^ source.sentinel constant.numeric.number.sentinel
 >
 ># Matches
-#^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >value = "test" matches "e"
 #^^^^^^ source.sentinel
 #      ^ source.sentinel keyword.operator.symbol.sentinel
@@ -313,7 +316,8 @@
 #                             ^ source.sentinel string.quoted.double.untitled
 >
 ># Any, All
-#^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >all group.tasks as t { t.driver is "vmware" }
 #^^^ source.sentinel keyword.control.sentinel
 #   ^^^^^^^^^^^^^ source.sentinel
@@ -365,7 +369,8 @@
 #                                                                 ^ source.sentinel string.quoted.double.untitled
 >
 ># Emptiness/Defined
-#^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >value = x is empty
 #^^^^^^ source.sentinel
 #      ^ source.sentinel keyword.operator.symbol.sentinel

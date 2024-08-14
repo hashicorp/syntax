@@ -1,5 +1,6 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/rules
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 >main = rule {
 #^^^^^ source.sentinel

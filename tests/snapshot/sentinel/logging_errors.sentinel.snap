@@ -1,5 +1,6 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/logging-errors
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 >value = 42
 #^^^^^^ source.sentinel
@@ -13,7 +14,8 @@
 #       ^^^^^^^^^^^^ source.sentinel string.quoted.double.untitled
 #                   ^ source.sentinel string.quoted.double.untitled
 #                    ^^^^^^^^^ source.sentinel
-#                             ^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#                             ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#                               ^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >
 >map = { "foo": false }
 #^^^ source.sentinel keyword.control.sentinel
@@ -31,7 +33,8 @@
 #     ^ source.sentinel
 #      ^^^ source.sentinel keyword.control.sentinel
 #         ^^ source.sentinel
-#           ^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#           ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#             ^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >
 >one_is_zero = rule { 1 == 0 }
 #^^^^^^^^^^^^ source.sentinel
@@ -49,5 +52,6 @@
 >print(one_is_zero) // false
 #^^^^^ source.sentinel support.function.builtin.sentinel
 #     ^^^^^^^^^^^^^^ source.sentinel
-#                   ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#                   ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#                     ^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >

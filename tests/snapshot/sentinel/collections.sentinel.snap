@@ -1,20 +1,24 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/collection-operations
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 ># filter
-#^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >filter list as value { condition }      // Single-iterator, list
 #^^^^^^ source.sentinel keyword.control.sentinel
 #      ^^^^^^ source.sentinel
 #            ^^ source.sentinel keyword.other.sentinel
 #              ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
-#                                        ^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#                                        ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#                                          ^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >filter list as idx, value { condition } // Double-iterator, list
 #^^^^^^ source.sentinel keyword.control.sentinel
 #      ^^^^^^ source.sentinel
 #            ^^ source.sentinel keyword.other.sentinel
 #              ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
-#                                        ^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#                                        ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#                                          ^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >
 >filter map as key { condition }         // Single-iterator, map
 #^^^^^^ source.sentinel keyword.control.sentinel
@@ -23,7 +27,8 @@
 #          ^ source.sentinel
 #           ^^ source.sentinel keyword.other.sentinel
 #             ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
-#                                        ^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#                                        ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#                                          ^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >filter map as key, value { condition }  // Double-iterator, map
 #^^^^^^ source.sentinel keyword.control.sentinel
 #      ^ source.sentinel
@@ -31,10 +36,12 @@
 #          ^ source.sentinel
 #           ^^ source.sentinel keyword.other.sentinel
 #             ^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel
-#                                        ^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#                                        ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#                                          ^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >
 ># map
-#^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^ source.sentinel comment.line.number-sign.sentinel
 >l = [1, 2]
 #^^ source.sentinel
 #  ^ source.sentinel keyword.operator.symbol.sentinel
@@ -55,7 +62,8 @@
 #                    ^ source.sentinel
 #                     ^ source.sentinel constant.numeric.number.sentinel
 #                      ^^^ source.sentinel
-#                         ^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#                         ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#                           ^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >
 >m = { "a": "foo", "b": "bar" }
 #^^ source.sentinel
@@ -85,5 +93,6 @@
 #       ^^^ source.sentinel
 #          ^^ source.sentinel keyword.other.sentinel
 #            ^^^^^^^^^^^^ source.sentinel
-#                        ^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#                        ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#                          ^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >

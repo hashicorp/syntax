@@ -1,5 +1,6 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/imports
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 >import "calendar"
 #^^^^^^ source.sentinel keyword.control.declaration.sentinel

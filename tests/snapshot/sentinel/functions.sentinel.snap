@@ -1,5 +1,6 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/functions
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 >func sum(a, b) {
 #^^^^ source.sentinel keyword.other.sentinel
@@ -77,7 +78,8 @@
 #^^^^ source.sentinel
 #    ^^^^^ source.sentinel support.function.builtin.sentinel
 #         ^^^^ source.sentinel
-#             ^^^^^ source.sentinel comment.line.double-slash.sentinel
+#             ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#               ^^^ source.sentinel comment.line.double-slash.sentinel
 >    return undefined
 #^^^^ source.sentinel
 #    ^^^^^^ source.sentinel keyword.control.sentinel
@@ -89,7 +91,8 @@
 >print(a) // undefined
 #^^^^^ source.sentinel support.function.builtin.sentinel
 #     ^^^^ source.sentinel
-#         ^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#         ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#           ^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >
 >fib = func(x) {
 #^^^^ source.sentinel
