@@ -38,12 +38,7 @@
       "match": "\\b(if|case|for|any|all|filter|map|break|continue|return)\\b"
     },
     {
-      "name": "keyword.operator.symbol.sentinel",
-      "match": "[-+*/%=<>!]"
-    },
-    {
-      "name": "keyword.control.sentinel",
-      "match": "\\b(and|or|contains|in|is|matches|not|xor|else)\\b"
+      "include": "#operators"
     },
     {
       "name": "keyword.other.sentinel",
@@ -122,6 +117,26 @@
         {
           "name": "constant.numeric.number.sentinel",
           "match": "\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))([eE][-+]?[0-9]+)?\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.symbol.sentinel",
+          "match": "(\\+=|-=|\\*=|\\/=|%=|==|!=|<=|>=)"
+        },
+        {
+          "name": "keyword.operator.symbol.sentinel",
+          "match": "(\\+|-|\\*|\\/|%|<|>|=|!)"
+        },
+        {
+          "name": "keyword.control.sentinel",
+          "match": "\\b(is\bnot\bempty|is\bempty|not\bcontains|not\bmatches|is\bnot)\\b"
+        },
+        {
+          "name": "keyword.control.sentinel",
+          "match": "\\b(and|contains|else|in|is|matches|not|or|xor)\\b"
         }
       ]
     },

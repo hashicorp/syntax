@@ -10,8 +10,7 @@
 #               ^ source.sentinel
 #                ^^^^ source.sentinel keyword.other.sentinel
 #                    ^^^^^^^^ source.sentinel
-#                            ^ source.sentinel keyword.operator.symbol.sentinel
-#                             ^ source.sentinel keyword.operator.symbol.sentinel
+#                            ^^ source.sentinel keyword.operator.symbol.sentinel
 #                              ^ source.sentinel
 #                               ^ source.sentinel constant.numeric.number.sentinel
 #                                ^^^ source.sentinel
