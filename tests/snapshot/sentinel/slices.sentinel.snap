@@ -1,5 +1,6 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/slices
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >a = [1, 2, 3, 4, 5]
 #^^ source.sentinel
 #  ^ source.sentinel keyword.operator.symbol.sentinel

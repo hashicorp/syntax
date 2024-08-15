@@ -1,8 +1,10 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/conditionals
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 ># Single line if statements
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >if value is 18 { print("condition met") }
 #^^ source.sentinel keyword.control.sentinel
 #  ^^^^^^^ source.sentinel
@@ -44,7 +46,8 @@
 #                                            ^^^^ source.sentinel
 >
 ># Multi-line if statements
-#^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >if value is 18 {
 #^^ source.sentinel keyword.control.sentinel
 #  ^^^^^^^ source.sentinel
@@ -100,7 +103,8 @@
 #^^ source.sentinel
 >
 ># Multi-line if-elseif-else statements
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >if value is 18 { print("condition met") } else if value { print("condition met") } else { print("condition met") }
 #^^ source.sentinel keyword.control.sentinel
 #  ^^^^^^^ source.sentinel
@@ -134,7 +138,8 @@
 #                                                                                                               ^^^^ source.sentinel
 >
 ># Multi-line if-elseif-else statements
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >if value is 18 {
 #^^ source.sentinel keyword.control.sentinel
 #  ^^^^^^^ source.sentinel
@@ -180,7 +185,8 @@
 #^^ source.sentinel
 >
 >// Case statements
-#^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#  ^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >case x { when "foo", "bar": return true; else: return false }
 #^^^^ source.sentinel keyword.control.sentinel
 #    ^^^^^ source.sentinel

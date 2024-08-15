@@ -1,5 +1,6 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/undefined
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 >foo() else 42
 #^^^^^^ source.sentinel
@@ -25,7 +26,8 @@
 #                               ^ source.sentinel string.quoted.double.untitled
 >
 >// In more complex scenarios
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
+#^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >
 >foo() else 42 == 12
 #^^^^^^ source.sentinel
@@ -33,8 +35,7 @@
 #          ^ source.sentinel
 #           ^^ source.sentinel constant.numeric.number.sentinel
 #             ^ source.sentinel
-#              ^ source.sentinel keyword.operator.symbol.sentinel
-#               ^ source.sentinel keyword.operator.symbol.sentinel
+#              ^^ source.sentinel keyword.operator.symbol.sentinel
 #                ^ source.sentinel
 #                 ^^ source.sentinel constant.numeric.number.sentinel
 >a = config.value else "default"

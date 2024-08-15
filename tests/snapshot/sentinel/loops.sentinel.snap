@@ -1,5 +1,6 @@
 ># https://developer.hashicorp.com/sentinel/docs/language/loops
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
 >
 >for { "a": 1, "b": 2 } as name {
 #^^^ source.sentinel keyword.control.sentinel
@@ -21,7 +22,8 @@
 >    append(list, name)
 #^^^^ source.sentinel
 #    ^^^^^^ source.sentinel support.function.builtin.sentinel
-#          ^^^^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel
+#           ^^^^^^^^^^^^ source.sentinel
 >}
 #^^ source.sentinel
 >
@@ -60,8 +62,7 @@
 #                ^^^^^^^ source.sentinel
 >    count += num
 #^^^^^^^^^^ source.sentinel
-#          ^ source.sentinel keyword.operator.symbol.sentinel
-#           ^ source.sentinel keyword.operator.symbol.sentinel
+#          ^^ source.sentinel keyword.operator.symbol.sentinel
 #            ^^^^^ source.sentinel
 >}
 #^^ source.sentinel

@@ -1,0 +1,212 @@
+># https://developer.hashicorp.com/sentinel/docs/functions
+#^ source.sentinel comment.line.number-sign.sentinel punctuation.definition.comment.sentinel
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.sentinel comment.line.number-sign.sentinel
+>
+>append  (foo, bar)
+#^^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^^^ source.sentinel
+#         ^^^^^^^^^^ source.sentinel
+>append = "baz"
+#^^^^^^^ source.sentinel
+#       ^ source.sentinel keyword.operator.symbol.sentinel
+#        ^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+>something = append
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^^ source.sentinel
+>
+>compare  (foo, bar)
+#^^^^^^^ source.sentinel support.function.builtin.sentinel
+#       ^^^ source.sentinel
+#          ^^^^^^^^^^ source.sentinel
+>compare = "baz"
+#^^^^^^^^ source.sentinel
+#        ^ source.sentinel keyword.operator.symbol.sentinel
+#         ^ source.sentinel
+#          ^ source.sentinel string.quoted.double.untitled
+#           ^^^ source.sentinel string.quoted.double.untitled
+#              ^ source.sentinel string.quoted.double.untitled
+>something = compare
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^^^ source.sentinel
+>
+>delete  (foo, bar)
+#^^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^^^ source.sentinel
+#         ^^^^^^^^^^ source.sentinel
+>delete = "baz"
+#^^^^^^^ source.sentinel
+#       ^ source.sentinel keyword.operator.symbol.sentinel
+#        ^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+>something = delete
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^^ source.sentinel
+>
+>error  (foo, bar)
+#^^^^^ source.sentinel support.function.builtin.sentinel
+#     ^^^ source.sentinel
+#        ^^^^^^^^^^ source.sentinel
+>error = "baz"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+>something = error
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^ source.sentinel
+>
+>keys  (foo, bar)
+#^^^^ source.sentinel support.function.builtin.sentinel
+#    ^^^ source.sentinel
+#       ^^^^^^^^^^ source.sentinel
+>keys = "baz"
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+>something = keys
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^ source.sentinel
+>
+>length  (foo, bar)
+#^^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^^^ source.sentinel
+#         ^^^^^^^^^^ source.sentinel
+>length = "baz"
+#^^^^^^^ source.sentinel
+#       ^ source.sentinel keyword.operator.symbol.sentinel
+#        ^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+>something = length
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^^ source.sentinel
+>
+>print  (foo, bar)
+#^^^^^ source.sentinel support.function.builtin.sentinel
+#     ^^^ source.sentinel
+#        ^^^^^^^^^^ source.sentinel
+>print = "baz"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+>something = print
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^ source.sentinel
+>
+>range  (foo, bar)
+#^^^^^ source.sentinel support.function.builtin.sentinel
+#     ^^^ source.sentinel
+#        ^^^^^^^^^^ source.sentinel
+>range = "baz"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+>something = range
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^ source.sentinel
+>
+>values  (foo, bar)
+#^^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^^^ source.sentinel
+#         ^^^^^^^^^^ source.sentinel
+>values = "baz"
+#^^^^^^^ source.sentinel
+#       ^ source.sentinel keyword.operator.symbol.sentinel
+#        ^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+>something = values
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^^ source.sentinel
+>
+>int  (foo, bar)
+#^^^ source.sentinel support.function.builtin.sentinel
+#   ^^^ source.sentinel
+#      ^^^^^^^^^^ source.sentinel
+>int = "baz"
+#^^^^ source.sentinel
+#    ^ source.sentinel keyword.operator.symbol.sentinel
+#     ^ source.sentinel
+#      ^ source.sentinel string.quoted.double.untitled
+#       ^^^ source.sentinel string.quoted.double.untitled
+#          ^ source.sentinel string.quoted.double.untitled
+>something = int
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^ source.sentinel
+>
+>float  (foo, bar)
+#^^^^^ source.sentinel support.function.builtin.sentinel
+#     ^^^ source.sentinel
+#        ^^^^^^^^^^ source.sentinel
+>float = "baz"
+#^^^^^^ source.sentinel
+#      ^ source.sentinel keyword.operator.symbol.sentinel
+#       ^ source.sentinel
+#        ^ source.sentinel string.quoted.double.untitled
+#         ^^^ source.sentinel string.quoted.double.untitled
+#            ^ source.sentinel string.quoted.double.untitled
+>something = float
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^ source.sentinel
+>
+>string  (foo, bar)
+#^^^^^^ source.sentinel support.function.builtin.sentinel
+#      ^^^ source.sentinel
+#         ^^^^^^^^^^ source.sentinel
+>string = "baz"
+#^^^^^^^ source.sentinel
+#       ^ source.sentinel keyword.operator.symbol.sentinel
+#        ^ source.sentinel
+#         ^ source.sentinel string.quoted.double.untitled
+#          ^^^ source.sentinel string.quoted.double.untitled
+#             ^ source.sentinel string.quoted.double.untitled
+>something = string
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^^^ source.sentinel
+>
+>bool  (foo, bar)
+#^^^^ source.sentinel support.function.builtin.sentinel
+#    ^^^ source.sentinel
+#       ^^^^^^^^^^ source.sentinel
+>bool = "baz"
+#^^^^^ source.sentinel
+#     ^ source.sentinel keyword.operator.symbol.sentinel
+#      ^ source.sentinel
+#       ^ source.sentinel string.quoted.double.untitled
+#        ^^^ source.sentinel string.quoted.double.untitled
+#           ^ source.sentinel string.quoted.double.untitled
+>something = bool
+#^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel keyword.operator.symbol.sentinel
+#           ^^^^^^ source.sentinel
+>

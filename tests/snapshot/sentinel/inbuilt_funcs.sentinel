@@ -1,0 +1,53 @@
+# https://developer.hashicorp.com/sentinel/docs/functions
+
+append  (foo, bar)
+append = "baz"
+something = append
+
+compare  (foo, bar)
+compare = "baz"
+something = compare
+
+delete  (foo, bar)
+delete = "baz"
+something = delete
+
+error  (foo, bar)
+error = "baz"
+something = error
+
+keys  (foo, bar)
+keys = "baz"
+something = keys
+
+length  (foo, bar)
+length = "baz"
+something = length
+
+print  (foo, bar)
+print = "baz"
+something = print
+
+range  (foo, bar)
+range = "baz"
+something = range
+
+values  (foo, bar)
+values = "baz"
+something = values
+
+int  (foo, bar)
+int = "baz"
+something = int
+
+float  (foo, bar)
+float = "baz"
+something = float
+
+string  (foo, bar)
+string = "baz"
+something = string
+
+bool  (foo, bar)
+bool = "baz"
+something = bool

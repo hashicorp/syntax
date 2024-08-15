@@ -5,33 +5,13 @@
   "fileTypes": ["sentinel"],
   "patterns": [
     {
-      "name": "comment.line.double-slash.sentinel",
-      "match": "\\/\\/.*$"
+      "include": "#comments"
     },
     {
-      "name": "comment.line.number-sign.sentinel",
-      "match": "#.*$"
+      "include": "#numeric_literals"
     },
     {
-      "begin": "/\\*",
-      "end": "\\*/",
-      "name": "comment.line.block.sentinel"
-    },
-    {
-      "name": "constant.numeric.hex.sentinel",
-      "match": "\\b0[xX][a-fA-F0-9]+\\b"
-    },
-    {
-      "name": "constant.numeric.oct.sentinel",
-      "match": "\\b0[0-7]+\\b"
-    },
-    {
-      "name": "constant.numeric.number.sentinel",
-      "match": "\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))([eE][-+]?[0-9]+)?\\b"
-    },
-    {
-      "name": "constant.language.sentinel",
-      "match": "\\b(true|false|null|undefined)\\b"
+      "include": "#language_constants"
     },
     {
       "captures": {
@@ -58,12 +38,7 @@
       "match": "\\b(if|case|for|any|all|filter|map|break|continue|return)\\b"
     },
     {
-      "name": "keyword.operator.symbol.sentinel",
-      "match": "[-+*/%=<>!]"
-    },
-    {
-      "name": "keyword.control.sentinel",
-      "match": "\\b(and|or|contains|in|is|matches|not|xor|else)\\b"
+      "include": "#operators"
     },
     {
       "name": "keyword.other.sentinel",
@@ -74,6 +49,112 @@
       "match": "\\b(as|default|when)\\b"
     },
     {
+      "include": "#string_literals"
+    },
+    {
+      "include": "#functions"
+    }
+  ],
+  "repository": {
+    "block_inline_comments": {
+      "name": "comment.block.sentinel",
+      "begin": "/\\*",
+      "end": "\\*/",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.sentinel"
+        }
+      }
+    },
+    "comments": {
+      "patterns": [
+        {
+          "include": "#hash_line_comments"
+        },
+        {
+          "include": "#double_slash_line_comments"
+        },
+        {
+          "include": "#block_inline_comments"
+        }
+      ]
+    },
+    "double_slash_line_comments": {
+      "name": "comment.line.double-slash.sentinel",
+      "begin": "//",
+      "end": "$\\n?",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.sentinel"
+        }
+      }
+    },
+    "functions": {
+      "match": "\\b(append|compare|delete|error|keys|length|print|range|values|int|float|string|bool)(\\b\\s*\\()",
+      "captures": {
+        "1": {
+          "name": "support.function.builtin.sentinel"
+        },
+        "2": {
+          "name": ""
+        }
+
+      }
+    },
+    "hash_line_comments": {
+      "name": "comment.line.number-sign.sentinel",
+      "begin": "#",
+      "end": "$\\n?",
+      "captures": {
+        "0": {
+          "name": "punctuation.definition.comment.sentinel"
+        }
+      }
+    },
+    "language_constants": {
+      "name": "constant.language.sentinel",
+      "match": "\\b(true|false|null|undefined)\\b"
+    },
+    "numeric_literals": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hex.sentinel",
+          "match": "\\b0[xX][a-fA-F0-9]+\\b"
+        },
+        {
+          "name": "constant.numeric.oct.sentinel",
+          "match": "\\b0[0-7]+\\b"
+        },
+        {
+          "name": "constant.numeric.number.sentinel",
+          "match": "\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))([eE][-+]?[0-9]+)?\\b"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "name": "keyword.operator.symbol.sentinel",
+          "match": "(\\+=|-=|\\*=|\\/=|%=|==|!=|<=|>=)"
+        },
+        {
+          "name": "keyword.operator.symbol.sentinel",
+          "match": "(\\+|-|\\*|\\/|%|<|>|=|!)"
+        },
+        {
+          "name": "keyword.control.sentinel",
+          "match": "\\b(is\bnot\bempty|is\bempty|not\bcontains|not\bmatches|is\bnot)\\b"
+        },
+        {
+          "name": "keyword.control.sentinel",
+          "match": "\\b(and|contains|else|in|is|matches|not|or|xor)\\b"
+        }
+      ]
+    },
+    "string_literals": {
+      "name": "string.quoted.double.untitled",
+      "begin": "\"",
+      "end": "\"",
       "patterns": [
         {
           "name": "constant.character.escape.single.sentinel",
@@ -95,14 +176,7 @@
           "name": "constant.character.escape.unicode64.sentinel",
           "match": "\\\\U[a-fA-F0-9]{8}"
         }
-      ],
-      "begin": "\"",
-      "end": "\"",
-      "name": "string.quoted.double.untitled"
-    },
-    {
-      "name": "support.function.builtin.sentinel",
-      "match": "\\b(append|delete|error|keys|length|print|range|values|int|float|string|bool)\\b"
+      ]
     }
-  ]
+  }
 }
