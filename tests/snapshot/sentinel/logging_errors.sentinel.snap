@@ -50,7 +50,8 @@
 #                           ^^^ source.sentinel
 >print(one_is_zero) // false
 #^^^^^ source.sentinel support.function.builtin.sentinel
-#     ^^^^^^^^^^^^^^ source.sentinel
+#     ^ source.sentinel
+#      ^^^^^^^^^^^^^ source.sentinel
 #                   ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
 #                     ^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >

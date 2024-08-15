@@ -57,7 +57,8 @@
 #  ^ source.sentinel keyword.operator.symbol.sentinel
 #   ^ source.sentinel
 #    ^^^ source.sentinel support.function.builtin.sentinel
-#       ^^^^^^ source.sentinel
+#       ^ source.sentinel
+#        ^^^^^ source.sentinel
 #             ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
 #               ^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >a = float(s) // a = 1.1
@@ -65,7 +66,8 @@
 #  ^ source.sentinel keyword.operator.symbol.sentinel
 #   ^ source.sentinel
 #    ^^^^^ source.sentinel support.function.builtin.sentinel
-#         ^^^^ source.sentinel
+#         ^ source.sentinel
+#          ^^^ source.sentinel
 #             ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
 #               ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >
@@ -79,7 +81,8 @@
 #  ^ source.sentinel keyword.operator.symbol.sentinel
 #   ^ source.sentinel
 #    ^^^^^^ source.sentinel support.function.builtin.sentinel
-#          ^^^^ source.sentinel
+#          ^ source.sentinel
+#           ^^^ source.sentinel
 #              ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
 #                ^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >

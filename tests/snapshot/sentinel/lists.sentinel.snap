@@ -47,7 +47,8 @@
 #      ^ source.sentinel keyword.operator.symbol.sentinel
 #       ^ source.sentinel
 #        ^^^^^^ source.sentinel support.function.builtin.sentinel
-#              ^^ source.sentinel
+#              ^ source.sentinel
+#               ^ source.sentinel
 #                ^ source.sentinel constant.numeric.number.sentinel
 #                 ^ source.sentinel
 #                  ^ source.sentinel constant.numeric.number.sentinel
@@ -61,7 +62,8 @@
 #      ^ source.sentinel keyword.operator.symbol.sentinel
 #       ^ source.sentinel
 #        ^^^^^^ source.sentinel support.function.builtin.sentinel
-#              ^^ source.sentinel
+#              ^ source.sentinel
+#               ^ source.sentinel
 #                ^ source.sentinel constant.numeric.number.sentinel
 #                 ^ source.sentinel
 #                  ^ source.sentinel constant.numeric.number.sentinel
@@ -77,7 +79,8 @@
 #      ^ source.sentinel keyword.operator.symbol.sentinel
 #       ^ source.sentinel
 #        ^^^^^^ source.sentinel support.function.builtin.sentinel
-#              ^^ source.sentinel
+#              ^ source.sentinel
+#               ^ source.sentinel
 #                ^ source.sentinel constant.numeric.number.sentinel
 #                 ^ source.sentinel
 #                  ^ source.sentinel constant.numeric.number.sentinel

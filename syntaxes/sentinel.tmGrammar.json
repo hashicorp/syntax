@@ -52,8 +52,7 @@
       "include": "#string_literals"
     },
     {
-      "name": "support.function.builtin.sentinel",
-      "match": "\\b(append|delete|error|keys|length|print|range|values|int|float|string|bool)\\b"
+      "include": "#functions"
     }
   ],
   "repository": {
@@ -88,6 +87,18 @@
         "0": {
           "name": "punctuation.definition.comment.sentinel"
         }
+      }
+    },
+    "functions": {
+      "match": "\\b(append|compare|delete|error|keys|length|print|range|values|int|float|string|bool)(\\b\\s*\\()",
+      "captures": {
+        "1": {
+          "name": "support.function.builtin.sentinel"
+        },
+        "2": {
+          "name": ""
+        }
+
       }
     },
     "hash_line_comments": {

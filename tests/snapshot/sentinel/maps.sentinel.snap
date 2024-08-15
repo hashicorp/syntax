@@ -181,12 +181,14 @@
 #                       ^^^ source.sentinel
 >keys(data)       // ["b", "a"]
 #^^^^ source.sentinel support.function.builtin.sentinel
-#    ^^^^^^^^^^^^^ source.sentinel
+#    ^ source.sentinel
+#     ^^^^^^^^^^^^ source.sentinel
 #                 ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
 #                   ^^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >values(data)     // [2, 3]
 #^^^^^^ source.sentinel support.function.builtin.sentinel
-#      ^^^^^^^^^^^ source.sentinel
+#      ^ source.sentinel
+#       ^^^^^^^^^^ source.sentinel
 #                 ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
 #                   ^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >

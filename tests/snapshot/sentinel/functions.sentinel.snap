@@ -77,7 +77,8 @@
 >    print(a) // 42
 #^^^^ source.sentinel
 #    ^^^^^ source.sentinel support.function.builtin.sentinel
-#         ^^^^ source.sentinel
+#         ^ source.sentinel
+#          ^^^ source.sentinel
 #             ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
 #               ^^^ source.sentinel comment.line.double-slash.sentinel
 >    return undefined
@@ -90,7 +91,8 @@
 >
 >print(a) // undefined
 #^^^^^ source.sentinel support.function.builtin.sentinel
-#     ^^^^ source.sentinel
+#     ^ source.sentinel
+#      ^^^ source.sentinel
 #         ^^ source.sentinel comment.line.double-slash.sentinel punctuation.definition.comment.sentinel
 #           ^^^^^^^^^^ source.sentinel comment.line.double-slash.sentinel
 >

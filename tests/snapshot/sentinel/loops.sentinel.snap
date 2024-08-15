@@ -22,7 +22,8 @@
 >    append(list, name)
 #^^^^ source.sentinel
 #    ^^^^^^ source.sentinel support.function.builtin.sentinel
-#          ^^^^^^^^^^^^^ source.sentinel
+#          ^ source.sentinel
+#           ^^^^^^^^^^^^ source.sentinel
 >}
 #^^ source.sentinel
 >
