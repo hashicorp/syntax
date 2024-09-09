@@ -1,6 +1,6 @@
 {
   "scopeName": "source.hcl.terraform",
-  "name": "HashiCorp Terraform",
+  "name": "OpenTofu Terraform",
   "uuid": "d9db10d3-db70-48aa-8d44-f96ccbaa29f3",
   "fileTypes": [
     "tf",

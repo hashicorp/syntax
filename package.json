@@ -1,7 +1,7 @@
 {
   "name": "syntax",
-  "version": "0.7.0",
-  "description": "HashiCorp TextMate grammar files",
+  "version": "0.0.1",
+  "description": "OpenTofu TextMate grammar files",
   "main": "index.js",
   "repository": {
     "type": "git",

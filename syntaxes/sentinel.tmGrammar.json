@@ -1,6 +1,6 @@
 {
   "scopeName": "source.sentinel",
-  "name": "HashiCorp Sentinel",
+  "name": "OpenTofu Sentinel",
   "uuid": "B6448CA1-0D29-4C4F-B1F3-5A0B0E875453",
   "fileTypes": ["sentinel"],
   "patterns": [
