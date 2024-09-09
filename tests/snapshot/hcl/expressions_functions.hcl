@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 # numeric
 
 abs(23)

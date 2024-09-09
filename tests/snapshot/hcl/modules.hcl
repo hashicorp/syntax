@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 module "servers" {
   source = "./app-cluster"
 

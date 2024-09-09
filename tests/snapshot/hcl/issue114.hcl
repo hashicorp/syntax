@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 byte_match_statement_rules = local.enabled && var.byte_match_statement_rules != null ? {
   for rule in flatten(var.byte_match_statement_rules) :
     format("%s-%s",

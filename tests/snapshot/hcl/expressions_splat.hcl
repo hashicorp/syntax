@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 attr = [for o in var.list : o.id]
 
 attr = var.list[*].id

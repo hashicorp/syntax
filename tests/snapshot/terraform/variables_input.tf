@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 # input variables
 
 variable "image_id" {

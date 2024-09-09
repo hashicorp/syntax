@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 resource "aws_instance" "web" {
   // The trailing { can confuse the regex into thinking it's a block
   type = list(object({

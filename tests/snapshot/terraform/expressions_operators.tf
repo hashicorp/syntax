@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 # arithmetic
 
 1 + 2 * 3 / 4

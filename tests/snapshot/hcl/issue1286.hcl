@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 variable "foo" {
   description = "bar"
   nullable    = true

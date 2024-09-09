@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 variable "foo" {}
 output "result-val" { value = var.foo }
 

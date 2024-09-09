@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 dynamic "text_transformation" {
   for_each = lookup(rule.value.statement, "text_transformation", null) != null ? [
     for rule in lookup(rule.value.statement, "text_transformation") : {

@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 [for s in var.list : upper(s)]
 
 [for k, v in var.map : length(k) + length(v)]

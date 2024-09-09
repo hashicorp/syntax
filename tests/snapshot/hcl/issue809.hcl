@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 locals {
   key_name = "testing"
   test_example = {

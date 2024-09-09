@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 attr = "hello"
 
 attr = "\n\r\t\"\\"

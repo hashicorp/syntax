@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 // terraform type block
 resource "aws_instance" "web" {
   ami           = "ami-a1b2c3d4"

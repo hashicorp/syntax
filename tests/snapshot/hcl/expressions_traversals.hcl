@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 attr = var.test
 attr = var.test42
 attr = var.test42test

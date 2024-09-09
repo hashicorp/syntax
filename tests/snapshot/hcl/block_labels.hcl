@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 // generic blocks with multiple labels as strings
 block0 {}
 block0-newline {

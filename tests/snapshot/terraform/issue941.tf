@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 instance_size = (                   #Comment
   length(var.instance_size) > 0 ? ( #Comment
     var.instance_size               #If instance size is provided, use it.

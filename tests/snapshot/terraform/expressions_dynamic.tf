@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 resource "thing" "name" {
   name = "tf-test-name"
 

@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 block {
     attr = var.test
     attr2 = var.test == "foo" ? "true" : "false"

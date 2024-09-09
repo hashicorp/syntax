@@ -1,3 +1,5 @@
+# Copyright (c) HashiCorp, Inc.
+
 # line comment
 
 // line comment
