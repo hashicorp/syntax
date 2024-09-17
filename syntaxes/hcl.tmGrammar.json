@@ -82,7 +82,7 @@
     },
     "block": {
       "name": "meta.block.hcl",
-      "begin": "([\\w][\\-\\w]*)([^?\\r\\n]*)(\\{)",
+      "begin": "([\\w][\\-\\w]*)(([^\\S\\r\\n]*([\\w][\\-_\\w]*|\\\"[^\\\"\\r\\n]*\\\"))*)[^\\S\\r\\n]*(\\{)",
       "end": "\\}",
       "comment": "This will match HCL blocks like `thing1 \"one\" \"two\" {` or `thing2 {`",
       "beginCaptures": {
@@ -104,12 +104,12 @@
             },
             {
               "match": "[[:alpha:]][[:alnum:]_-]*",
-              "comment": "Block label (Indentifier)",
+              "comment": "Block label (Identifier)",
               "name": "variable.other.enummember.hcl"
             }
           ]
         },
-        "3": {
+        "5": {
           "name": "punctuation.section.block.begin.hcl"
         }
       },
