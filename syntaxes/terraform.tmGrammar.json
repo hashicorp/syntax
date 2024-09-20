@@ -112,6 +112,9 @@
         },
         "3": {
           "name": "punctuation.section.block.begin.hcl"
+        },
+        "5": {
+          "name": "punctuation.section.block.begin.hcl"
         }
       },
       "endCaptures": {

@@ -266,6 +266,28 @@
 >}
 #^ source.hcl meta.braces.hcl punctuation.section.braces.end.hcl
 >
+># braces are fun (now)
+#^ source.hcl comment.line.number-sign.hcl punctuation.definition.comment.hcl
+# ^^^^^^^^^^^^^^^^^^^^^ source.hcl comment.line.number-sign.hcl
+>a = not_a_block == "{"
+#^ source.hcl variable.declaration.hcl variable.other.readwrite.hcl
+# ^ source.hcl variable.declaration.hcl
+#  ^ source.hcl variable.declaration.hcl keyword.operator.assignment.hcl
+#   ^ source.hcl variable.declaration.hcl
+#    ^^^^^^^^^^^^ source.hcl
+#                ^^ source.hcl keyword.operator.hcl
+#                  ^ source.hcl
+#                   ^ source.hcl string.quoted.double.hcl punctuation.definition.string.begin.hcl
+#                    ^ source.hcl string.quoted.double.hcl
+#                     ^ source.hcl string.quoted.double.hcl punctuation.definition.string.end.hcl
+>brace_label "{" {}
+#^^^^^^^^^^^ source.hcl meta.block.hcl entity.name.type.hcl
+#           ^ source.hcl meta.block.hcl
+#            ^^^ source.hcl meta.block.hcl variable.other.enummember.hcl
+#               ^ source.hcl meta.block.hcl
+#                ^ source.hcl meta.block.hcl punctuation.section.block.begin.hcl
+#                 ^ source.hcl meta.block.hcl punctuation.section.block.end.hcl
+>
 >path "secrets/data/users/{{identity.entity.name}}/*" {
 #^^^^ source.hcl meta.block.hcl entity.name.type.hcl
 #    ^ source.hcl meta.block.hcl

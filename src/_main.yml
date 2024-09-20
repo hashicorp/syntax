@@ -76,7 +76,7 @@ repository:
   block:
     name: meta.block.hcl
     comment: This will match HCL blocks like `thing1 "one" "two" {` or `thing2 {`
-    begin: ([\w][\-\w]*)([^?\r\n]*)(\{)
+    begin: ([\w][\-\w]*)(([^\S\r\n]*([\w][\-_\w]*|\"[^\"\r\n]*\"))*)[^\S\r\n]*(\{)
     beginCaptures:
       "1":
         patterns:
@@ -89,9 +89,9 @@ repository:
             comment: Block label (String Literal)
             match: '\"[^\"\r\n]*\"'
           - name: variable.other.enummember.hcl
-            comment: Block label (Indentifier)
+            comment: Block label (Identifier)
             match: "[[:alpha:]][[:alnum:]_-]*"
-      "3":
+      "5":
         name: punctuation.section.block.begin.hcl
     end: \}
     endCaptures:

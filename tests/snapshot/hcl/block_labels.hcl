@@ -49,6 +49,10 @@ block-single-char-indentifier-newline a {
 byte_match_statement_rules = local.enabled && var.byte_match_statement_rules != null ? {
 }
 
+# braces are fun (now)
+a = not_a_block == "{"
+brace_label "{" {}
+
 path "secrets/data/users/{{identity.entity.name}}/*" {
   capabilities = ["create", "update", "patch", "read", "delete", "list"]
 }
