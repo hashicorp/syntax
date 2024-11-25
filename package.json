@@ -54,7 +54,6 @@
     ]
   },
   "scripts": {
-    "lint": "eslint",
     "check": "prettier --check .",
     "format": "prettier --write .",
     "build": "go run ./cmd/builder build",
@@ -66,8 +65,6 @@
     "test:snap:terraform": "npx vscode-tmgrammar-snap \"tests/snapshot/terraform/*.tf\""
   },
   "devDependencies": {
-    "eslint": "^9.15.0",
-    "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.3.3",
     "vscode-tmgrammar-test": "^0.1.1"
   }
