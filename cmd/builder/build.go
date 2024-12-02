@@ -13,6 +13,7 @@ import (
 	"github.com/mitchellh/cli"
 	"github.com/spf13/viper"
 )
+
 type BuildCommand struct {
 	Ui cli.Ui
 }

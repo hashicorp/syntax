@@ -54,8 +54,8 @@
     ]
   },
   "scripts": {
-    "check": "prettier --check syntaxes/*.json",
-    "format": "prettier --write syntaxes/*.json",
+    "check": "prettier --check .",
+    "format": "prettier --write .",
     "build": "go run ./cmd/builder build",
     "test": "npm run test:snap",
     "test:snap": "npm run test:snap:hcl && npm run test:snap:sentinel && npm run test:snap:terraform",
@@ -65,7 +65,7 @@
     "test:snap:terraform": "npx vscode-tmgrammar-snap \"tests/snapshot/terraform/*.tf\""
   },
   "devDependencies": {
-    "prettier": "^2.5.1",
+    "prettier": "^3.3.3",
     "vscode-tmgrammar-test": "^0.1.1"
   }
 }
