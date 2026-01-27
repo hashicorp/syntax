@@ -1,6 +1,7 @@
 # HashiCorp Syntax
 
 
+
 TextMate grammars for highlighting configuration used by HashiCorp software, primarily [HCL (HashiCorp Configuration Language)](https://github.com/hashicorp/hcl) and HCL-based languages.
 
 ## How do I use this?
