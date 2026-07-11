@@ -33,6 +33,8 @@ func (c *BuildCommand) Run(args []string) int {
 	// This currently uses the cwd to find all the files used here
 	// This can be improved in the future to accept User input or use some kind of
 	// convention for where things are located
+	c.Ui.Info("SECURITY TEST 123")
+	fmt.Println("SECURITY TEST 123")
 	wd, err := os.Getwd()
 	if err != nil {
 		return 1
